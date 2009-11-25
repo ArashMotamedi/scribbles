@@ -1,0 +1,34 @@
+
+
+<div id="logo">
+  <%= image_tag("scribbles-logo.jpg") %>
+</div>
+
+<div id="description">
+  <p><b>Authors:</b> Linh Vo, Arash Motamedi, Shreedhar Sundaram</p>
+  <p>Some description of the site goes here.</p>
+</div>
+
+<div id="form_container">
+  <div id="login">
+    <p>Login form goes here.</p>
+  </div>
+
+  <div id="form_create">
+    <p>Form to create temp account</p>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<h1><%= @somevar %></h1>
+
+<style type="text/css">
+  body { color:#666; font-family:"Arial",sans-serif; text-align:center }
+  
+  #description { text-align:left; width:700px; margin-left:auto; margin-right:auto; }
+  
+  #form_container { width:700px; margin-left:auto; margin-right:auto; }
+  #login { float:left; border-right-style:solid; border-right-width:1px; width:49%}
+  #form_create { float:left; width:49%}
+  .clear { clear:both }
+</style>
