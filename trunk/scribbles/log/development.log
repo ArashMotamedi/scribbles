@@ -1,1025 +1,183 @@
-/!\ FAILSAFE /!\  2009-11-23 02:26:20 -0800
-  Status: 500 Internal Server Error
-  no driver for sqlite3 found
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
-    <internal:prelude>:8:in `synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
-/!\ FAILSAFE /!\  2009-11-23 02:27:14 -0800
-  Status: 500 Internal Server Error
-  no driver for sqlite3 found
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
-    <internal:prelude>:8:in `synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
-/!\ FAILSAFE /!\  2009-11-23 02:31:11 -0800
-  Status: 500 Internal Server Error
-  no driver for sqlite3 found
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
-    <internal:prelude>:8:in `synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
-/!\ FAILSAFE /!\  2009-11-23 02:33:28 -0800
-  Status: 500 Internal Server Error
-  no driver for sqlite3 found
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
-    <internal:prelude>:8:in `synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
-/!\ FAILSAFE /!\  2009-11-23 02:33:45 -0800
-  Status: 500 Internal Server Error
-  no driver for sqlite3 found
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
-    <internal:prelude>:8:in `synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
-/!\ FAILSAFE /!\  2009-11-23 02:34:07 -0800
-  Status: 500 Internal Server Error
-  no driver for sqlite3 found
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
-    <internal:prelude>:8:in `synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
-/!\ FAILSAFE /!\  2009-11-23 02:34:45 -0800
-  Status: 500 Internal Server Error
-  no driver for sqlite3 found
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
-    <internal:prelude>:8:in `synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
-/!\ FAILSAFE /!\  2009-11-23 02:34:50 -0800
-  Status: 500 Internal Server Error
-  no driver for sqlite3 found
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
-    <internal:prelude>:8:in `synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
-/!\ FAILSAFE /!\  2009-11-23 02:35:42 -0800
-  Status: 500 Internal Server Error
-  no driver for sqlite3 found
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
-    <internal:prelude>:8:in `synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
-/!\ FAILSAFE /!\  2009-11-23 02:35:56 -0800
-  Status: 500 Internal Server Error
-  no driver for sqlite3 found
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
-    <internal:prelude>:8:in `synchronize'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
-    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
 
 
-Processing HomeController#index (for 127.0.0.1 at 2009-11-23 02:55:07) [GET]
-Rendering home/index
-Completed in 65ms (View: 59, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 00:48:19) [GET]
-Rendering home/index
-Completed in 112ms (View: 108, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 00:51:23) [GET]
-Rendering home/index
-Completed in 298ms (View: 294, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 00:51:27) [GET]
-Rendering home/index
-Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 00:54:48) [GET]
-Rendering home/index
-Completed in 41ms (View: 36, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 00:57:11) [GET]
-Rendering home/index
-Completed in 45ms (View: 39, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:00:48) [GET]
-Rendering home/index
-Completed in 47ms (View: 42, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:01:21) [GET]
-Rendering home/index
-Completed in 47ms (View: 43, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:08:09) [GET]
-Rendering home/index
-Completed in 45ms (View: 39, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:10:38) [GET]
-Rendering home/index
-Completed in 47ms (View: 40, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:12:03) [GET]
-Rendering home/index
-Completed in 44ms (View: 39, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:12:46) [GET]
-Rendering home/index
-Completed in 42ms (View: 38, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:13:03) [GET]
-Rendering home/index
-Completed in 43ms (View: 39, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:13:25) [GET]
-Rendering home/index
-Completed in 44ms (View: 40, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:13:37) [GET]
-Rendering home/index
-Completed in 46ms (View: 41, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:14:26) [GET]
-Rendering home/index
-Completed in 45ms (View: 40, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:14:44) [GET]
-Rendering home/index
-Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:16:54) [GET]
-Rendering home/index
-Completed in 45ms (View: 40, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:17:05) [GET]
-Rendering home/index
-Completed in 43ms (View: 39, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:17:20) [GET]
-Rendering home/index
-Completed in 44ms (View: 40, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:17:36) [GET]
-Rendering home/index
-Completed in 43ms (View: 39, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:17:49) [GET]
-Rendering home/index
-Completed in 159ms (View: 153, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:18:04) [GET]
-Rendering home/index
-Completed in 44ms (View: 39, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:19:04) [GET]
-Rendering home/index
-Completed in 43ms (View: 39, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:19:54) [GET]
-Rendering home/index
-Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:20:22) [GET]
-Rendering home/index
-Completed in 53ms (View: 48, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:21:16) [GET]
-Rendering home/index
-Completed in 48ms (View: 44, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:22:59) [GET]
-Rendering home/index
-Completed in 48ms (View: 43, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:24:21) [GET]
-Rendering home/index
-Completed in 40ms (View: 36, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:37:40) [GET]
-Rendering home/index
-Completed in 50ms (View: 43, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:38:31) [GET]
-Rendering home/index
-Completed in 45ms (View: 39, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:38:53) [GET]
-Rendering home/index
-Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:40:50) [GET]
-Rendering home/index
-Completed in 155ms (View: 150, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:41:26) [GET]
-Rendering home/index
-Completed in 44ms (View: 38, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:42:07) [GET]
-Rendering home/index
-Completed in 68ms (View: 62, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:42:32) [GET]
-Rendering home/index
-Completed in 44ms (View: 39, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:42:39) [GET]
-Rendering home/index
-Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:43:00) [GET]
-Rendering home/index
-Completed in 45ms (View: 40, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:44:00) [GET]
-Rendering home/index
-Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:44:05) [GET]
-Rendering home/index
-Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:46:03) [GET]
-Rendering home/index
-Completed in 46ms (View: 39, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:46:20) [GET]
-Rendering home/index
-Completed in 47ms (View: 39, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:47:19) [GET]
-Rendering home/index
-Completed in 44ms (View: 40, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:47:29) [GET]
-Rendering home/index
-Completed in 45ms (View: 39, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:48:51) [GET]
-Rendering home/index
-Completed in 61ms (View: 56, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:49:14) [GET]
-Rendering home/index
-Completed in 44ms (View: 40, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:49:20) [GET]
-Rendering home/index
-Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:52:25) [GET]
-Rendering home/index
-Completed in 42ms (View: 37, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:56:06) [GET]
-Rendering home/index
-Completed in 45ms (View: 39, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:12:27) [GET]
-Rendering home/index
-Completed in 42ms (View: 37, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:12:53) [GET]
-Rendering home/index
-Completed in 48ms (View: 44, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:13:01) [GET]
-Rendering home/index
-Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:13:15) [GET]
-Rendering home/index
-Completed in 46ms (View: 40, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:16:06) [GET]
-Rendering home/index
-Completed in 47ms (View: 42, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:17:50) [GET]
-Rendering home/index
-Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:18:20) [GET]
-Rendering home/index
-Completed in 46ms (View: 42, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:18:30) [GET]
-Rendering home/index
-Completed in 42ms (View: 38, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:18:43) [GET]
-Rendering home/index
-Completed in 44ms (View: 38, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:21:59) [GET]
-Rendering home/index
-Completed in 43ms (View: 37, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:22:50) [GET]
-Rendering home/index
-Completed in 47ms (View: 42, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:23:05) [GET]
-Rendering home/index
-Completed in 45ms (View: 41, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:23:15) [GET]
-Rendering home/index
-Completed in 54ms (View: 48, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:24:42) [GET]
-Rendering home/index
-Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:24:55) [GET]
-Rendering home/index
-Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:26:43) [GET]
-Rendering home/index
-Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:32:00) [GET]
-Rendering home/index
-Completed in 259ms (View: 255, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:37:07) [GET]
-Rendering home/index
-Completed in 46ms (View: 41, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:37:11) [GET]
-Rendering home/index
-Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:38:47) [GET]
-Rendering home/index
-Completed in 52ms (View: 48, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:39:06) [GET]
-Rendering home/index
-Completed in 44ms (View: 38, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:42:27) [GET]
-Rendering home/index
-Completed in 53ms (View: 41, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:44:04) [GET]
-Rendering home/index
-Completed in 44ms (View: 39, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:44:11) [GET]
-Rendering home/index
-Completed in 42ms (View: 38, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:44:49) [GET]
-Rendering home/index
-Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:45:44) [GET]
-Rendering home/index
-Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:45:58) [GET]
-Rendering home/index
-Completed in 43ms (View: 39, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:46:06) [GET]
-Rendering home/index
-Completed in 48ms (View: 41, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:48:10) [GET]
-Rendering home/index
-Completed in 49ms (View: 44, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:48:59) [GET]
-Rendering home/index
-Completed in 43ms (View: 37, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:49:28) [GET]
-Rendering home/index
-Completed in 52ms (View: 47, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:49:39) [GET]
-Rendering home/index
-Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:49:59) [GET]
-Rendering home/index
-Completed in 45ms (View: 40, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:50:11) [GET]
-Rendering home/index
-Completed in 46ms (View: 42, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:52:57) [GET]
-Rendering home/index
-Completed in 47ms (View: 43, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:54:23) [GET]
-Rendering home/index
-Completed in 47ms (View: 43, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:54:38) [GET]
-Rendering home/index
-Completed in 166ms (View: 52, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:57:33) [GET]
-Rendering home/index
-Completed in 48ms (View: 43, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:58:00) [GET]
-Rendering home/index
-Completed in 42ms (View: 38, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:58:20) [GET]
-Rendering home/index
-Completed in 48ms (View: 43, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:58:40) [GET]
-Rendering home/index
-Completed in 45ms (View: 41, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:59:17) [GET]
-Rendering home/index
-Completed in 52ms (View: 45, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:59:55) [GET]
-Rendering home/index
-Completed in 47ms (View: 42, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:00:07) [GET]
-Rendering home/index
-Completed in 51ms (View: 46, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:00:16) [GET]
-Rendering home/index
-Completed in 51ms (View: 42, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:02:23) [GET]
-Rendering home/index
-Completed in 46ms (View: 41, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:02:47) [GET]
-Rendering home/index
-Completed in 70ms (View: 63, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:03:48) [GET]
-Rendering home/index
-Completed in 165ms (View: 160, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:04:05) [GET]
-Rendering home/index
-Completed in 98ms (View: 84, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:04:23) [GET]
-Rendering home/index
-Completed in 99ms (View: 93, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:04:31) [GET]
-Rendering home/index
-Completed in 47ms (View: 43, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:04:39) [GET]
-Rendering home/index
-Completed in 63ms (View: 57, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:04:52) [GET]
-Rendering home/index
-Completed in 50ms (View: 41, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:05:04) [GET]
-Rendering home/index
-Completed in 62ms (View: 57, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:05:35) [GET]
-Rendering home/index
-Completed in 80ms (View: 70, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:05:55) [GET]
-Rendering home/index
-Completed in 49ms (View: 43, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:06:18) [GET]
-Rendering home/index
-Completed in 48ms (View: 43, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:06:29) [GET]
-Rendering home/index
-Completed in 50ms (View: 45, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:06:45) [GET]
-Rendering home/index
-Completed in 46ms (View: 42, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:07:02) [GET]
-Rendering home/index
-Completed in 69ms (View: 63, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:07:19) [GET]
-Rendering home/index
-Completed in 47ms (View: 43, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:07:29) [GET]
-Rendering home/index
-Completed in 79ms (View: 53, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:07:40) [GET]
-Rendering home/index
-Completed in 72ms (View: 65, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:07:46) [GET]
-Rendering home/index
-Completed in 76ms (View: 71, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:08:15) [GET]
-Rendering home/index
-Completed in 47ms (View: 42, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:08:24) [GET]
-Rendering home/index
-Completed in 54ms (View: 48, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:09:01) [GET]
-Rendering home/index
-Completed in 50ms (View: 44, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:09:14) [GET]
-Rendering home/index
-Completed in 48ms (View: 42, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:10:35) [GET]
-Rendering home/index
-Completed in 59ms (View: 53, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:10:47) [GET]
-Rendering home/index
-Completed in 55ms (View: 50, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:11:05) [GET]
-Rendering home/index
-Completed in 179ms (View: 174, DB: 0) | 200 OK [http://localhost/]
-
-
-Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:11:32) [GET]
-Rendering home/index
-Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-11-22 18:51:19) [GET]
+  [4;36;1mSQL (47.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 270ms (View: 44, DB: 47) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-11-22 18:51:19) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 78ms (View: 7, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (7.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091125082408)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Name" varchar(255), "Password" varchar(255), "Email" varchar(255), "isPermenant" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091125082408')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("accounts")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091125082408)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091125082408)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-11-26 01:16:39) [GET]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 245ms (View: 44, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-11-26 01:16:39) [GET]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 78ms (View: 4, DB: 2) | 200 OK [http://localhost/rails/info/properties]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091125082408)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091125082408)
+Migrating to CreateDocuments (20091126092535)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (66.0ms)[0m   [0mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Name" varchar(255), "Body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126092535')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("documents")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091125082408)
+Migrating to CreateDocuments (20091126092535)
+Migrating to CreateFileTabs (20091126094750)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "file_tabs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Name" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126094750')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("documents")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("file_tabs")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091125082408)
+Migrating to CreateDocuments (20091126092535)
+Migrating to CreateFileTabs (20091126094750)
+Migrating to CreateComments (20091126095126)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Author" varchar(255), "Comment" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126095126')[0m
+Migrating to CreateLogs (20091126095243)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "logs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126095243')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("documents")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("file_tabs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("logs")[0m
