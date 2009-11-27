@@ -1,183 +1,3057 @@
+/!\ FAILSAFE /!\  2009-11-23 02:26:20 -0800
+  Status: 500 Internal Server Error
+  no driver for sqlite3 found
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+/!\ FAILSAFE /!\  2009-11-23 02:27:14 -0800
+  Status: 500 Internal Server Error
+  no driver for sqlite3 found
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+/!\ FAILSAFE /!\  2009-11-23 02:31:11 -0800
+  Status: 500 Internal Server Error
+  no driver for sqlite3 found
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+/!\ FAILSAFE /!\  2009-11-23 02:33:28 -0800
+  Status: 500 Internal Server Error
+  no driver for sqlite3 found
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+/!\ FAILSAFE /!\  2009-11-23 02:33:45 -0800
+  Status: 500 Internal Server Error
+  no driver for sqlite3 found
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+/!\ FAILSAFE /!\  2009-11-23 02:34:07 -0800
+  Status: 500 Internal Server Error
+  no driver for sqlite3 found
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+/!\ FAILSAFE /!\  2009-11-23 02:34:45 -0800
+  Status: 500 Internal Server Error
+  no driver for sqlite3 found
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+/!\ FAILSAFE /!\  2009-11-23 02:34:50 -0800
+  Status: 500 Internal Server Error
+  no driver for sqlite3 found
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+/!\ FAILSAFE /!\  2009-11-23 02:35:42 -0800
+  Status: 500 Internal Server Error
+  no driver for sqlite3 found
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+/!\ FAILSAFE /!\  2009-11-23 02:35:56 -0800
+  Status: 500 Internal Server Error
+  no driver for sqlite3 found
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:621:in `load_driver'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/sqlite3-ruby-1.2.3-x86-mswin32/lib/sqlite3/database.rb:74:in `initialize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/monitor.rb:190:in `mon_synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
 
 
-Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-11-22 18:51:19) [GET]
-  [4;36;1mSQL (47.0ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-Completed in 270ms (View: 44, DB: 47) | 200 OK [http://localhost/rails/info/properties]
+Processing HomeController#index (for 127.0.0.1 at 2009-11-23 02:55:07) [GET]
+Rendering home/index
+Completed in 65ms (View: 59, DB: 0) | 200 OK [http://localhost/]
 
 
-Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-11-22 18:51:19) [GET]
-  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-Completed in 78ms (View: 7, DB: 0) | 200 OK [http://localhost/rails/info/properties]
-  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 00:48:19) [GET]
+Rendering home/index
+Completed in 112ms (View: 108, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 00:51:23) [GET]
+Rendering home/index
+Completed in 298ms (View: 294, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 00:51:27) [GET]
+Rendering home/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 00:54:48) [GET]
+Rendering home/index
+Completed in 41ms (View: 36, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 00:57:11) [GET]
+Rendering home/index
+Completed in 45ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:00:48) [GET]
+Rendering home/index
+Completed in 47ms (View: 42, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:01:21) [GET]
+Rendering home/index
+Completed in 47ms (View: 43, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:08:09) [GET]
+Rendering home/index
+Completed in 45ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:10:38) [GET]
+Rendering home/index
+Completed in 47ms (View: 40, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:12:03) [GET]
+Rendering home/index
+Completed in 44ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:12:46) [GET]
+Rendering home/index
+Completed in 42ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:13:03) [GET]
+Rendering home/index
+Completed in 43ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:13:25) [GET]
+Rendering home/index
+Completed in 44ms (View: 40, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:13:37) [GET]
+Rendering home/index
+Completed in 46ms (View: 41, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:14:26) [GET]
+Rendering home/index
+Completed in 45ms (View: 40, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:14:44) [GET]
+Rendering home/index
+Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:16:54) [GET]
+Rendering home/index
+Completed in 45ms (View: 40, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:17:05) [GET]
+Rendering home/index
+Completed in 43ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:17:20) [GET]
+Rendering home/index
+Completed in 44ms (View: 40, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:17:36) [GET]
+Rendering home/index
+Completed in 43ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:17:49) [GET]
+Rendering home/index
+Completed in 159ms (View: 153, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:18:04) [GET]
+Rendering home/index
+Completed in 44ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:19:04) [GET]
+Rendering home/index
+Completed in 43ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:19:54) [GET]
+Rendering home/index
+Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:20:22) [GET]
+Rendering home/index
+Completed in 53ms (View: 48, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:21:16) [GET]
+Rendering home/index
+Completed in 48ms (View: 44, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:22:59) [GET]
+Rendering home/index
+Completed in 48ms (View: 43, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:24:21) [GET]
+Rendering home/index
+Completed in 40ms (View: 36, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:37:40) [GET]
+Rendering home/index
+Completed in 50ms (View: 43, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:38:31) [GET]
+Rendering home/index
+Completed in 45ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:38:53) [GET]
+Rendering home/index
+Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:40:50) [GET]
+Rendering home/index
+Completed in 155ms (View: 150, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:41:26) [GET]
+Rendering home/index
+Completed in 44ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:42:07) [GET]
+Rendering home/index
+Completed in 68ms (View: 62, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:42:32) [GET]
+Rendering home/index
+Completed in 44ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:42:39) [GET]
+Rendering home/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:43:00) [GET]
+Rendering home/index
+Completed in 45ms (View: 40, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:44:00) [GET]
+Rendering home/index
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:44:05) [GET]
+Rendering home/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:46:03) [GET]
+Rendering home/index
+Completed in 46ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:46:20) [GET]
+Rendering home/index
+Completed in 47ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:47:19) [GET]
+Rendering home/index
+Completed in 44ms (View: 40, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:47:29) [GET]
+Rendering home/index
+Completed in 45ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:48:51) [GET]
+Rendering home/index
+Completed in 61ms (View: 56, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:49:14) [GET]
+Rendering home/index
+Completed in 44ms (View: 40, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:49:20) [GET]
+Rendering home/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:52:25) [GET]
+Rendering home/index
+Completed in 42ms (View: 37, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 01:56:06) [GET]
+Rendering home/index
+Completed in 45ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:12:27) [GET]
+Rendering home/index
+Completed in 42ms (View: 37, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:12:53) [GET]
+Rendering home/index
+Completed in 48ms (View: 44, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:13:01) [GET]
+Rendering home/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:13:15) [GET]
+Rendering home/index
+Completed in 46ms (View: 40, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:16:06) [GET]
+Rendering home/index
+Completed in 47ms (View: 42, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:17:50) [GET]
+Rendering home/index
+Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:18:20) [GET]
+Rendering home/index
+Completed in 46ms (View: 42, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:18:30) [GET]
+Rendering home/index
+Completed in 42ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:18:43) [GET]
+Rendering home/index
+Completed in 44ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:21:59) [GET]
+Rendering home/index
+Completed in 43ms (View: 37, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:22:50) [GET]
+Rendering home/index
+Completed in 47ms (View: 42, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:23:05) [GET]
+Rendering home/index
+Completed in 45ms (View: 41, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:23:15) [GET]
+Rendering home/index
+Completed in 54ms (View: 48, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:24:42) [GET]
+Rendering home/index
+Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:24:55) [GET]
+Rendering home/index
+Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:26:43) [GET]
+Rendering home/index
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:32:00) [GET]
+Rendering home/index
+Completed in 259ms (View: 255, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:37:07) [GET]
+Rendering home/index
+Completed in 46ms (View: 41, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:37:11) [GET]
+Rendering home/index
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:38:47) [GET]
+Rendering home/index
+Completed in 52ms (View: 48, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:39:06) [GET]
+Rendering home/index
+Completed in 44ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:42:27) [GET]
+Rendering home/index
+Completed in 53ms (View: 41, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:44:04) [GET]
+Rendering home/index
+Completed in 44ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:44:11) [GET]
+Rendering home/index
+Completed in 42ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:44:49) [GET]
+Rendering home/index
+Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:45:44) [GET]
+Rendering home/index
+Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:45:58) [GET]
+Rendering home/index
+Completed in 43ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:46:06) [GET]
+Rendering home/index
+Completed in 48ms (View: 41, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:48:10) [GET]
+Rendering home/index
+Completed in 49ms (View: 44, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:48:59) [GET]
+Rendering home/index
+Completed in 43ms (View: 37, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:49:28) [GET]
+Rendering home/index
+Completed in 52ms (View: 47, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:49:39) [GET]
+Rendering home/index
+Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:49:59) [GET]
+Rendering home/index
+Completed in 45ms (View: 40, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:50:11) [GET]
+Rendering home/index
+Completed in 46ms (View: 42, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:52:57) [GET]
+Rendering home/index
+Completed in 47ms (View: 43, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:54:23) [GET]
+Rendering home/index
+Completed in 47ms (View: 43, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:54:38) [GET]
+Rendering home/index
+Completed in 166ms (View: 52, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:57:33) [GET]
+Rendering home/index
+Completed in 48ms (View: 43, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:58:00) [GET]
+Rendering home/index
+Completed in 42ms (View: 38, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:58:20) [GET]
+Rendering home/index
+Completed in 48ms (View: 43, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:58:40) [GET]
+Rendering home/index
+Completed in 45ms (View: 41, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:59:17) [GET]
+Rendering home/index
+Completed in 52ms (View: 45, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 02:59:55) [GET]
+Rendering home/index
+Completed in 47ms (View: 42, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:00:07) [GET]
+Rendering home/index
+Completed in 51ms (View: 46, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:00:16) [GET]
+Rendering home/index
+Completed in 51ms (View: 42, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:02:23) [GET]
+Rendering home/index
+Completed in 46ms (View: 41, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:02:47) [GET]
+Rendering home/index
+Completed in 70ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:03:48) [GET]
+Rendering home/index
+Completed in 165ms (View: 160, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:04:05) [GET]
+Rendering home/index
+Completed in 98ms (View: 84, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:04:23) [GET]
+Rendering home/index
+Completed in 99ms (View: 93, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:04:31) [GET]
+Rendering home/index
+Completed in 47ms (View: 43, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:04:39) [GET]
+Rendering home/index
+Completed in 63ms (View: 57, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:04:52) [GET]
+Rendering home/index
+Completed in 50ms (View: 41, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:05:04) [GET]
+Rendering home/index
+Completed in 62ms (View: 57, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:05:35) [GET]
+Rendering home/index
+Completed in 80ms (View: 70, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:05:55) [GET]
+Rendering home/index
+Completed in 49ms (View: 43, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:06:18) [GET]
+Rendering home/index
+Completed in 48ms (View: 43, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:06:29) [GET]
+Rendering home/index
+Completed in 50ms (View: 45, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:06:45) [GET]
+Rendering home/index
+Completed in 46ms (View: 42, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:07:02) [GET]
+Rendering home/index
+Completed in 69ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:07:19) [GET]
+Rendering home/index
+Completed in 47ms (View: 43, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:07:29) [GET]
+Rendering home/index
+Completed in 79ms (View: 53, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:07:40) [GET]
+Rendering home/index
+Completed in 72ms (View: 65, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:07:46) [GET]
+Rendering home/index
+Completed in 76ms (View: 71, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:08:15) [GET]
+Rendering home/index
+Completed in 47ms (View: 42, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:08:24) [GET]
+Rendering home/index
+Completed in 54ms (View: 48, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:09:01) [GET]
+Rendering home/index
+Completed in 50ms (View: 44, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:09:14) [GET]
+Rendering home/index
+Completed in 48ms (View: 42, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:10:35) [GET]
+Rendering home/index
+Completed in 59ms (View: 53, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:10:47) [GET]
+Rendering home/index
+Completed in 55ms (View: 50, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:11:05) [GET]
+Rendering home/index
+Completed in 179ms (View: 174, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-25 03:11:32) [GET]
+Rendering home/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 00:28:54) [GET]
+Rendering home/index
+Completed in 322ms (View: 318, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 02:13:25) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 109ms (View: 103, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 02:13:51) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 46ms (View: 41, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 02:14:35) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 282ms (View: 277, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 02:15:49) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 288ms (View: 282, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 02:16:16) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 47ms (View: 41, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 10:02:59) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 49ms (View: 43, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:44:39) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 6823ms (View: 6818, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:44:49) [POST]
+  Parameters: {"authenticity_token"=>"/IpHErx5uBur3Rf2BgtAlZkc3wTk/Oja7uMzDMhJSrQ=", "commit"=>"Login"}
+
+NoMethodError (undefined method `^' for "5":String):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (301.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:45:35) [POST]
+  Parameters: {"authenticity_token"=>"/IpHErx5uBur3Rf2BgtAlZkc3wTk/Oja7uMzDMhJSrQ=", "commit"=>"Login"}
+
+NoMethodError (undefined method `^' for "5":String):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (292.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:45:59) [POST]
+  Parameters: {"authenticity_token"=>"/IpHErx5uBur3Rf2BgtAlZkc3wTk/Oja7uMzDMhJSrQ=", "commit"=>"Login"}
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "5":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :action => "login") do -%>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (461.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:46:09) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "5":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :action => "login") do -%>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (394.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:46:13) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "5":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :action => "login") do -%>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (377.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:47:25) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "5":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :action => "login") do -%>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (471.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:48:52) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "5":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :action => "login") do %>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (375.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:49:40) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:49:48) [POST]
+  Parameters: {"authenticity_token"=>"Ch/MrcV+mw45vBybkhUcKMXN+yFEdcYaQ5WcjsO0rzk=", "commit"=>"Login"}
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "a":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :action => "login") do %>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (367.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:53:30) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "a":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :url => "form/login") do -%>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (478.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:54:05) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:55:08) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "d":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :url => "/form/login") do -%>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (390.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:55:16) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "d":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :url => "/form/login") do -%>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (376.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:57:09) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 6817ms (View: 6812, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:57:27) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "f":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :url => "/home/login") do -%>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (479.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:59:44) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "f":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :url => "/home/login") do -%>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (372.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:59:51) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 11:59:58) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "b":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :url => "/home/login") do -%>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (379.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:01:07) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "b":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :action => "login") do -%>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (470.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:01:17) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "b":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :action => "login") do -%>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (364.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:01:32) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/home/index]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:01:36) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "7":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :action => "login") do -%>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (470.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:04:07) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/home/index]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:04:36) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "e":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :action => "login") do -%>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (472.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:05:21) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "e":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :action => "login") do -%>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (373.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:05:48) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/home/index]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:05:55) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "4":String) on line #12 of app/views/home/index.html.erb:
+9: 
+10: <div id="form_container">
+11:   <div id="login">
+12:     <% form_remote_tag(:update => "login_warn", :action => "login") do -%>
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:12
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (472.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:08:31) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 52ms (View: 47, DB: 0) | 200 OK [http://localhost/home/index]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:08:38) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "2":String) on line #13 of app/views/home/index.html.erb:
+10: <div id="form_container">
+11:   <div id="login">
+12:     <div>
+13:     <% form_remote_tag(:update => "login_warn", :action => "login") do -%>
+14:       <p><%= submit_tag "Login" %></p>
+15:     <% end %>
+16:     </div>
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:13
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (493.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:09:34) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 49ms (View: 44, DB: 0) | 200 OK [http://localhost/home/index]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:09:41) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "9":String) on line #13 of app/views/home/index.html.erb:
+10: <div id="form_container">
+11:   <div id="login">
+12:     <div>
+13:     <% form_remote_tag(:update => "login_warn", :action => "logini") do -%>
+14:       <p><%= submit_tag "Login" %></p>
+15:     <% end %>
+16:     </div>
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:13
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (370.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:10:40) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/home/index]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:11:16) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "9":String) on line #13 of app/views/home/index.html.erb:
+10: <div id="form_container">
+11:   <div id="login">
+12:     <div>
+13:     <% form_remote_tag(:update => "login_warn", :action => "logini") do -%>
+14:       <p><%= submit_tag "Login" %></p>
+15:     <% end %>
+16:     </div>
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:13
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (382.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:11:28) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 6895ms (View: 6890, DB: 0) | 200 OK [http://localhost/home/index]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 12:11:42) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `^' for "d":String) on line #13 of app/views/home/index.html.erb:
+10: <div id="form_container">
+11:   <div id="login">
+12:     <div>
+13:     <% form_remote_tag(:update => "login_warn", :action => "logini") do -%>
+14:       <p><%= submit_tag "Login" %></p>
+15:     <% end %>
+16:     </div>
+
+    (eval):2:in `form_authenticity_token'
+    app/views/home/index.html.erb:13
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (387.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:09:40) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 281ms (View: 277, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:09:45) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:09:59) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:10:10) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering template within layouts/application
+Rendering home/index
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:10:18) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering template within layouts/application
+Rendering home/index
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:11:44) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 52ms (View: 47, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:11:50) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering template within layouts/application
+Rendering home/index
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:14:03) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:21:41) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering template within layouts/application
+Rendering home/index
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:22:15) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering template within layouts/application
+Rendering home/index
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:22:20) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering template within layouts/application
+Rendering home/index
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:28:19) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 51ms (View: 47, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 14:28:24) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:30:43) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 50ms (View: 46, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 14:31:14) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:31:23) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:32:02) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 275ms (View: 271, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 14:32:10) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:33:28) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 52ms (View: 47, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 14:33:31) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:34:04) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 51ms (View: 46, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 14:34:13) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:40:28) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 14:40:32) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+NoMethodError (undefined method `text' for #<HomeController:0x365793c>):
+  app/controllers/home_controller.rb:10:in `login'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (309.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:42:31) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 14:42:37) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+NoMethodError (undefined method `text' for #<HomeController:0x433c760>):
+  app/controllers/home_controller.rb:10:in `login'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (214.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:52:30) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 14:52:33) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/_login.erb in view path app/views):
+  app/controllers/home_controller.rb:10:in `login'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 14:55:13) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 14:55:15) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/_login.erb in view path app/views):
+  app/controllers/home_controller.rb:10:in `login'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:09:14) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:09:46) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 292ms (View: 288, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:09:53) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/_login.erb in view path app/views):
+  app/controllers/home_controller.rb:10:in `login'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:21:37) [GET]
+Rendering template within layouts/application
+Rendering home/index
+ERROR: compiling _run_erb_app47views47home47index46html46erb RAISED C:/275Project3/trunk/scribbles/app/views/home/index.html.erb:16: syntax error, unexpected tASSOC, expecting ')'
+...er.concat(( render (:partial => "login_warn") ).to_s); @outp...
+...                               ^
+C:/275Project3/trunk/scribbles/app/views/home/index.html.erb:16: syntax error, unexpected ')', expecting keyword_end
+...artial => "login_warn") ).to_s); @output_buffer.concat "\n  ...
+...                               ^
+Function body:           def _run_erb_app47views47home47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"logo\">\n  "
+; @output_buffer.concat(( image_tag("scribbles-logo.jpg") ).to_s); @output_buffer.concat "\n</div>\n\n<div id=\"description\">\n  <p><b>Authors:</b> Linh Vo, Arash Motamedi, Shreedhar Sundaram</p>\n  <p>Some description of the site goes here.</p>\n</div>\n\n<div id=\"form_container\">\n  <div id=\"login\">\n    "
+
+
+
+
+
+
+
+
+
+;  form_remote_tag(:update => "login_warn", :url => {:action => :login}) do 
+@output_buffer.concat "      <p>"; @output_buffer.concat(( submit_tag "Login" ).to_s); @output_buffer.concat "</p>\n    "
+;  end ; @output_buffer.concat "\n    <div id=\"login_warn\">\n      "
+
+; @output_buffer.concat(( render (:partial => "login_warn") ).to_s); @output_buffer.concat "\n    </div>\n  </div>\n\n  <div id=\"form_create\">\n    <p>Form to create temp account</p>\n  </div>\n  <div class=\"clear\"></div>\n</div>\n\n<style type=\"text/css\">\n  #description { text-align:left; width:700px; margin-left:auto; margin-right:auto; }\n  \n  #form_container { width:700px; margin-left:auto; margin-right:auto; }\n  #login { float:left; border-right-style:solid; border-right-width:1px; width:49% }\n  #form_create { float:left; width:49% }\n  .clear { clear:both }\n</style>"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.force_encoding(__ENCODING__)
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_view/renderable.rb:77:in `module_eval'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_view/renderable.rb:77:in `compile!'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+C:/Ruby1.9.1/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+C:/Ruby1.9.1/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action_with_flash'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process_with_filters'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `block in call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `block in call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (C:/275Project3/trunk/scribbles/app/views/home/index.html.erb:16: syntax error, unexpected tASSOC, expecting ')'
+...er.concat(( render (:partial => "login_warn") ).to_s); @outp...
+...                               ^
+C:/275Project3/trunk/scribbles/app/views/home/index.html.erb:16: syntax error, unexpected ')', expecting keyword_end
+...artial => "login_warn") ).to_s); @output_buffer.concat "\n  ...
+...                               ^) on line #16 of app/views/home/index.html.erb:
+13:       <p><%= submit_tag "Login" %></p>
+14:     <% end %>
+15:     <div id="login_warn">
+16:       <%= render (:partial => "login_warn") %>
+17:     </div>
+18:   </div>
+19: 
+
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (298.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:24:09) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 82ms (View: 76, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:24:16) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/_login.erb in view path app/views):
+  app/controllers/home_controller.rb:10:in `login'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:24:36) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:24:48) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:24:51) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/_login.erb in view path app/views):
+  app/controllers/home_controller.rb:10:in `login'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:24:57) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:28:22) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/_login.erb in view path app/views):
+  app/controllers/home_controller.rb:10:in `login'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:29:13) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 55ms (View: 51, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:29:16) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:29:22) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:29:28) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:33:26) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:33:35) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:33:39) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:33:47) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:33:55) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:33:57) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:34:00) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:34:01) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:34:03) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:34:03) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template home/login.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:44:19) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+
+ActionView::TemplateError (undefined local variable or method `page' for #<ActionView::Base:0x3c7e478>) on line #17 of app/views/home/index.html.erb:
+14:     <% end %>
+15:     <div id="login_warn">
+16:       <!--<%= render(:partial => "login_warn") %>-->
+17:       <% page.replace_html "login_warn", :partial => "login_warn" %>
+18:     </div>
+19:   </div>
+20: 
+
+    app/views/home/index.html.erb:17
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (394.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:47:13) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+Completed in 53ms (View: 48, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:47:46) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (3.0ms)
+Completed in 312ms (View: 307, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:50:29) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (3.0ms)
+Completed in 358ms (View: 353, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:51:16) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (3.0ms)
+Completed in 344ms (View: 339, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:54:36) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering home/login
+Completed in 42ms (View: 36, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:54:47) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:55:09) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 40ms (View: 34, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:55:18) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:55:39) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:56:02) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:56:05) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:58:02) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 51ms (View: 45, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:58:07) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (1.0ms)
+Completed in 134ms (View: 35, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:58:09) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:58:11) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:58:13) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:58:16) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (1.0ms)
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 15:58:18) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 15:59:56) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (3.0ms)
+Completed in 49ms (View: 45, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 16:00:02) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 41ms (View: 34, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 16:00:22) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 16:00:27) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (1.0ms)
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 16:01:56) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 16:07:33) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 53ms (View: 47, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 16:09:14) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 59ms (View: 54, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 16:09:37) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+Completed in 60ms (View: 56, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 16:12:30) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 324ms (View: 319, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 16:15:18) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 59ms (View: 54, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 16:15:32) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+Completed in 53ms (View: 48, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 16:15:40) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"Username", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 44ms (View: 38, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 16:16:12) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 55ms (View: 51, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 16:16:18) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"Username", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 16:16:20) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"Username", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 16:18:22) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"Username", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 16:18:25) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"Username", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 16:18:28) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"Username", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 18:52:44) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"Username", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 34ms (View: 28, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:22:07) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 53ms (View: 49, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:24:49) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 53ms (View: 48, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:25:05) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 53ms (View: 48, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:25:34) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 54ms (View: 50, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:26:25) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 53ms (View: 49, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:28:00) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+Completed in 55ms (View: 50, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:28:33) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 54ms (View: 50, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:30:09) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 52ms (View: 48, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:30:49) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 57ms (View: 53, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:31:51) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 55ms (View: 50, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:33:26) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 57ms (View: 51, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:35:00) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 59ms (View: 55, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:35:26) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 55ms (View: 50, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 19:36:18) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/home/login]
+  [4;36;1mSQL (26.0ms)[0m   [0;1m SELECT name
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
-  [4;36;1mSQL (8.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
-  [4;35;1mSQL (7.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (128.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (88.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
-Migrating to CreateAccounts (20091125082408)
-  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Name" varchar(255), "Password" varchar(255), "Email" varchar(255), "isPermenant" boolean, "created_at" datetime, "updated_at" datetime) [0m
-  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091125082408')[0m
-  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+Migrating to CreateAccounts (20091126085948)
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "email" varchar(255), "is_permanent" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091126085948')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
-  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("accounts")[0m
-  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
-Migrating to CreateAccounts (20091125082408)
-  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
-  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
-  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
-  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
-Migrating to CreateAccounts (20091125082408)
-  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
-  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
-  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
 
 
-Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-11-26 01:16:39) [GET]
-  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
-Completed in 245ms (View: 44, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 19:38:54) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
 
 
-Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-11-26 01:16:39) [GET]
-  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
-Completed in 78ms (View: 4, DB: 2) | 200 OK [http://localhost/rails/info/properties]
-  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
-Migrating to CreateAccounts (20091125082408)
-  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
-  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
-  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
-  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
-Migrating to CreateAccounts (20091125082408)
-Migrating to CreateDocuments (20091126092535)
-  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
-  [4;35;1mSQL (66.0ms)[0m   [0mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Name" varchar(255), "Body" text, "created_at" datetime, "updated_at" datetime) [0m
-  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126092535')[0m
-  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
-  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("documents")[0m
-  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
-Migrating to CreateAccounts (20091125082408)
-Migrating to CreateDocuments (20091126092535)
-Migrating to CreateFileTabs (20091126094750)
-  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
-  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "file_tabs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Name" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
-  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126094750')[0m
-  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
-  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("documents")[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("file_tabs")[0m
-  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
-Migrating to CreateAccounts (20091125082408)
-Migrating to CreateDocuments (20091126092535)
-Migrating to CreateFileTabs (20091126094750)
-Migrating to CreateComments (20091126095126)
-  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
-  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Author" varchar(255), "Comment" text, "created_at" datetime, "updated_at" datetime) [0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126095126')[0m
-Migrating to CreateLogs (20091126095243)
-  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "logs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Description" text, "created_at" datetime, "updated_at" datetime) [0m
-  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126095243')[0m
-  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
-  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("comments")[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("documents")[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("file_tabs")[0m
-  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("logs")[0m
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 19:50:04) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:51:35) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+Completed in 54ms (View: 50, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:51:55) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+Completed in 58ms (View: 53, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 19:52:22) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 19:55:15) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:55:53) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 58ms (View: 54, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:56:26) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 61ms (View: 56, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 19:56:30) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:56:52) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+Completed in 54ms (View: 50, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 19:56:57) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 19:59:16) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+Completed in 66ms (View: 61, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:01:12) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 74ms (View: 69, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 20:01:17) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:02:53) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 63ms (View: 57, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:05:15) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 92ms (View: 87, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:15:29) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 102ms (View: 77, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:15:45) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 252ms (View: 247, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:17:37) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+Completed in 103ms (View: 97, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:20:22) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 97ms (View: 92, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:21:36) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 57ms (View: 51, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:21:42) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 32ms (View: 27, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:22:55) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 97ms (View: 93, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:23:29) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 104ms (View: 99, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 20:23:49) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 20:23:52) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (12.0ms)
+Completed in 24ms (View: 17, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 20:23:59) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 24ms (View: 17, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 20:24:13) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:26:26) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 102ms (View: 84, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:29:52) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 100ms (View: 95, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:33:00) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 88ms (View: 71, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:33:27) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 95ms (View: 89, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 20:33:54) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "e-mail"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:39:13) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (3.0ms)
+Completed in 332ms (View: 327, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:39:35) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 60ms (View: 55, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:52:50) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 74ms (View: 69, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:54:15) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+Completed in 93ms (View: 88, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-11-26 20:54:32) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "e-mail"=>"", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (1.0ms)
+Completed in 66ms (View: 58, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:55:01) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 98ms (View: 80, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 20:56:03) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 78ms (View: 74, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 21:33:54) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 84ms (View: 80, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 21:34:39) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 74ms (View: 70, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 21:36:04) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 74ms (View: 69, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-26 21:36:37) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 78ms (View: 67, DB: 0) | 200 OK [http://localhost/]
