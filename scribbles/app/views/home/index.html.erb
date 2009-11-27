@@ -1,5 +1,3 @@
-
-
 <div id="logo">
   <%= image_tag("scribbles-logo.jpg") %>
 </div>
@@ -10,25 +8,52 @@
 </div>
 
 <div id="form_container">
-  <div id="login">
-    <p>Login form goes here.</p>
+  <div id="login_border" class="border">
+    <div id="login">
+      <% form_remote_tag(:url => {:action => :login}) do -%>
+        <table>
+          <tr>
+            <td class="label"><%= label_tag "username" %></td>
+            <td><%= text_field_tag "username" %></td>
+          </tr>
+          <tr>
+            <td class="label"><%= label_tag "password" %></td>
+            <td><%= password_field_tag "password" %></td>
+          </tr>
+          <tr>
+            <td class="label"><%= label_tag "e-mail" %></td>
+            <td><%= text_field_tag "e-mail" %></td>
+          </tr>
+        </table>
+        <%= submit_tag "Login" %>
+      <% end %>
+      <div id="login_warn">
+        <%= render(:partial => "login_warn") %>
+      </div>
+    </div>
   </div>
 
-  <div id="form_create">
-    <p>Form to create temp account</p>
+  <div id="form_create_border" class="border">
+    <div id="form_create">
+      <p>Form to create temp account</p>
+    </div>
   </div>
   <div class="clear"></div>
 </div>
 
-<h1><%= @somevar %></h1>
-
 <style type="text/css">
-  body { color:#666; font-family:"Arial",sans-serif; text-align:center }
-  
   #description { text-align:left; width:700px; margin-left:auto; margin-right:auto; }
   
   #form_container { width:700px; margin-left:auto; margin-right:auto; }
-  #login { float:left; border-right-style:solid; border-right-width:1px; width:49%}
-  #form_create { float:left; width:49%}
+  #login_border { float:left; width:48%; }
+  #login { background-color:#E8EEFA; padding:5px }
+  #login_labels { float:left; margin-right:5px; text-align:right; width:30% }
+  #login_fields { float:left; text-align:left; width:49% }
+  
+  #form_create_border { float:left; width:49%; }
+  #form_create { background-color:#E8EEFA; padding:5px }
+  
+  .border { background-color:#FFFFFF; border:#C3D9FF 1px solid; padding:3px; }
   .clear { clear:both }
+  .label { text-align:right; width:45% }
 </style>

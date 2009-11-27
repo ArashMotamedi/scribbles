@@ -2,10 +2,11 @@ class HomeController < ApplicationController
 
   # Main landing page
   def index
-  
-     @somevar = "this is a test string"
-  
   end
-  
+
+  # Login
+  def login
+    flash[:warning] = "Incorrect username or password"
+  end
 
 end
