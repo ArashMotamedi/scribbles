@@ -1,2 +1,2 @@
 page.replace_html "login_warn", :partial => "login_warn"
-page[:pw_warning].visual_effect :highlight
+page[:pw_warning].visual_effect :highlight, :startcolor => "#9FC2FF", :endcolor => "#E8EEFA"
