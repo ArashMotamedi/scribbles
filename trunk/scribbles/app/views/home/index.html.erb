@@ -10,6 +10,7 @@
 <div id="form_container">
   <div id="login_border" class="border">
     <div id="login">
+      <div style="color:#000; font-size:larger; font-weight:bold">Sign in</div>
       <% form_remote_tag(:url => {:action => :login}) do -%>
         <table>
           <tr>
@@ -30,6 +31,9 @@
       <div id="login_warn">
         <%= render(:partial => "login_warn") %>
       </div>
+      <div style="font-size:smaller">
+        Don't have an account? <%= link_to "Register", :controller => "accounts", :action => "register" %>
+      </div>
     </div>
   </div>
 
@@ -46,9 +50,8 @@
   
   #form_container { width:700px; margin-left:auto; margin-right:auto; }
   #login_border { float:left; width:48%; }
-  #login { background-color:#E8EEFA; padding:5px }
-  #login_labels { float:left; margin-right:5px; text-align:right; width:30% }
-  #login_fields { float:left; text-align:left; width:49% }
+  #login { background-color:#E8EEFA; padding:5px;}
+  #login_warn { text-align:center; margin-left:auto; margin-right:auto; width:80%; }
   
   #form_create_border { float:left; width:49%; }
   #form_create { background-color:#E8EEFA; padding:5px }
