@@ -10,7 +10,8 @@
 <div id="form_container">
   <div id="login_border" class="border">
     <div id="login">
-      <div style="color:#000; font-size:larger; font-weight:bold">Sign in</div>
+      <!--<div style="color:#000; font-size:larger; font-weight:bold">Sign in</div>-->
+      <h1 style="margin-top:5px">Sign in</h1>
       <% form_remote_tag(:url => {:action => :login}) do -%>
         <table>
           <tr>
@@ -21,10 +22,6 @@
             <td class="label"><%= label_tag "password" %></td>
             <td><%= password_field_tag "password" %></td>
           </tr>
-          <tr>
-            <td class="label"><%= label_tag "e-mail" %></td>
-            <td><%= text_field_tag "e-mail" %></td>
-          </tr>
         </table>
         <%= submit_tag "Login" %>
       <% end %>
@@ -32,7 +29,7 @@
         <%= render(:partial => "login_warn") %>
       </div>
       <div style="font-size:smaller">
-        Don't have an account? <%= link_to "Register", :controller => "accounts", :action => "register" %>
+        Don't have an account? <%= link_to "Register", :controller => "accounts", :action => "registration" %>
       </div>
     </div>
   </div>
