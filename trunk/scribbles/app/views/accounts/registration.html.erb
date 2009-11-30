@@ -7,25 +7,33 @@
       <div id="description">
         Create a FREE account with no expiration!
       </div>
-      <% form_remote_tag(:url => {:action => :register}) do -%>
+      <% form_remote_tag(:url => {:action => "register"}) do -%>
         <table style="margin-left:auto; margin-right:auto">
           <tr>
             <td class="label"><%= label_tag "username" %></td>
-            <td><%= text_field_tag "username" %></td>
+            <td><%= text_field_tag :name %></td>
           </tr>
           <tr>
             <td class="label"><%= label_tag "password" %></td>
-            <td><%= password_field_tag "password" %></td>
+            <td><%= password_field_tag :password %></td>
           </tr>
           <tr>
-            <td class="label"><%= label_tag "email" %></td>
-            <td><%= password_field_tag "email" %></td>
+            <td class="label"><%= label_tag "verify password" %></td>
+            <td><%= password_field_tag :password2 %></td>
+          </tr>
+          <tr>
+            <td class="label"><%= label_tag "e-mail" %></td>
+            <td><%= text_field_tag :email %></td>
           </tr>
         </table>
         <%= submit_tag "Register" %>
       <% end %>
+      <div id="register_warn">
+        <%= render(:partial => "register_warn") %>
+      </div>
     </div>
   </div>
+  
 
 </div>
 
@@ -35,6 +43,7 @@
   #form_border { background-color:#FFFFFF; border:#C3D9FF 1px solid; padding:3px; width:340px }
   #description { font-weight:bold; padding-bottom:10px; text-align:left }
   #form_register { background-color:#E8EEFA; padding:5px; text-align:center}
+  #register_warn { text-align:center; margin-left:auto; margin-right:auto; width:80%; }
   
   .label { text-align:right }
 </style>
