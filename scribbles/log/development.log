@@ -7092,3 +7092,1833 @@ Processing AccountsController#register (for 127.0.0.1 at 2009-11-30 00:05:54) [P
 Rendering accounts/register
 Rendered accounts/_register_warn (1.0ms)
 Completed in 32ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 00:06:20) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (3.0ms)
+Completed in 573ms (View: 568, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:06:30) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (3.0ms)
+Completed in 158ms (View: 121, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:06:35) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 41ms (View: 36, DB: 0) | 200 OK [http://localhost/accounts/register]
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091126085948)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mDROP TABLE "accounts"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126085948'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091126085948)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "email" varchar(255), "is_permanent" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126085948')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:44:27) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 35ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:45:42) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (3.0ms)
+Completed in 65ms (View: 46, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:45:48) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:45:53) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 34ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:45:58) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 138ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:46:02) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:46:04) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 34ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:46:07) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 35ms (View: 15, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:47:35) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (2.0ms)
+Completed in 42ms (View: 37, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:50:39) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (3.0ms)
+Completed in 67ms (View: 46, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:51:01) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 33ms (View: 13, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:51:08) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:51:24) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 43ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:51:29) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:51:31) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:51:39) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:53:29) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 35ms (View: 15, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:53:34) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 136ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:53:36) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 40ms (View: 34, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:53:39) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:53:43) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:53:48) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:53:51) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 33ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:53:55) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 34ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:53:57) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:54:20) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:57:13) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (2.0ms)
+Completed in 68ms (View: 46, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:57:26) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (3.0ms)
+Completed in 72ms (View: 51, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:57:29) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:57:31) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:57:36) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (3.0ms)
+Completed in 152ms (View: 145, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:59:07) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 34ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:59:10) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 44ms (View: 38, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:59:12) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:59:15) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 00:59:18) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 00:59:57) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (2.0ms)
+Completed in 68ms (View: 45, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:00:00) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:03:24) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:06:23) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (3.0ms)
+Completed in 74ms (View: 47, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:07:46) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (2.0ms)
+Completed in 70ms (View: 48, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:07:48) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:08:08) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (3.0ms)
+Completed in 172ms (View: 152, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:08:25) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (2.0ms)
+Completed in 66ms (View: 46, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:08:29) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:08:32) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:10:44) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (2.0ms)
+Completed in 102ms (View: 81, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:10:47) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:11:26) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (3.0ms)
+Completed in 43ms (View: 37, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:11:29) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 36ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:11:32) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:13:34) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 35ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 01:13:39) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:13:42) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 34ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:13:45) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:16:48) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 69ms (View: 48, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:16:50) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:17:07) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 68ms (View: 47, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:18:25) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 68ms (View: 47, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:18:31) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:18:54) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:18:58) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 69ms (View: 48, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:21:05) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 69ms (View: 48, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:21:12) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:22:25) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:22:28) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 168ms (View: 147, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:22:50) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 68ms (View: 48, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:22:52) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:23:03) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 68ms (View: 46, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:23:05) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:23:45) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:23:45) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 69ms (View: 48, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:23:54) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:24:40) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 68ms (View: 47, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:25:23) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 78ms (View: 57, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:25:26) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:25:43) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 69ms (View: 48, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:26:56) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:27:00) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 69ms (View: 49, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:27:24) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 68ms (View: 47, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:27:27) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:27:51) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 70ms (View: 47, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:28:32) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 67ms (View: 46, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:28:35) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:30:17) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 67ms (View: 47, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:30:47) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 71ms (View: 50, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:30:49) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:32:02) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 173ms (View: 152, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:32:34) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 68ms (View: 46, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:32:37) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:34:45) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 70ms (View: 48, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:34:52) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:35:57) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 69ms (View: 49, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:36:34) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 74ms (View: 48, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:37:31) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (2.0ms)
+Completed in 429ms (View: 321, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:37:34) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 41ms (View: 36, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:43:35) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 35ms (View: 13, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:43:38) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:43:43) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 34ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:43:52) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:43:56) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 38ms (View: 17, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:43:59) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:44:02) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:44:06) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 34ms (View: 13, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:44:58) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 35ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:45:01) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 45ms (View: 39, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:45:04) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:45:07) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:46:08) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (2.0ms)
+Completed in 99ms (View: 79, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:46:10) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:47:57) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 68ms (View: 48, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:48:03) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:48:30) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 68ms (View: 48, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:48:35) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:49:03) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (3.0ms)
+Completed in 70ms (View: 49, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:49:40) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (3.0ms)
+Completed in 431ms (View: 323, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:49:47) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 43ms (View: 37, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:50:35) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 74ms (View: 55, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:50:41) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:51:13) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (2.0ms)
+Completed in 73ms (View: 53, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:51:20) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 01:52:48) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (2.0ms)
+Completed in 66ms (View: 46, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:52:54) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 146ms (View: 140, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 01:52:57) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 01:55:00) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 109ms (View: 105, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-03 01:55:03) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 42ms (View: 36, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-03 01:55:51) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 01:55:57) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-03 01:56:33) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 01:57:21) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 53ms (View: 49, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-03 01:57:28) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091126085948)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (27.0ms)[0m   [0mDROP TABLE "accounts"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126085948'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091125082408)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Name" varchar(255), "Password" varchar(255), "Email" varchar(255), "isPermenant" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091125082408')[0m
+Migrating to CreateDocuments (20091126092535)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Name" varchar(255), "Body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126092535')[0m
+Migrating to CreateFileTabs (20091126094750)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "file_tabs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Name" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126094750')[0m
+Migrating to CreateComments (20091126095126)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Author" varchar(255), "Comment" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126095126')[0m
+Migrating to CreateLogs (20091126095243)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "logs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126095243')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("documents")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("file_tabs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("logs")[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 22:56:53) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (3.0ms)
+Completed in 483ms (View: 394, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-03 22:56:56) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 42ms (View: 36, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 22:57:41) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 54ms (View: 49, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 22:58:19) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 431ms (View: 342, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 22:58:28) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-03 22:58:36) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 48ms (View: 42, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 22:58:52) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 52ms (View: 48, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 22:59:31) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 420ms (View: 329, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 22:59:35) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-03 22:59:43) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 43ms (View: 37, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 22:59:47) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 22:59:54) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (2.0ms)
+Completed in 134ms (View: 110, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 22:59:59) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 42ms (View: 36, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 23:00:07) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 23:00:10) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 36ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 23:01:53) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 340ms (View: 335, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 23:01:56) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (2.0ms)
+Completed in 136ms (View: 111, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 23:01:58) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 49ms (View: 42, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 23:02:02) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 23:02:05) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 35ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLogs (20091126095243)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mDROP TABLE "logs"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126095243'[0m
+Migrating to CreateComments (20091126095126)
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "comments"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126095126'[0m
+Migrating to CreateFileTabs (20091126094750)
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "file_tabs"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126094750'[0m
+Migrating to CreateDocuments (20091126092535)
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "documents"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126092535'[0m
+Migrating to CreateAccounts (20091125082408)
+  [4;35;1mSQL (5.0ms)[0m   [0mDROP TABLE "accounts"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091125082408'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091125082408)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "email" varchar(255), "is_permanent" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091125082408')[0m
+Migrating to CreateDocuments (20091126092535)
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126092535')[0m
+Migrating to CreateFileTabs (20091126094750)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "file_tabs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126094750')[0m
+Migrating to CreateComments (20091126095126)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author" varchar(255), "comment" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126095126')[0m
+Migrating to CreateLogs (20091126095243)
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "logs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126095243')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("documents")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("file_tabs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("logs")[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 23:12:58) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 440ms (View: 345, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 23:13:01) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 23:13:08) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 24ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-03 23:13:15) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 45ms (View: 39, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 23:13:19) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 23:13:56) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 427ms (View: 330, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-03 23:14:00) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 45ms (View: 40, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 23:14:04) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-03 23:14:13) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 23:14:17) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 23:16:23) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 423ms (View: 331, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-03 23:16:28) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (1.0ms)
+Completed in 44ms (View: 38, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 23:16:31) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-03 23:16:35) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 23:16:37) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-03 23:16:40) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (1.0ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 23:16:43) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-03 23:18:25) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (1.0ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 23:18:28) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-03 23:46:40) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-03 23:46:46) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 23:46:47) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (3.0ms)
+Completed in 232ms (View: 208, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 23:46:55) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+ERROR: compiling _run_rjs_app47views47accounts47register46rjs RAISED C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:3: syntax error, unexpected '<', expecting keyword_end
+<% if flash[:reg_warning] %>
+ ^
+C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+<% if flash[:reg_warning] %>
+           ^
+C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:3: syntax error, unexpected '>'
+C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:5: syntax error, unexpected '<', expecting keyword_end
+<% elsif flash[:reg_notice] %>
+ ^
+C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:5: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+<% elsif flash[:reg_notice] %>
+              ^
+C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:5: syntax error, unexpected '>'
+C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:7: syntax error, unexpected '<', expecting keyword_end
+<% end %>
+ ^
+C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:7: syntax error, unexpected '>'
+C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:12: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _run_rjs_app47views47accounts47register46rjs(local_assigns)
+            old_output_buffer = output_buffer;;@template_format = :html;controller.response.content_type ||= Mime::JS;update_page do |page|;page.replace_html "register_warn", :partial => "register_warn"
+
+<% if flash[:reg_warning] %>
+  page[:reg_warning].visual_effect :highlight, :startcolor => "#CF3333", :endcolor => "#EB9898"
+<% elsif flash[:reg_notice] %>
+  page[:reg_notice].visual_effect :highlight, :startcolor => "#99CC99", :endcolor => "#CCFFCC"
+<% end %>
+
+end
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `module_eval'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `compile!'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+C:/Ruby1.9.1/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+C:/Ruby1.9.1/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action_with_flash'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process_with_filters'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `block in call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby1.9.1/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:3: syntax error, unexpected '<', expecting keyword_end
+<% if flash[:reg_warning] %>
+ ^
+C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+<% if flash[:reg_warning] %>
+           ^
+C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:3: syntax error, unexpected '>'
+C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:5: syntax error, unexpected '<', expecting keyword_end
+<% elsif flash[:reg_notice] %>
+ ^
+C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:5: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+<% elsif flash[:reg_notice] %>
+              ^
+C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:5: syntax error, unexpected '>'
+C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:7: syntax error, unexpected '<', expecting keyword_end
+<% end %>
+ ^
+C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:7: syntax error, unexpected '>'
+C:/275Project3/trunk/scribbles/app/views/accounts/register.rjs:12: syntax error, unexpected $end, expecting keyword_end) on line #3 of app/views/accounts/register.rjs:
+1: page.replace_html "register_warn", :partial => "register_warn"
+2: 
+3: <% if flash[:reg_warning] %>
+4:   page[:reg_warning].visual_effect :highlight, :startcolor => "#CF3333", :endcolor => "#EB9898"
+5: <% elsif flash[:reg_notice] %>
+6:   page[:reg_notice].visual_effect :highlight, :startcolor => "#99CC99", :endcolor => "#CCFFCC"
+
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (292.0ms)
+Rendered rescues/_request_and_response (6.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-03 23:48:51) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 34ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-03 23:49:51) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 40ms (View: 35, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-04 00:22:43) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 37ms (View: 16, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-04 00:22:52) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 40ms (View: 16, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 00:22:55) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 37ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 00:23:07) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 45ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-04 00:23:42) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 36ms (View: 15, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 00:23:44) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 46ms (View: 6, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-04 00:23:58) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 39ms (View: 16, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 00:24:02) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 44ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-04 00:27:31) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 37ms (View: 15, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 00:27:33) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 60ms (View: 7, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-04 00:36:02) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 36ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 00:36:10) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+
+NoMethodError (undefined method `each' for #<Account:0x4214310>):
+  app/controllers/accounts_controller.rb:25:in `register'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (240.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-04 00:36:31) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 34ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 00:36:34) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+
+NoMethodError (undefined method `to_u' for "name":String):
+  app/controllers/accounts_controller.rb:26:in `block in register'
+  app/controllers/accounts_controller.rb:25:in `register'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (251.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-04 00:37:29) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 41ms (View: 16, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 00:37:31) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 66ms (View: 6, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-04 00:38:41) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 37ms (View: 15, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 00:38:44) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 74ms (View: 9, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-04 00:42:09) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 36ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 00:42:15) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 165ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 00:43:45) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 60ms (View: 6, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 00:45:59) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 58ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-04 00:46:06) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 70ms (View: 48, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 00:46:09) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 62ms (View: 6, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 00:48:35) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"df", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 58ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 00:48:51) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"df", "password"=>"jh", "password2"=>"", "email"=>"", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 00:49:02) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"df", "password"=>"", "password2"=>"", "email"=>"df", "commit"=>"Register"}
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 59ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-04 01:03:03) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (0.0ms)
+Completed in 69ms (View: 47, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 01:03:08) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"kj", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'kj') LIMIT 1[0m
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 66ms (View: 9, DB: 1) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 01:03:19) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"kj", "password"=>"a", "password2"=>"a", "email"=>"", "commit"=>"Register"}
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'kj') LIMIT 1[0m
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 163ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 01:03:24) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"kj", "password"=>"a", "password2"=>"a", "email"=>"fds", "commit"=>"Register"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'kj') LIMIT 1[0m
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 63ms (View: 5, DB: 1) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-04 01:04:07) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 35ms (View: 14, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 01:04:46) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"jh", "password"=>"a", "password2"=>"a", "email"=>"fgf", "commit"=>"Register"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'jh') LIMIT 1[0m
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 62ms (View: 5, DB: 1) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 01:07:09) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"linh", "password"=>"linh", "password2"=>"linh", "email"=>"a.b_c@gmail.com", "commit"=>"Register"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;35;1mAccount Create (2.0ms)[0m   [0mINSERT INTO "accounts" ("name", "password", "email", "is_permanent", "created_at", "updated_at") VALUES('linh', 'linh', 'a.b_c@gmail.com', 't', '2009-12-04 09:07:09', '2009-12-04 09:07:09')[0m
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 161ms (View: 5, DB: 3) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 01:07:14) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"linh", "password"=>"linh", "password2"=>"linh", "email"=>"a.b_c@gmail.com", "commit"=>"Register"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 62ms (View: 6, DB: 1) | 200 OK [http://localhost/accounts/register]

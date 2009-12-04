@@ -1,8 +1,8 @@
 class CreateDocuments < ActiveRecord::Migration
   def self.up
     create_table :documents do |t|
-      t.string :Name
-      t.text :Body
+      t.string :name
+      t.text :body
 
       t.timestamps
     end

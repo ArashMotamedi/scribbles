@@ -6,7 +6,7 @@ class HomeController < ApplicationController
 
   # Login
   def login
-    flash[:pw_warning] = "Incorrect username or password"
+    flash.now[:pw_warning] = "Wrong username or password"
   end
 
 end
