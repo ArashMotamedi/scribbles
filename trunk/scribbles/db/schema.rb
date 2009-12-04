@@ -12,37 +12,37 @@
 ActiveRecord::Schema.define(:version => 20091126095243) do
 
   create_table "accounts", :force => true do |t|
-    t.string   "Name"
-    t.string   "Password"
-    t.string   "Email"
-    t.boolean  "isPermenant"
+    t.string   "name"
+    t.string   "password"
+    t.string   "email"
+    t.boolean  "is_permanent"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "comments", :force => true do |t|
-    t.string   "Author"
-    t.text     "Comment"
+    t.string   "author"
+    t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "documents", :force => true do |t|
-    t.string   "Name"
-    t.text     "Body"
+    t.string   "name"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "file_tabs", :force => true do |t|
-    t.string   "Name"
+    t.string   "name"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "logs", :force => true do |t|
-    t.text     "Description"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

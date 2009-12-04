@@ -1,2 +1,7 @@
 page.replace_html "register_warn", :partial => "register_warn"
-page[:reg_warning].visual_effect :highlight, :startcolor => "#9FC2FF", :endcolor => "#E8EEFA"
+
+if flash[:reg_warning]
+  page[:reg_warning].visual_effect :highlight, :startcolor => "#CF3333", :endcolor => "#EB9898"
+elsif flash[:reg_notice]
+  page[:reg_notice].visual_effect :highlight, :startcolor => "#99CC99", :endcolor => "#CCFFCC"
+end

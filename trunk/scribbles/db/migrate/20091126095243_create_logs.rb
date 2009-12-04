@@ -1,7 +1,7 @@
 class CreateLogs < ActiveRecord::Migration
   def self.up
     create_table :logs do |t|
-      t.text :Description
+      t.text :description
 
       t.timestamps
     end

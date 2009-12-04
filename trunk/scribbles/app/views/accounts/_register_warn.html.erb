@@ -1,3 +1,5 @@
 <% if flash[:reg_warning] %>
-  <div id="reg_warning" style="color:red;"><%= flash[:reg_warning] %></div>
+  <div id="reg_warning" class="warning"><%= flash[:reg_warning] %></div>
+<% elsif flash[:reg_notice] %>
+  <div id="reg_notice" class="notice"><%= flash[:reg_notice] %></div>
 <% end %>

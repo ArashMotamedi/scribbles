@@ -1,10 +1,10 @@
 class CreateAccounts < ActiveRecord::Migration
   def self.up
     create_table :accounts do |t|
-      t.string :Name
-      t.string :Password
-      t.string :Email
-      t.boolean :isPermenant
+      t.string :name
+      t.string :password
+      t.string :email
+      t.boolean :is_permanent
 
       t.timestamps
     end
