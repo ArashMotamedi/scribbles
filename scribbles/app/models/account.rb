@@ -1,4 +1,7 @@
 class Account < ActiveRecord::Base
+  has_many :documents
+
+  # Validation
   validates_presence_of :name
   validates_presence_of :password
   validates_presence_of :email
