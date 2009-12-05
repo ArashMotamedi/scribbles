@@ -8922,3 +8922,227 @@ Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 01:07:14) [P
 Rendering accounts/register
 Rendered accounts/_register_warn (0.0ms)
 Completed in 62ms (View: 6, DB: 1) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-04 02:19:35) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (3.0ms)
+Completed in 440ms (View: 326, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 02:19:41) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = '') LIMIT 1[0m
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 95ms (View: 37, DB: 1) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 02:44:50) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"j", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'j') LIMIT 1[0m
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 60ms (View: 5, DB: 1) | 200 OK [http://localhost/accounts/register]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-04 02:44:57) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (3.0ms)
+Completed in 126ms (View: 122, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-04 22:37:48) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 807ms (View: 564, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-04 22:38:16) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 71ms (View: 54, DB: 0) | 200 OK [http://localhost/home/login]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-04 22:38:21) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (3.0ms)
+Completed in 205ms (View: 147, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 22:38:25) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = '') LIMIT 1[0m
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 159ms (View: 57, DB: 1) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-04 22:38:30) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "name"=>"", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = '') LIMIT 1[0m
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 113ms (View: 5, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-04 23:34:11) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (can't convert Symbol into Integer) on line #14 of app/views/home/index.html.erb:
+11:   <div id="login_border" class="border">
+12:     <div id="login">
+13:       <h1 style="margin-top:5px">Sign in</h1>
+14:       <% form_remote_tag(session_path) do -%>
+15:         <table>
+16:           <tr>
+17:             <td class="label"><%= label_tag "username" %></td>
+
+    app/views/home/index.html.erb:14
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (366.0ms)
+Rendered rescues/_request_and_response (8.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-12-04 23:35:48) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 73ms (View: 69, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-04 23:36:52) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (can't convert Symbol into Integer) on line #14 of app/views/home/index.html.erb:
+11:   <div id="login_border" class="border">
+12:     <div id="login">
+13:       <h1 style="margin-top:5px">Sign in</h1>
+14:       <% form_remote_tag session_path do -%>
+15:         <table>
+16:           <tr>
+17:             <td class="label"><%= label_tag "username" %></td>
+
+    app/views/home/index.html.erb:14
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (457.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-04 23:37:43) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 132ms (View: 123, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-04 23:37:58) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template sessions/create.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-04 23:42:34) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 58ms (View: 54, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-04 23:42:41) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"", "password"=>"", "commit"=>"Login"}
+
+ActionView::MissingTemplate (Missing template sessions/create.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-04 23:56:50) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-04 23:57:02) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"linh", "password"=>"linh", "commit"=>"Login"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh' AND "accounts"."password" = 'linh') LIMIT 1[0m
+Redirected to http://localhost:3000/session?url%5Baction%5D=login&url%5Bcontroller%5D=home
+Completed in 222ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing SessionsController#show (for 127.0.0.1 at 2009-12-04 23:57:03) [GET]
+  Parameters: {"url"=>{"action"=>"login", "controller"=>"home"}}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, and new):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-05 00:01:40) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 69ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-05 00:01:54) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"linh", "password"=>"linh", "commit"=>"Login"}
+  [4;35;1mAccount Load (2.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh' AND "accounts"."password" = 'linh') LIMIT 1[0m
+Rendering home/login
+Rendered home/_login_warn (1.0ms)
+Completed in 106ms (View: 66, DB: 2) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-05 00:02:02) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"linhh", "password"=>"linh", "commit"=>"Login"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linhh' AND "accounts"."password" = 'linh') LIMIT 1[0m
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 41ms (View: 7, DB: 1) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-05 00:07:11) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"linhh", "password"=>"linh", "commit"=>"Login"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linhh' AND "accounts"."password" = 'linh') LIMIT 1[0m
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 48ms (View: 6, DB: 1) | 200 OK [http://localhost/home/login]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-05 00:08:02) [POST]
+  Parameters: {"authenticity_token"=>"2JRtHw32tJifZGtuZpfazagH+Gdle6UwuAMKnxxQOvw=", "username"=>"linh", "password"=>"linhf", "commit"=>"Login"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh' AND "accounts"."password" = 'linhf') LIMIT 1[0m
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 46ms (View: 5, DB: 1) | 200 OK [http://localhost/home/login]
