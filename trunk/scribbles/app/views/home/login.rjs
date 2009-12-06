@@ -1,2 +1,8 @@
-page.replace_html "login_warn", :partial => "login_warn"
-page[:pw_warning].visual_effect :highlight, :startcolor => "#CF3333", :endcolor => "#EB9898"
+# If login is successful, redirect to homepage
+if @current_user
+  page.redirect_to :controller => "documents"
+# If login not successful, print warning
+else
+  page.replace_html "login_warn", :partial => "login_warn"
+  page[:pw_warning].visual_effect :highlight, :startcolor => "#CF3333", :endcolor => "#EB9898"
+end
