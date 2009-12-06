@@ -21,7 +21,9 @@ class AccountsController < ApplicationController
     
     # Try to save
     if @newAcc.save
-      flash.now[:reg_notice] = @newAcc.name + " " + @newAcc.password + " " + @newAcc.email
+      # Log user in
+      @current_user = Account.find_by_name(@newAcc.name)
+      session[:user_id] = @current_user.id
     # Save failed, so show error message
     else
       @newAcc.errors.each do |attr,msg|
@@ -32,7 +34,7 @@ class AccountsController < ApplicationController
     
   end
   
-  #-- Below are private methods --
+  ### Below are private methods ###
   private
   
   # Method to do some validation

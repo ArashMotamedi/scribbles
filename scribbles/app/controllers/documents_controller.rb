@@ -1,4 +1,6 @@
 class DocumentsController < ApplicationController
+  before_filter :get_logged_in_user
+  
   def index
   end
   
@@ -15,4 +17,5 @@ class DocumentsController < ApplicationController
   def logout
     session[:user_id] = @current_user = nil
   end
+
 end
