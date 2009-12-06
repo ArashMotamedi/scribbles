@@ -1,9 +1,10 @@
 <% if session[:user_id] %>
+  User: <%= @current_user.name %>
   <%= link_to_remote "Logout", :url => {:action => "logout"} %>
 <% else %>
   <% form_remote_tag(:url => {:action => "login"}) do -%>
-    Username <%= text_field_tag "username" %>
-    Password <%= password_field_tag "password" %>
+    Username <%= text_field_tag "username", nil, :size => 8 %>
+    Password <%= password_field_tag "password", nil, :size => 8 %>
     <%= submit_tag "Login" %>
   <% end %>
 <% end %>

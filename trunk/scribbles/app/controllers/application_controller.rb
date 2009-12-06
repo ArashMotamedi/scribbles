@@ -7,4 +7,20 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  
+  ### Below are protected methods ###
+  protected
+  def redirect_if_logged_in
+    get_logged_in_user
+    if @current_user
+      redirect_to :controller => "documents", :pagename => @current_user.name
+    end
+  end
+  
+  def get_logged_in_user
+    if not session[:user_id]
+      return
+    end
+    @current_user = Account.find_by_id(session[:user_id])
+  end
 end

@@ -1,6 +1,6 @@
 # If login is successful, redirect to homepage
 if @current_user
-  page.redirect_to :controller => "documents"
+  page.redirect_to :controller => "documents", :pagename => @current_user.name
 # If login not successful, print warning
 else
   page.replace_html "login_warn", :partial => "login_warn"

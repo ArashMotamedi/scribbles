@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  before_filter :redirect_if_logged_in
 
   # Main landing page
   def index
