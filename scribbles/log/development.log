@@ -11690,3 +11690,249 @@ Rendered documents/_menu (0.0ms)
 Rendered documents/_textarea (0.0ms)
 Rendered documents/_comments (0.0ms)
 Completed in 46ms (View: 19, DB: 1) | 200 OK [http://localhost/linh]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-06 20:32:27) [GET]
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/test
+Filter chain halted as [:redirect_if_logged_in] rendered_or_redirected.
+Completed in 388ms (DB: 2) | 302 Found [http://localhost/]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-06 20:32:28) [GET]
+  Parameters: {"pagename"=>"test"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (12.0ms)
+Rendered documents/_messages (2.0ms)
+Rendered documents/_menu (2.0ms)
+Rendered documents/_textarea (2.0ms)
+Rendered documents/_comments (2.0ms)
+Completed in 308ms (View: 281, DB: 1) | 200 OK [http://localhost/test]
+
+
+Processing DocumentsController#logout (for 127.0.0.1 at 2009-12-06 20:32:38) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE="}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+Rendering documents/logout
+Rendered documents/_login (3.0ms)
+Completed in 65ms (View: 38, DB: 1) | 200 OK [http://localhost/documents/logout]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-06 20:32:45) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 118ms (View: 112, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-06 20:32:48) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (3.0ms)
+Completed in 140ms (View: 118, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-06 20:34:03) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "name"=>"linh", "password"=>"linh", "password2"=>"linh", "email"=>"linh@gmail.com", "commit"=>"Register"}
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 192ms (View: 36, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-06 20:34:09) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "name"=>"linh2", "password"=>"linh", "password2"=>"linh", "email"=>"linh@gmail.com", "commit"=>"Register"}
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'linh2') LIMIT 1[0m
+  [4;35;1mAccount Create (2.0ms)[0m   [0mINSERT INTO "accounts" ("name", "password", "email", "is_permanent", "created_at", "updated_at") VALUES('linh2', 'linh', 'linh@gmail.com', 't', '2009-12-07 04:34:09', '2009-12-07 04:34:09')[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh2') LIMIT 1[0m
+  [4;35;1mDocument Create (2.0ms)[0m   [0mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('default', '', 3, '2009-12-07 04:34:09', '2009-12-07 04:34:09')[0m
+Rendering accounts/register
+Completed in 316ms (View: 4, DB: 5) | 200 OK [http://localhost/accounts/register]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-06 20:34:10) [GET]
+  Parameters: {"pagename"=>"linh2"}
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (8.0ms)
+Rendered documents/_messages (0.0ms)
+Rendered documents/_menu (0.0ms)
+Rendered documents/_textarea (0.0ms)
+Rendered documents/_comments (1.0ms)
+Completed in 47ms (View: 20, DB: 0) | 200 OK [http://localhost/linh2]
+
+
+Processing DocumentsController#logout (for 127.0.0.1 at 2009-12-06 20:34:25) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE="}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 3) LIMIT 1[0m
+Rendering documents/logout
+Rendered documents/_login (3.0ms)
+Completed in 36ms (View: 9, DB: 1) | 200 OK [http://localhost/documents/logout]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-06 20:34:29) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-06 20:34:43) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (1.0ms)
+Completed in 36ms (View: 13, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-06 20:35:04) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "name"=>"linh3", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'linh3') LIMIT 1[0m
+Rendering accounts/register
+Rendered accounts/_register_warn (0.0ms)
+Completed in 62ms (View: 6, DB: 1) | 200 OK [http://localhost/accounts/register]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-06 21:03:35) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-06 21:04:19) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "username"=>"linh", "password"=>"linh", "commit"=>"Login"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh' AND "accounts"."password" = 'linh') LIMIT 1[0m
+Rendering home/login
+Completed in 70ms (View: 43, DB: 1) | 200 OK [http://localhost/home/login]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-06 21:04:20) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (8.0ms)
+Rendered documents/_messages (0.0ms)
+Rendered documents/_menu (0.0ms)
+Rendered documents/_textarea (0.0ms)
+Rendered documents/_comments (0.0ms)
+Completed in 81ms (View: 55, DB: 1) | 200 OK [http://localhost/linh]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-06 21:07:16) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (7.0ms)
+Rendered documents/_messages (0.0ms)
+Rendered documents/_menu (0.0ms)
+Rendered documents/_textarea (0.0ms)
+Rendered documents/_comments (0.0ms)
+Completed in 114ms (View: 88, DB: 0) | 200 OK [http://localhost/linh]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-06 21:08:24) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (7.0ms)
+Rendered documents/_messages (0.0ms)
+Rendered documents/_menu (0.0ms)
+Rendered documents/_textarea (0.0ms)
+Rendered documents/_comments (0.0ms)
+Completed in 80ms (View: 54, DB: 1) | 200 OK [http://localhost/linh]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-06 21:09:17) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (7.0ms)
+Rendered documents/_messages (0.0ms)
+Rendered documents/_menu (0.0ms)
+Rendered documents/_textarea (0.0ms)
+Rendered documents/_comments (1.0ms)
+Completed in 82ms (View: 55, DB: 1) | 200 OK [http://localhost/linh]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-06 21:09:56) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (7.0ms)
+Rendered documents/_messages (0.0ms)
+Rendered documents/_menu (0.0ms)
+Rendered documents/_textarea (0.0ms)
+Rendered documents/_comments (0.0ms)
+Completed in 83ms (View: 56, DB: 1) | 200 OK [http://localhost/linh]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-06 21:10:23) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (7.0ms)
+Rendered documents/_messages (0.0ms)
+Rendered documents/_menu (0.0ms)
+Rendered documents/_textarea (0.0ms)
+Rendered documents/_comments (0.0ms)
+Completed in 83ms (View: 55, DB: 1) | 200 OK [http://localhost/linh]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-06 21:10:45) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (7.0ms)
+Rendered documents/_messages (0.0ms)
+Rendered documents/_menu (0.0ms)
+Rendered documents/_textarea (1.0ms)
+Rendered documents/_comments (1.0ms)
+Completed in 81ms (View: 54, DB: 1) | 200 OK [http://localhost/linh]
+
+
+Processing DocumentsController#logout (for 127.0.0.1 at 2009-12-06 21:11:29) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE="}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+Rendering documents/logout
+Rendered documents/_login (3.0ms)
+Completed in 33ms (View: 8, DB: 1) | 200 OK [http://localhost/documents/logout]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-06 21:12:19) [GET]
+  Parameters: {"pagename"=>"linh"}
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (3.0ms)
+Rendered documents/_messages (1.0ms)
+Rendered documents/_menu (0.0ms)
+Rendered documents/_textarea (0.0ms)
+Rendered documents/_comments (0.0ms)
+Completed in 159ms (View: 51, DB: 0) | 200 OK [http://localhost/linh]
+
+
+Processing DocumentsController#login (for 127.0.0.1 at 2009-12-06 21:12:22) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "username"=>"", "password"=>"", "commit"=>"Login"}
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = '' AND "accounts"."password" = '') LIMIT 1[0m
+Rendering documents/login
+Rendered documents/_login (3.0ms)
+Rendered documents/_messages (1.0ms)
+Completed in 65ms (View: 39, DB: 0) | 200 OK [http://localhost/documents/login]
+
+
+Processing DocumentsController#login (for 127.0.0.1 at 2009-12-06 21:12:38) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "username"=>"linh", "password"=>"linh", "commit"=>"Login"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh' AND "accounts"."password" = 'linh') LIMIT 1[0m
+Rendering documents/login
+Rendered documents/_login (7.0ms)
+Rendered documents/_messages (0.0ms)
+Completed in 44ms (View: 13, DB: 1) | 200 OK [http://localhost/documents/login]

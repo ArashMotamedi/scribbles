@@ -2,6 +2,9 @@
   <div id="login">
     <%= render :partial => "login" %>
   </div>
+  <div id="logo">
+    <%= image_tag("scribbles-logo-mini.jpg") %>
+  </div>
 </div>
 <div id="messages">
   <%= render :partial => "messages" %>
@@ -27,6 +30,7 @@
 
 <style type="text/css">
   #top-ribbon { border-bottom:blue 1px solid; margin-left:auto; margin-right:auto; padding-bottom:5px; padding-top:5px; width:80%; }
-  #login { text-align:right }
+  #logo { text-align:left }
+  #login { float:right }
   #messages { width:80%; margin-left:auto; margin-right:auto }
 </style>
