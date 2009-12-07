@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20091126095243) do
   create_table "comments", :force => true do |t|
     t.string   "author"
     t.text     "comment"
+    t.integer  "document_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -38,12 +39,14 @@ ActiveRecord::Schema.define(:version => 20091126095243) do
   create_table "file_tabs", :force => true do |t|
     t.string   "name"
     t.text     "body"
+    t.integer  "document_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "logs", :force => true do |t|
     t.text     "description"
+    t.integer  "document_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

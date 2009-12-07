@@ -3,6 +3,7 @@ class CreateFileTabs < ActiveRecord::Migration
     create_table :file_tabs do |t|
       t.string :name
       t.text :body
+	  t.integer :document_id
 
       t.timestamps
     end
