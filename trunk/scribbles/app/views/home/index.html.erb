@@ -10,7 +10,7 @@
 <div id="form_container">
   <div id="login_border" class="border">
     <div id="login">
-      <h1 style="margin-top:5px">Sign in</h1>
+      <h2 style="margin-top:5px">Sign in</h2>
       <% form_remote_tag(:url => {:action => "login"}) do -%>
         <table>
           <tr>
@@ -35,22 +35,31 @@
 
   <div id="form_create_border" class="border">
     <div id="form_create">
-      <p>Form to create temp account</p>
+      <h2 style="margin-top:5px; text-align:center">Temporary account</h2>
+      <p>To create a temporary account that will expire in 7 days, just type your account name in the URL. For example:</p>
+      <p><b>http://localhost:3000/myaccount</b></p>
+      <p>Or just type your account name in the textbox below and click Create</p>
+      <span style="text-align:center">
+        <% form_tag(:action => "create_temp") do %>
+          <%= text_field_tag "temp_account" %>
+          <%= submit_tag "Create" %>
+        <% end %>
+      </span>
     </div>
   </div>
   <div class="clear"></div>
 </div>
 
 <style type="text/css">
-  #description { text-align:left; width:700px; margin-left:auto; margin-right:auto; }
+  #description { text-align:left; width:800px; margin-left:auto; margin-right:auto; }
   
-  #form_container { width:700px; margin-left:auto; margin-right:auto; }
+  #form_container { width:800px; margin-left:auto; margin-right:auto; }
   #login_border { float:left; width:48%; }
-  #login { background-color:#E8EEFA; padding:5px; }
+  #login { background-color:#E8EEFA; padding:5px; height:223px }
   #login_warn { text-align:center; margin-left:auto; margin-right:auto; width:80%; }
   
   #form_create_border { float:left; width:49%; }
-  #form_create { background-color:#E8EEFA; padding:5px }
+  #form_create { background-color:#E8EEFA; padding:5px; height:223px; text-align:left }
   
   .border { background-color:#FFFFFF; border:#C3D9FF 1px solid; padding:3px; }
   .label { text-align:right; width:45% }

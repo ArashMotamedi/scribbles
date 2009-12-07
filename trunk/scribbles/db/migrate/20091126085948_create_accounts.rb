@@ -4,6 +4,7 @@ class CreateAccounts < ActiveRecord::Migration
       t.string :name
       t.string :password
       t.string :email
+      t.integer :expiration  # -1 means no expiration
       t.boolean :is_permanent
 
       t.timestamps

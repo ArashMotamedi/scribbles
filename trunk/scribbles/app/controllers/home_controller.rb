@@ -15,5 +15,12 @@ class HomeController < ApplicationController
       flash.now[:pw_warning] = "Wrong username or password"
     end
   end
+  
+  # Create temp account
+  def create_temp
+    if params[:temp_account]
+      redirect_to :controller => "documents", :pagename => params[:temp_account]
+    end
+  end
 
 end

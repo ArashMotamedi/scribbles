@@ -17,6 +17,7 @@ class AccountsController < ApplicationController
     @newAcc.name = params[:name]
     @newAcc.password = params[:password]
     @newAcc.email = params[:email]
+    @newAcc.expiration = -1;
     @newAcc.is_permanent = true
     
     # Try to save

@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20091126095243) do
     t.string   "name"
     t.string   "password"
     t.string   "email"
+    t.integer  "expiration"
     t.boolean  "is_permanent"
     t.datetime "created_at"
     t.datetime "updated_at"
