@@ -24,7 +24,15 @@ class AccountsController < ApplicationController
       # Log user in
       @current_user = Account.find_by_name(@newAcc.name)
       session[:user_id] = @current_user.id
-    # Save failed, so show error message
+      
+      # Create default doc for account
+      newDoc = Document.new
+      newDoc.name = "default"
+      newDoc.account_id = @current_user.id
+      newDoc.body = ""
+      newDoc.save
+      
+    # Save account failed, so show error message
     else
       @newAcc.errors.each do |attr,msg|
         flash.now[:reg_warning] = attr.capitalize + " " + msg
