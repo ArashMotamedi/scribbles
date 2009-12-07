@@ -11399,3 +11399,294 @@ Processing DocumentsController#logout (for 127.0.0.1 at 2009-12-06 02:17:17) [PO
 Rendering documents/logout
 Rendered documents/_login (3.0ms)
 Completed in 37ms (View: 9, DB: 1) | 200 OK [http://localhost/documents/logout]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-06 15:41:50) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (7.0ms)
+Completed in 418ms (View: 411, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-06 15:42:04) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "username"=>"linh", "password"=>"linh", "commit"=>"Login"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh' AND "accounts"."password" = 'linh') LIMIT 1[0m
+Rendering home/login
+Completed in 328ms (View: 54, DB: 1) | 200 OK [http://localhost/home/login]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-06 15:42:05) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (12.0ms)
+Rendered documents/_messages (3.0ms)
+Completed in 175ms (View: 148, DB: 0) | 200 OK [http://localhost/linh]
+
+
+Processing DocumentsController#logout (for 127.0.0.1 at 2009-12-06 15:42:09) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE="}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+Rendering documents/logout
+Rendered documents/_login (3.0ms)
+Completed in 66ms (View: 39, DB: 1) | 200 OK [http://localhost/documents/logout]
+
+
+Processing DocumentsController#login (for 127.0.0.1 at 2009-12-06 15:42:17) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "username"=>"", "password"=>"", "commit"=>"Login"}
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = '' AND "accounts"."password" = '') LIMIT 1[0m
+Rendering documents/login
+Rendered documents/_login (3.0ms)
+Rendered documents/_messages (0.0ms)
+Completed in 69ms (View: 42, DB: 0) | 200 OK [http://localhost/documents/login]
+
+
+Processing DocumentsController#login (for 127.0.0.1 at 2009-12-06 15:47:55) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "username"=>"linh", "password"=>"linh", "commit"=>"Login"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh' AND "accounts"."password" = 'linh') LIMIT 1[0m
+Rendering documents/login
+Rendered documents/_login (7.0ms)
+Rendered documents/_messages (0.0ms)
+Completed in 39ms (View: 13, DB: 1) | 200 OK [http://localhost/documents/login]
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLogs (20091126095243)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mDROP TABLE "logs"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126095243'[0m
+Migrating to CreateComments (20091126095126)
+  [4;35;1mSQL (5.0ms)[0m   [0mDROP TABLE "comments"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126095126'[0m
+Migrating to CreateFileTabs (20091126094750)
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "file_tabs"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126094750'[0m
+Migrating to CreateDocuments (20091126092535)
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "documents"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126092535'[0m
+Migrating to CreateAccounts (20091126085948)
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "accounts"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126085948'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091126085948)
+Migrating to CreateDocuments (20091126092535)
+Migrating to CreateFileTabs (20091126094750)
+Migrating to CreateComments (20091126095126)
+Migrating to CreateLogs (20091126095243)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("documents")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("file_tabs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("logs")[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLogs (20091126095243)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "logs"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126095243'[0m
+Migrating to CreateComments (20091126095126)
+  [4;35;1mSQL (3.0ms)[0m   [0mDROP TABLE "comments"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126095126'[0m
+Migrating to CreateFileTabs (20091126094750)
+  [4;35;1mSQL (3.0ms)[0m   [0mDROP TABLE "file_tabs"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126094750'[0m
+Migrating to CreateDocuments (20091126092535)
+  [4;35;1mSQL (3.0ms)[0m   [0mDROP TABLE "documents"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126092535'[0m
+Migrating to CreateAccounts (20091126085948)
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "accounts"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126085948'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091126085948)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "email" varchar(255), "is_permanent" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126085948')[0m
+Migrating to CreateDocuments (20091126092535)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "body" text, "account_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126092535')[0m
+Migrating to CreateFileTabs (20091126094750)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "file_tabs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "body" text, "document_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126094750')[0m
+Migrating to CreateComments (20091126095126)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author" varchar(255), "comment" text, "document_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126095126')[0m
+Migrating to CreateLogs (20091126095243)
+  [4;35;1mSQL (4.0ms)[0m   [0mCREATE TABLE "logs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "document_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126095243')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("documents")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("file_tabs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("logs")[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-06 16:35:02) [GET]
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 529ms (View: 142, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-06 16:36:41) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "username"=>"linh", "password"=>"linh", "commit"=>"Login"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh' AND "accounts"."password" = 'linh') LIMIT 1[0m
+Rendering home/login
+Rendered home/_login_warn (1.0ms)
+Completed in 66ms (View: 38, DB: 2) | 200 OK [http://localhost/home/login]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-06 16:36:44) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (14.0ms)
+Completed in 173ms (View: 151, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-06 16:36:56) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "name"=>"linh", "password"=>"linh", "password2"=>"linh", "email"=>"linh@gmail.com", "commit"=>"Register"}
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;36;1mAccount Create (2.0ms)[0m   [0;1mINSERT INTO "accounts" ("name", "password", "email", "is_permanent", "created_at", "updated_at") VALUES('linh', 'linh', 'linh@gmail.com', 't', '2009-12-07 00:36:57', '2009-12-07 00:36:57')[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+Rendering accounts/register
+Completed in 179ms (View: 35, DB: 3) | 200 OK [http://localhost/accounts/register]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-06 16:36:57) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (12.0ms)
+Rendered documents/_messages (2.0ms)
+Completed in 164ms (View: 139, DB: 1) | 200 OK [http://localhost/linh]
+
+
+Processing DocumentsController#logout (for 127.0.0.1 at 2009-12-06 16:53:07) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE="}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+Rendering documents/logout
+Rendered documents/_login (110.0ms)
+Completed in 173ms (View: 146, DB: 1) | 200 OK [http://localhost/documents/logout]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-06 16:53:12) [GET]
+  Parameters: {"pagename"=>"asdf"}
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (2.0ms)
+Rendered documents/_messages (0.0ms)
+Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/asdf]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-06 17:49:49) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (3.0ms)
+Completed in 323ms (View: 316, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-06 17:49:51) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (3.0ms)
+Completed in 312ms (View: 109, DB: 0) | 200 OK [http://localhost/accounts/registration]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-06 17:50:19) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "name"=>"test", "password"=>"test", "password2"=>"test", "email"=>"test@gmail.com", "commit"=>"Register"}
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'test') LIMIT 1[0m
+  [4;35;1mAccount Create (2.0ms)[0m   [0mINSERT INTO "accounts" ("name", "password", "email", "is_permanent", "created_at", "updated_at") VALUES('test', 'test', 'test@gmail.com', 't', '2009-12-07 01:50:19', '2009-12-07 01:50:19')[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test') LIMIT 1[0m
+  [4;35;1mDocument Create (2.0ms)[0m   [0mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('default', '', 2, '2009-12-07 01:50:19', '2009-12-07 01:50:19')[0m
+Rendering accounts/register
+Completed in 351ms (View: 35, DB: 5) | 200 OK [http://localhost/accounts/register]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-06 17:50:20) [GET]
+  Parameters: {"pagename"=>"test"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (12.0ms)
+Rendered documents/_messages (3.0ms)
+Rendered documents/_menu (1.0ms)
+Rendered documents/_textarea (1.0ms)
+Rendered documents/_comments (1.0ms)
+Completed in 279ms (View: 253, DB: 1) | 200 OK [http://localhost/test]
+  [4;36;1mDocument Load (1.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."name" = 'default') LIMIT 1[0m
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-06 17:52:24) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (7.0ms)
+Rendered documents/_messages (0.0ms)
+Rendered documents/_menu (0.0ms)
+Rendered documents/_textarea (0.0ms)
+Rendered documents/_comments (0.0ms)
+Completed in 46ms (View: 19, DB: 1) | 200 OK [http://localhost/linh]
