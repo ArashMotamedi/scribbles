@@ -4,6 +4,7 @@ class DocumentsController < ApplicationController
   # Variables
   # @current_user - The currently logged in user
   # @this_doc - The document that is displayed on the page
+  # @doc_account - The account that this document 
   
   def index
     # Get the account of this page
@@ -31,6 +32,12 @@ class DocumentsController < ApplicationController
   
   def logout
     session[:user_id] = @current_user = nil
+  end
+  
+  def Print
+  end
+  
+  def Upload
   end
   
   #### Private methods below ####

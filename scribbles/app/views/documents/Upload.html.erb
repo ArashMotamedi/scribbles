@@ -1,0 +1,14 @@
+﻿<% content_for(:head) do -%>
+  <%= javascript_include_tag "Upload" %>
+  <%= stylesheet_link_tag "Upload" %>
+<% end -%>
+
+<body>
+	<div id="div_form">
+		<form name="upload" action="upload.aspx">
+		<input id="file" type="file" />
+		</form>
+	</div>
+	<div id="div_progress" class="progress">
+		</div>
+</body>

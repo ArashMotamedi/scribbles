@@ -1,36 +1,219 @@
-<div id="top-ribbon">
-  <div id="login">
-    <p><%= render :partial => "login" %></p>
-  </div>
-  <div id="logo">
-    <%= image_tag("scribbles-logo-mini.jpg") %>
-  </div>
-</div>
-<div id="messages">
-  <%= render :partial => "messages" %>
-</div>
+<% content_for(:head) do -%>
+  <%= javascript_include_tag "DocumentEditor" %>
+  <%= stylesheet_link_tag "DocumentEditor" %>
+<% end -%>
 
-<table>
-<tr>
-  <td>
-    <div id="menu">
-      <%= render :partial => "menu" %>
+<body onload="bodyLoad();" onresize="locateComponents();">
+    <div id="login">
+        <p><%= render :partial => "login" %></p>
     </div>
-  </td>
-  <td>
-    <div id="textarea">
-      <%= render :partial => "textarea" %>
+    <!-- <div class="clear" /> -->
+    <div id="messages">
+        <%= render :partial => "messages" %>
     </div>
-    <div id="comments">
-      <%= render :partial => "comments" %>
-    </div>
-  </td>
-</tr>
-</table>
-
-<style type="text/css">
-  #top-ribbon { border-bottom:blue 1px solid; margin-left:auto; margin-right:auto; padding-bottom:5px; padding-top:5px; width:80%; }
-  #logo { text-align:left }
-  #login { float:right }
-  #messages { width:80%; margin-left:auto; margin-right:auto }
-</style>
+	<img class="logo" src="images/scribbles.png" />
+	<div id="div_curtain" class="curtain" style="opacity: 1">
+	</div>
+	<iframe id="iframe_print" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"
+		class="hidden" src="/documents/Print"></iframe>
+	<div id="div_popup_comment" class="popup_ph">
+		<img src="images/button-comment.png" class="popup" />
+		<div class="popup_title">
+			Add a Comment</div>
+		<div class="popup_content">
+			Your Name:<br />
+			<input id="comment_name" class="popup" /><br />
+			Comment:<br />
+			<textarea id="comment_description" class="popup popup_comment"></textarea>
+		</div>
+		<div id="comment_error" class="popup_message">
+			<span class="note">Error: </span><span id="comment_error_message"></span>
+		</div>
+		<div id="comment_progress" class="popup_message">
+			<img src="images/loading.gif" class="loading" /><span class="progress">Adding comment...</span></div>
+		<div class="popup_buttons">
+			<input type="button" value="Submit" onclick="addComment();" />
+			<input type="button" value="Close" onclick="hidePopups(true);" />
+		</div>
+	</div>
+	<div id="div_popup_upload" class="popup_ph">
+		<img src="images/button-upload.png" class="popup" />
+		<div class="popup_title">
+			Upload a File</div>
+		<div class="popup_content">
+			File:<br />
+			<iframe id="iframe_upload" class="popup" frameborder="0" marginheight="0" marginwidth="0"
+				height="32" scrolling="no" src="about:blank"></iframe>
+			Description:<br />
+			<textarea id="upload_description" class="popup popup_file_description"></textarea>
+		</div>
+		<div id="upload_error" class="popup_message">
+			<span class="note">Error: </span><span id="upload_error_message"></span>
+		</div>
+		<div id="upload_progress" class="popup_message">
+			<img src="images/loading.gif" class="loading" /><span class="progress">Uploading file...</span></div>
+		<div class="popup_buttons">
+			<input type="button" value="Upload" onclick="uploadFile();" />
+			<input type="button" value="Close" onclick="hidePopups(true);" />
+		</div>
+	</div>
+	<div id="div_popup_protect" class="popup_ph">
+		<img src="images/button-protect.png" class="popup" />
+		<div class="popup_title">
+			Protect This Document</div>
+		<div class="popup_content">
+			Password:<br />
+			<input id="protect_password" type="password" class="popup" /><br />
+			Retype Password:<br />
+			<input id="protect_password_confirmation" type="password" class="popup" />
+		</div>
+		<div id="protect_error" class="popup_message">
+			<span class="note">Error: </span><span id="protect_error_message"></span>
+		</div>
+		<div id="protect_progress" class="popup_message">
+			<img src="images/loading.gif" class="loading" /><span class="progress">Setting up password...</span></div>
+		<div class="popup_buttons">
+			<input type="button" value="Protect" onclick="setPassword();" />
+			<input type="button" value="Close" onclick="hidePopups(true);" />
+		</div>
+	</div>
+	<div id="div_popup_share" class="popup_ph">
+		<img src="images/button-email.png" class="popup" />
+		<div class="popup_title">
+			Share This Document</div>
+		<div class="popup_content">
+			Your Name:<br />
+			<input id="share_name" class="popup" /><br />
+			Recipient's Email Address:<br />
+			<input id="share_recipient" class="popup" /><br />
+			Message:<br />
+			<textarea id="share_message" class="popup popup_message"></textarea>
+		</div>
+		<div id="share_error" class="popup_message">
+			<span class="note">Error: </span><span id="share_error_message"></span>
+		</div>
+		<div id="share_progress" class="popup_message">
+			<img src="images/loading.gif" class="loading" /><span class="progress">Sharing document...</span></div>
+		<div class="popup_buttons">
+			<input type="button" value="Email" onclick="emailLink();" />
+			<input type="button" value="Close" onclick="hidePopups(true);" />
+		</div>
+	</div>
+	<div id="div_button_protect" class="button button_inactive" onmouseover="activateButton(this, true);"
+		onmouseout="activateButton(this, false);">
+		<a href="javascript:void(0);" onclick="showPopup('protect');">
+			<img class="button" src="images/button-protect.png" /></a><br />
+		<a href="javascript:void(0);" onclick="showPopup('protect');">Protect</a>
+	</div>
+	<div id="div_button_share" class="button button_inactive" onmouseover="activateButton(this, true);"
+		onmouseout="activateButton(this, false);">
+		<a href="javascript:void(0);" onclick="showPopup('share');">
+			<img class="button" src="images/button-email.png" /></a><br />
+		<a href="javascript:void(0);" onclick="showPopup('share');">Share</a>
+	</div>
+	<div id="div_button_print" class="button button_inactive" onmouseover="activateButton(this, true);"
+		onmouseout="activateButton(this, false);">
+		<a href="javascript:void(0);" onclick="printDocument();">
+			<img class="button" src="images/button-print.png" /></a><br />
+		<a href="javascript:void(0);" onclick="printDocument();">Print</a>
+	</div>
+	<div id="div_button_comment" class="button button_inactive" style="visibility: hidden"
+		onmouseover="activateButton(this, true);" onmouseout="activateButton(this, false);">
+		<a href="javascript:void(0);" onclick="showPopup('comment');">
+			<img class="button" src="images/button-comment.png" /></a><br />
+		<a href="javascript:void(0);" onclick="showPopup('comment');">Comment</a>
+	</div>
+	<div id="div_button_upload" class="button button_inactive" onmouseover="activateButton(this, true);"
+		onmouseout="activateButton(this, false);">
+		<a href="javascript:void(0);" onclick="showPopup('upload');">
+			<img class="button" src="images/button-upload.png" /></a><br />
+		<a href="javascript:void(0);" onclick="showPopup('upload');">Upload</a>
+	</div>
+	<div id="div_document_lock" class="document_lock" style="opacity: 1">
+		<span id="document_lock_message"></span>
+		<img class="document_lock" src="images/document-lock.png" />
+	</div>
+	<div id="div_document_status" class="document_status" style="opacity: 1">
+	</div>
+	<div id="div_document_title" class="document_title">
+		Title</div>
+	<div id="div_textarea_ph" class="textarea_ph">
+		<div id="div_textarea_ph_top" class="textarea_ph_top">
+			<img src="images/textarea-top-left.png" class="corner left" />
+			<img src="images/textarea-top-right.png" class="corner right" />
+		</div>
+		<div id="div_textarea_ph_middle" class="textarea_ph_middle">
+			<div id="div_textarea_ph_left" class="textarea_ph_left">
+			</div>
+			<div id="div_textarea_content" class="textarea_content">
+				<textarea id="document_body" class="textarea_content" onchange="bodyChanged();" onkeypress="bodyChanged();"></textarea>
+			</div>
+			<div id="div_textarea_ph_right" class="textarea_ph_right">
+			</div>
+		</div>
+		<div id="div_textarea_ph_bottom" class="textarea_ph_bottom">
+			<img src="images/textarea-bottom-left.png" class="corner left" />
+			<img src="images/textarea-bottom-right.png" class="corner right" />
+		</div>
+	</div>
+	<div id="div_attachments_ph" class="textarea_ph">
+		<div id="div_attachments_ph_top" class="textarea_ph_top">
+			<img src="images/textarea-top-left.png" class="corner left" />
+			<img src="images/textarea-top-right.png" class="corner right" />
+		</div>
+		<div id="div_attachments_ph_middle" class="textarea_ph_middle">
+			<div id="div_attachments_ph_left" class="textarea_ph_left">
+			</div>
+			<div id="div_attachments_ph_content" class="textarea_content">
+				<div id="div_files" class="attachments">
+					<div class="file">
+						<img class="icon icon32" src="images/ext/pdf.gif" />
+						<div class="file_details">
+							<p class="file_header">
+								<span class="file_name"><a href="test.pdf">Test.pdf</a></span> uploaded on <span class="file_time">Dec. 7,
+									7:18 am</span></p>
+							<p>
+								It's amazing that we can upload files</p>
+						</div>
+					</div>
+					<div class="file">
+						<img class="icon icon32" src="images/ext/doc.gif" />
+						<div class="file_details">
+							<p class="file_header">
+								<span class="file_name"><a href="test.doc">Test.doc</a></span> uploaded on <span class="file_time">Dec. 7,
+									7:28 am</span></p>
+							<p>
+								Gotta love the icons! :D</p>
+						</div>
+					</div>					
+				</div>
+				<div id="div_comments" class="attachments" style="visibility: hidden">
+					<div class="comment">
+						<p class="comment_header">
+							<span class="comment_name">Arash</span> said on <span class="comment_time">Dec. 7, 7:01
+								am</span></p>
+						<p>
+							This is such a wonderful service :D</p>
+					</div>
+					<div class="comment">
+						<p class="comment_header">
+							<span class="comment_name">Linh</span> said on <span class="comment_time">Dec. 7, 8:01
+								am</span></p>
+						<p>
+							I kinda agree with that!</p>
+					</div>
+				</div>
+			</div>
+			<div id="div_attachments_ph_right" class="textarea_ph_right">
+			</div>
+		</div>
+		<div id="div_attachments_ph_bottom" class="textarea_ph_bottom">
+			<img src="images/textarea-bottom-left.png" class="corner left" />
+			<img src="images/textarea-bottom-right.png" class="corner right" />
+		</div>
+	</div>
+	<div id="div_tab_files" class="tab tab_active">
+		<a href="javascript:void(0);" onclick="activateTab('files');">Files</a></div>
+	<div id="div_tab_comments" class="tab tab_inactive">
+		<a href="javascript:void(0);" onclick="activateTab('comments');">Comments</a></div>
+</body>
