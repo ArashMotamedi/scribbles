@@ -1,0 +1,31 @@
+﻿body
+{
+	margin: 0px;
+	font-family: Consolas, Tahoma;
+	font-size: 10pt;
+}
+div
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+input
+{
+	font-family: Consolas, Tahoma;
+	font-size: 10pt;
+	width: 100%;
+}
+div.progress
+{
+	visibility: hidden;
+	padding-top: 8px;
+	color: Green;
+	font-weight: bold;
+}
+form
+{
+	margin: 0px;
+}
