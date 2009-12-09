@@ -16444,3 +16444,864 @@ ActionController::RoutingError (No route matches "/documents/images/scribbles-lo
   C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
 
 Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:01:36) [GET]
+  Parameters: {"pagename"=>"test27"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test27') LIMIT 1[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'test27') LIMIT 1[0m
+  [4;35;1mAccount Create (2.0ms)[0m   [0mINSERT INTO "accounts" ("name", "password", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('test27', NULL, NULL, 7, 'f', '2009-12-09 02:01:37', '2009-12-09 02:01:37')[0m
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test27') LIMIT 1[0m
+  [4;35;1mDocument Create (2.0ms)[0m   [0mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('Default', '', 22, '2009-12-09 02:01:37', '2009-12-09 02:01:37')[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (6.0ms)
+Rendered documents/_messages (3.0ms)
+Completed in 919ms (View: 207, DB: 9) | 200 OK [http://localhost/test27]
+
+
+Processing DocumentsController#Print (for 127.0.0.1 at 2009-12-08 18:01:38) [GET]
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/Print
+Completed in 72ms (View: 43, DB: 1) | 200 OK [http://localhost/documents/Print]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 18:01:39) [GET]
+
+ActionController::RoutingError (No route matches "/documents/images/scribbles-logo.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:02:02) [GET]
+  Parameters: {"pagename"=>"test28"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test28') LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'test28') LIMIT 1[0m
+  [4;36;1mAccount Create (1.0ms)[0m   [0;1mINSERT INTO "accounts" ("name", "password", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('test28', NULL, NULL, 7, 'f', '2009-12-09 02:02:02', '2009-12-09 02:02:02')[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test28') LIMIT 1[0m
+  [4;36;1mDocument Create (2.0ms)[0m   [0;1mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('Default', '', 23, '2009-12-09 02:02:02', '2009-12-09 02:02:02')[0m
+Rendering template within layouts/application
+Rendering documents/index
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #6 of app/views/documents/index.html.erb:
+3:   <%= stylesheet_link_tag "DocumentEditor" %>
+4: <% end -%>
+5: 
+6: <% set_page_title("#{@doc_account.name} (#{@this_doc.name})") %>
+7: 
+8: <body onload="bodyLoad();" onresize="locateComponents();">
+9:     <div id="login">
+
+    app/views/documents/index.html.erb:6
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (449.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:03:14) [GET]
+  Parameters: {"pagename"=>"test29"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test29') LIMIT 1[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'test29') LIMIT 1[0m
+  [4;35;1mAccount Create (2.0ms)[0m   [0mINSERT INTO "accounts" ("name", "password", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('test29', NULL, NULL, 7, 'f', '2009-12-09 02:03:14', '2009-12-09 02:03:14')[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test29') LIMIT 1[0m
+  [4;35;1mDocument Create (3.0ms)[0m   [0mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('Default', '', 24, '2009-12-09 02:03:14', '2009-12-09 02:03:14')[0m
+Rendering template within layouts/application
+Rendering documents/index
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #6 of app/views/documents/index.html.erb:
+3:   <%= stylesheet_link_tag "DocumentEditor" %>
+4: <% end -%>
+5: 
+6: <% set_page_title("#{@doc_account.name} (#{@this_doc.name})") %>
+7: 
+8: <body onload="bodyLoad();" onresize="locateComponents();">
+9:     <div id="login">
+
+    app/views/documents/index.html.erb:6
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (319.0ms)
+Rendered rescues/_request_and_response (7.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:05:34) [GET]
+  Parameters: {"pagename"=>"test30"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test30') LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'test30') LIMIT 1[0m
+  [4;35;1mAccount Create (3.0ms)[0m   [0mINSERT INTO "accounts" ("name", "password", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('test30', NULL, NULL, 7, 'f', '2009-12-09 02:05:34', '2009-12-09 02:05:34')[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test30') LIMIT 1[0m
+  [4;35;1mDocument Create (1.0ms)[0m   [0mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('Default', '', 25, '2009-12-09 02:05:34', '2009-12-09 02:05:34')[0m
+Rendering template within layouts/application
+Rendering documents/index
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #6 of app/views/documents/index.html.erb:
+3:   <%= stylesheet_link_tag "DocumentEditor" %>
+4: <% end -%>
+5: 
+6: <% set_page_title("#{@doc_account.name} (#{@this_doc.name})") %>
+7: 
+8: <body onload="bodyLoad();" onresize="locateComponents();">
+9:     <div id="login">
+
+    app/views/documents/index.html.erb:6
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (414.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 18:06:02) [GET]
+  Parameters: {"pagename"=>"test31"}
+
+NameError (uninitialized constant DocumentsController::Doc):
+  app/controllers/documents_controller.rb:9:in `<class:DocumentsController>'
+  app/controllers/documents_controller.rb:1:in `<top (required)>'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (253.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:07:14) [GET]
+  Parameters: {"pagename"=>"test32"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+
+NameError (uninitialized constant DocumentsController::Doc):
+  app/controllers/documents_controller.rb:11:in `index'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (344.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:07:52) [GET]
+  Parameters: {"pagename"=>"test32"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test32') LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'test32') LIMIT 1[0m
+  [4;36;1mAccount Create (2.0ms)[0m   [0;1mINSERT INTO "accounts" ("name", "password", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('test32', NULL, NULL, 7, 'f', '2009-12-09 02:07:52', '2009-12-09 02:07:52')[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test32') LIMIT 1[0m
+  [4;36;1mDocument Create (1.0ms)[0m   [0;1mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('Default', '', 26, '2009-12-09 02:07:53', '2009-12-09 02:07:53')[0m
+Rendering template within layouts/application
+Rendering documents/index
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #6 of app/views/documents/index.html.erb:
+3:   <%= stylesheet_link_tag "DocumentEditor" %>
+4: <% end -%>
+5: 
+6: <% set_page_title("#{@doc_account.name} (#{@this_doc.name})") %>
+7: 
+8: <body onload="bodyLoad();" onresize="locateComponents();">
+9:     <div id="login">
+
+    app/views/documents/index.html.erb:6
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (323.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:08:14) [GET]
+  Parameters: {"pagename"=>"test33"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test33') LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'test33') LIMIT 1[0m
+  [4;36;1mAccount Create (2.0ms)[0m   [0;1mINSERT INTO "accounts" ("name", "password", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('test33', NULL, NULL, 7, 'f', '2009-12-09 02:08:14', '2009-12-09 02:08:14')[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test33') LIMIT 1[0m
+  [4;36;1mDocument Create (2.0ms)[0m   [0;1mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('Default', '', 27, '2009-12-09 02:08:14', '2009-12-09 02:08:14')[0m
+Rendering template within layouts/application
+Rendering documents/index
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #6 of app/views/documents/index.html.erb:
+3:   <%= stylesheet_link_tag "DocumentEditor" %>
+4: <% end -%>
+5: 
+6: <% set_page_title("#{@doc_account.name} (#{@this_doc.name})") %>
+7: 
+8: <body onload="bodyLoad();" onresize="locateComponents();">
+9:     <div id="login">
+
+    app/views/documents/index.html.erb:6
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (419.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:19:01) [GET]
+  Parameters: {"pagename"=>"test34"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test34') LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'test34') LIMIT 1[0m
+  [4;36;1mAccount Create (2.0ms)[0m   [0;1mINSERT INTO "accounts" ("name", "password", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('test34', NULL, NULL, 7, 'f', '2009-12-09 02:19:01', '2009-12-09 02:19:01')[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test34') LIMIT 1[0m
+  [4;36;1mDocument Create (3.0ms)[0m   [0;1mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('Default', '', 28, '2009-12-09 02:19:01', '2009-12-09 02:19:01')[0m
+Rendering template within layouts/application
+Rendering documents/index
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #6 of app/views/documents/index.html.erb:
+3:   <%= stylesheet_link_tag "DocumentEditor" %>
+4: <% end -%>
+5: 
+6: <% set_page_title("#{@doc_account.name} (#{@this_doc.name})") %>
+7: 
+8: <body onload="bodyLoad();" onresize="locateComponents();">
+9:     <div id="login">
+
+    app/views/documents/index.html.erb:6
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (313.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:19:47) [GET]
+  Parameters: {"pagename"=>"test35"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test35') LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'test35') LIMIT 1[0m
+  [4;36;1mAccount Create (2.0ms)[0m   [0;1mINSERT INTO "accounts" ("name", "password", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('test35', NULL, NULL, 7, 'f', '2009-12-09 02:19:47', '2009-12-09 02:19:47')[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test35') LIMIT 1[0m
+  [4;36;1mDocument Create (2.0ms)[0m   [0;1mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('Default', '', 29, '2009-12-09 02:19:47', '2009-12-09 02:19:47')[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (5.0ms)
+Rendered documents/_messages (3.0ms)
+Completed in 531ms (View: 251, DB: 7) | 200 OK [http://localhost/test35]
+
+
+Processing DocumentsController#Print (for 127.0.0.1 at 2009-12-08 18:19:51) [GET]
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/Print
+Completed in 116ms (View: 64, DB: 1) | 200 OK [http://localhost/documents/Print]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 18:19:52) [GET]
+
+ActionController::RoutingError (No route matches "/documents/images/scribbles-logo.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:20:20) [GET]
+  Parameters: {"pagename"=>"test36"}
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test36') LIMIT 1[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'test36') LIMIT 1[0m
+  [4;35;1mAccount Create (1.0ms)[0m   [0mINSERT INTO "accounts" ("name", "password", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('test36', NULL, NULL, 7, 'f', '2009-12-09 02:20:20', '2009-12-09 02:20:20')[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test36') LIMIT 1[0m
+  [4;35;1mDocument Create (2.0ms)[0m   [0mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('Default', '', 30, '2009-12-09 02:20:20', '2009-12-09 02:20:20')[0m
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/documents_controller.rb:23:in `index'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (242.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:28:35) [GET]
+  Parameters: {"pagename"=>"test37"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test37') LIMIT 1[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'test37') LIMIT 1[0m
+  [4;35;1mAccount Create (2.0ms)[0m   [0mINSERT INTO "accounts" ("name", "password", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('test37', NULL, NULL, 7, 'f', '2009-12-09 02:28:35', '2009-12-09 02:28:35')[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test37') LIMIT 1[0m
+  [4;35;1mDocument Create (2.0ms)[0m   [0mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('Default', '', 31, '2009-12-09 02:28:35', '2009-12-09 02:28:35')[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (2.0ms)
+Rendered documents/_messages (0.0ms)
+Completed in 326ms (View: 13, DB: 8) | 200 OK [http://localhost/test37]
+
+
+Processing DocumentsController#Print (for 127.0.0.1 at 2009-12-08 18:28:38) [GET]
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/Print
+Completed in 37ms (View: 9, DB: 1) | 200 OK [http://localhost/documents/Print]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 18:28:38) [GET]
+
+ActionController::RoutingError (No route matches "/documents/images/scribbles-logo.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:30:14) [GET]
+  Parameters: {"pagename"=>"test38"}
+  [4;35;1mAccount Load (2.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test38') LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'test38') LIMIT 1[0m
+  [4;36;1mAccount Create (2.0ms)[0m   [0;1mINSERT INTO "accounts" ("name", "password", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('test38', NULL, NULL, 7, 'f', '2009-12-09 02:30:15', '2009-12-09 02:30:15')[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test38') LIMIT 1[0m
+  [4;36;1mDocument Create (2.0ms)[0m   [0;1mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('Default', '', 32, '2009-12-09 02:30:15', '2009-12-09 02:30:15')[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (1.0ms)
+Rendered documents/_messages (0.0ms)
+Completed in 374ms (View: 74, DB: 10) | 200 OK [http://localhost/test38]
+
+
+Processing DocumentsController#Print (for 127.0.0.1 at 2009-12-08 18:30:16) [GET]
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/Print
+Completed in 37ms (View: 10, DB: 1) | 200 OK [http://localhost/documents/Print]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 18:30:17) [GET]
+
+ActionController::RoutingError (No route matches "/documents/images/scribbles-logo.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:35:35) [GET]
+  Parameters: {"pagename"=>"test39"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test39') LIMIT 1[0m
+
+NoMethodError (undefined method `create_temp_account' for #<DocumentsController:0x3cba07c>):
+  app/controllers/documents_controller.rb:19:in `index'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (234.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:39:17) [GET]
+  Parameters: {"pagename"=>"test40"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test40') LIMIT 1[0m
+
+NoMethodError (undefined method `create_temp_account' for #<DocumentsController:0x372c614>):
+  app/controllers/documents_controller.rb:20:in `index'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (339.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:39:35) [GET]
+  Parameters: {"pagename"=>"test41"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test41') LIMIT 1[0m
+
+NoMethodError (undefined method `create_temp_account' for #<DocumentsController:0x4d00670>):
+  app/controllers/documents_controller.rb:20:in `index'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (230.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:41:01) [GET]
+  Parameters: {"pagename"=>"test41"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test41') LIMIT 1[0m
+
+NoMethodError (undefined method `create_temp_account' for #<DocumentsController:0x39b1484>):
+  app/controllers/documents_controller.rb:20:in `index'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (237.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 18:41:07) [GET]
+  Parameters: {"pagename"=>"test41"}
+
+MissingSourceFile (Missing helper file helpers/document_helper.rb):
+  app/controllers/documents_controller.rb:2:in `<class:DocumentsController>'
+  app/controllers/documents_controller.rb:1:in `<top (required)>'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (367.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:41:21) [GET]
+  Parameters: {"pagename"=>"test41"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test41') LIMIT 1[0m
+
+NoMethodError (undefined method `create_temp_account' for #<DocumentsController:0x4a9e47c>):
+  app/controllers/documents_controller.rb:20:in `index'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (233.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:43:57) [GET]
+  Parameters: {"pagename"=>"test41"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test41') LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'test41') LIMIT 1[0m
+  [4;35;1mAccount Create (2.0ms)[0m   [0mINSERT INTO "accounts" ("name", "password", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('test41', NULL, NULL, 7, 'f', '2009-12-09 02:43:57', '2009-12-09 02:43:57')[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test41') LIMIT 1[0m
+  [4;35;1mDocument Create (2.0ms)[0m   [0mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('Default', '', 33, '2009-12-09 02:43:57', '2009-12-09 02:43:57')[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (1.0ms)
+Rendered documents/_messages (1.0ms)
+Completed in 303ms (View: 13, DB: 6) | 200 OK [http://localhost/test41]
+
+
+Processing DocumentsController#Print (for 127.0.0.1 at 2009-12-08 18:43:58) [GET]
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/Print
+Completed in 38ms (View: 10, DB: 1) | 200 OK [http://localhost/documents/Print]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 18:44:00) [GET]
+
+ActionController::RoutingError (No route matches "/documents/images/scribbles-logo.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:50:54) [GET]
+  Parameters: {"pagename"=>"test40"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test40') LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'test40') LIMIT 1[0m
+  [4;36;1mAccount Create (3.0ms)[0m   [0;1mINSERT INTO "accounts" ("name", "password", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('test40', NULL, NULL, 7, 'f', '2009-12-09 02:50:54', '2009-12-09 02:50:54')[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test40') LIMIT 1[0m
+  [4;36;1mDocument Create (1.0ms)[0m   [0;1mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('Default', '', 34, '2009-12-09 02:50:55', '2009-12-09 02:50:55')[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (1.0ms)
+Rendered documents/_messages (0.0ms)
+Completed in 291ms (View: 12, DB: 7) | 200 OK [http://localhost/test40]
+
+
+Processing DocumentsController#Print (for 127.0.0.1 at 2009-12-08 18:50:56) [GET]
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/Print
+Completed in 36ms (View: 9, DB: 1) | 200 OK [http://localhost/documents/Print]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 18:50:57) [GET]
+
+ActionController::RoutingError (No route matches "/documents/images/scribbles-logo.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 18:51:11) [GET]
+
+ActionController::RoutingError (No route matches "/test.pdf" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-08 18:51:33) [GET]
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+Redirected to http://localhost:3000linh
+Filter chain halted as [:redirect_if_logged_in] rendered_or_redirected.
+Completed in 33ms (DB: 1) | 302 Found [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-08 18:51:35) [GET]
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+Redirected to http://localhost:3000linh
+Filter chain halted as [:redirect_if_logged_in] rendered_or_redirected.
+Completed in 31ms (DB: 1) | 302 Found [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-08 18:53:20) [GET]
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+Redirected to http://localhost:3000/linh
+Filter chain halted as [:redirect_if_logged_in] rendered_or_redirected.
+Completed in 32ms (DB: 1) | 302 Found [http://localhost/]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:53:21) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."account_id" = 14 AND "documents"."name" = 'Default') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (1.0ms)
+Rendered documents/_messages (1.0ms)
+Completed in 82ms (View: 26, DB: 3) | 200 OK [http://localhost/linh]
+
+
+Processing DocumentsController#Print (for 127.0.0.1 at 2009-12-08 18:53:22) [GET]
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/Print
+Completed in 38ms (View: 9, DB: 1) | 200 OK [http://localhost/documents/Print]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 18:53:23) [GET]
+
+ActionController::RoutingError (No route matches "/documents/images/scribbles-logo.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#logout (for 127.0.0.1 at 2009-12-08 18:53:38) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE="}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+Rendering documents/logout
+Rendered documents/_login (3.0ms)
+Completed in 66ms (View: 39, DB: 1) | 200 OK [http://localhost/documents/logout]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-08 18:53:42) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 221ms (View: 216, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-08 18:53:46) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "username"=>"linh", "password"=>"linh", "commit"=>"Login"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh' AND "accounts"."password" = 'linh') LIMIT 1[0m
+Rendering home/login
+Completed in 67ms (View: 40, DB: 1) | 200 OK [http://localhost/home/login]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:53:47) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."account_id" = 14 AND "documents"."name" = 'Default') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (2.0ms)
+Rendered documents/_messages (1.0ms)
+Completed in 77ms (View: 25, DB: 3) | 200 OK [http://localhost/linh]
+
+
+Processing DocumentsController#Print (for 127.0.0.1 at 2009-12-08 18:53:48) [GET]
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/Print
+Completed in 37ms (View: 9, DB: 1) | 200 OK [http://localhost/documents/Print]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 18:53:49) [GET]
+
+ActionController::RoutingError (No route matches "/documents/images/scribbles-logo.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#logout (for 127.0.0.1 at 2009-12-08 18:53:52) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE="}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 14) LIMIT 1[0m
+Rendering documents/logout
+Rendered documents/_login (3.0ms)
+Completed in 44ms (View: 15, DB: 1) | 200 OK [http://localhost/documents/logout]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-08 18:53:54) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-08 18:53:58) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (3.0ms)
+Completed in 136ms (View: 112, DB: 0) | 200 OK [http://localhost/accounts]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-08 18:54:09) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "name"=>"linh2", "password"=>"linh2", "password2"=>"linh2", "email"=>"linh2@linh2.com", "commit"=>"Register"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'linh2') LIMIT 1[0m
+  [4;35;1mAccount Create (2.0ms)[0m   [0mINSERT INTO "accounts" ("name", "password", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('linh2', 'linh2', 'linh2@linh2.com', -1, 't', '2009-12-09 02:54:09', '2009-12-09 02:54:09')[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh2') LIMIT 1[0m
+  [4;35;1mDocument Create (1.0ms)[0m   [0mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('Default', '', 35, '2009-12-09 02:54:10', '2009-12-09 02:54:10')[0m
+Rendering accounts/register
+Completed in 414ms (View: 36, DB: 5) | 200 OK [http://localhost/accounts/register]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:54:10) [GET]
+  Parameters: {"pagename"=>"linh2"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 35) LIMIT 1[0m
+  [4;35;1mAccount Load (2.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh2') LIMIT 1[0m
+  [4;36;1mDocument Load (1.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."account_id" = 35 AND "documents"."name" = 'Default') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (1.0ms)
+Rendered documents/_messages (0.0ms)
+Completed in 81ms (View: 26, DB: 4) | 200 OK [http://localhost/linh2]
+
+
+Processing DocumentsController#Print (for 127.0.0.1 at 2009-12-08 18:54:12) [GET]
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 35) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/Print
+Completed in 37ms (View: 9, DB: 1) | 200 OK [http://localhost/documents/Print]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 18:54:12) [GET]
+
+ActionController::RoutingError (No route matches "/documents/images/scribbles-logo.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#logout (for 127.0.0.1 at 2009-12-08 18:54:16) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE="}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 35) LIMIT 1[0m
+Rendering documents/logout
+Rendered documents/_login (3.0ms)
+Completed in 37ms (View: 9, DB: 1) | 200 OK [http://localhost/documents/logout]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-08 18:54:18) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#create_temp (for 127.0.0.1 at 2009-12-08 18:54:28) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "temp_account"=>"test50", "commit"=>"Go"}
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/home/create_temp]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:54:28) [GET]
+  Parameters: {"pagename"=>"test50"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test50') LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'test50') LIMIT 1[0m
+  [4;35;1mAccount Create (2.0ms)[0m   [0mINSERT INTO "accounts" ("name", "password", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('test50', NULL, NULL, 7, 'f', '2009-12-09 02:54:28', '2009-12-09 02:54:28')[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'test50') LIMIT 1[0m
+  [4;35;1mDocument Create (2.0ms)[0m   [0mINSERT INTO "documents" ("name", "body", "account_id", "created_at", "updated_at") VALUES('Default', '', 36, '2009-12-09 02:54:29', '2009-12-09 02:54:29')[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (3.0ms)
+Rendered documents/_messages (0.0ms)
+Completed in 275ms (View: 16, DB: 6) | 200 OK [http://localhost/test50]
+
+
+Processing DocumentsController#Print (for 127.0.0.1 at 2009-12-08 18:54:30) [GET]
+Rendering template within layouts/application
+Rendering documents/Print
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/documents/Print]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 18:54:31) [GET]
+
+ActionController::RoutingError (No route matches "/documents/images/scribbles-logo.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-08 18:54:34) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (0.0ms)
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#create_temp (for 127.0.0.1 at 2009-12-08 18:54:38) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "temp_account"=>"linh", "commit"=>"Go"}
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/home/create_temp]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:54:38) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."account_id" = 14 AND "documents"."name" = 'Default') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (3.0ms)
+Rendered documents/_messages (0.0ms)
+Completed in 80ms (View: 27, DB: 2) | 200 OK [http://localhost/linh]
+
+
+Processing DocumentsController#Print (for 127.0.0.1 at 2009-12-08 18:54:39) [GET]
+Rendering template within layouts/application
+Rendering documents/Print
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/documents/Print]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 18:54:40) [GET]
+
+ActionController::RoutingError (No route matches "/documents/images/scribbles-logo.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:56:02) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."account_id" = 14 AND "documents"."name" = 'Default') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (8.0ms)
+Rendered documents/_messages (3.0ms)
+Completed in 661ms (View: 214, DB: 2) | 200 OK [http://localhost/linh]
+
+
+Processing DocumentsController#Print (for 127.0.0.1 at 2009-12-08 18:56:04) [GET]
+Rendering template within layouts/application
+Rendering documents/Print
+Completed in 46ms (View: 41, DB: 0) | 200 OK [http://localhost/documents/Print]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 18:56:04) [GET]
+
+ActionController::RoutingError (No route matches "/documents/images/scribbles-logo.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-08 18:56:21) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."account_id" = 14 AND "documents"."name" = 'Default') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (3.0ms)
+Rendered documents/_messages (0.0ms)
+Completed in 126ms (View: 73, DB: 2) | 200 OK [http://localhost/linh]
+
+
+Processing DocumentsController#Print (for 127.0.0.1 at 2009-12-08 18:56:22) [GET]
+Rendering template within layouts/application
+Rendering documents/Print
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/documents/Print]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-08 18:56:23) [GET]
+
+ActionController::RoutingError (No route matches "/documents/images/scribbles-logo.jpg" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)

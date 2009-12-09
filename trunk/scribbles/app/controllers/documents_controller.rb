@@ -15,8 +15,8 @@ class DocumentsController < ApplicationController
       @this_doc = Document.find_by_account_id_and_name(@doc_account.id, DEFAULT_DOC_NAME)
     # Else, create a new temporary account and default doc
     else
-      # Method creates a temp account and returns the default doc
-      @this_doc = create_temp_account(params[:pagename])
+      # Method creates a temp account and returns the account and default doc
+      @doc_account,@this_doc = create_temp_account(params[:pagename])
     end
   end
   
@@ -46,7 +46,7 @@ class DocumentsController < ApplicationController
   #### Private methods below ####
   private
   
-  # Creates a new temporary account and returns the default doc for the account
+  # Creates a new temporary account and returns the account and the default doc for the account
   def create_temp_account(name)
     # Create the new account
     acc = Account.new
@@ -63,7 +63,7 @@ class DocumentsController < ApplicationController
     doc.body = ""
     doc.save!
     
-    return doc
+    return newAcc,doc
   end
 
 end

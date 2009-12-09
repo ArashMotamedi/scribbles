@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   def redirect_if_logged_in
     get_logged_in_user
     if @current_user
-      redirect_to @current_user.name
+      redirect_to "/#{@current_user.name}"
     end
   end
   
