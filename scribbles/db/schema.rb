@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20091126095243) do
     t.string   "name"
     t.text     "body"
     t.integer  "account_id"
+    t.string   "lockHolder"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
