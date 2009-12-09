@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
   
   ### CONSTANTS ###
-  DEFAULT_DOC_NAME = "Default"
+  DEFAULT_DOC_NAME = "My Document"
   
   ### Below are protected methods ###
   protected
