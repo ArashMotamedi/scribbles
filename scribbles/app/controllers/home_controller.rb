@@ -18,8 +18,10 @@ class HomeController < ApplicationController
   
   # Create temp account
   def create_temp
-    if params[:temp_account]
-      redirect_to :controller => "documents", :pagename => params[:temp_account]
+    render :update do |page|
+      if not params[:temp_account] == ""
+        page.redirect_to params[:temp_account]
+      end
     end
   end
 

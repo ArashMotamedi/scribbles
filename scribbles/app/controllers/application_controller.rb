@@ -8,12 +8,15 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
   
+  ### CONSTANTS ###
+  DEFAULT_DOC_NAME = "Default"
+  
   ### Below are protected methods ###
   protected
   def redirect_if_logged_in
     get_logged_in_user
     if @current_user
-      redirect_to :controller => "documents", :pagename => @current_user.name
+      redirect_to @current_user.name
     end
   end
   
