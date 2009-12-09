@@ -4,6 +4,7 @@ class CreateDocuments < ActiveRecord::Migration
       t.string  :name
       t.text    :body
       t.integer :account_id
+	  t.string  :lockHolder
 
       t.timestamps
     end

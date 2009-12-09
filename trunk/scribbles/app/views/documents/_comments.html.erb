@@ -1,0 +1,11 @@
+<% if session[:user_id] %>
+<h2>Enter Comments: </h2>
+<hr>
+<pre>
+Name: 		<input type="text" name="fname"  ><br/>
+Comment:	<textarea></textarea><br/>
+
+</pre>
+<%= submit_tag "Enter Comments" %>
+
+<% end %>
