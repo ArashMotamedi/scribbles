@@ -1,4 +1,4 @@
-<% @page_title = "#{@doc_account.name} (#{@this_doc.name})" %>
+<% @page_title = "-- #{@doc_account.name} (#{@this_doc.name})" -%>
 
 <% content_for(:head) do -%>
   <%= javascript_include_tag "DocumentEditor" %>
@@ -7,11 +7,10 @@
 
 <body onload="bodyLoad();" onresize="locateComponents();">
     <div id="login">
-        <p><%= render :partial => "login" %></p>
+        <%= render :partial => "login" -%>
     </div>
-    <!-- <div class="clear" /> -->
     <div id="messages">
-        <%= render :partial => "messages" %>
+        <%= render :partial => "messages" -%>
     </div>
 	<img class="logo" src="images/scribbles.png" />
 	<div id="div_curtain" class="curtain" style="opacity: 1">
