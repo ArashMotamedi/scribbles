@@ -28,7 +28,7 @@ class AccountsController < ApplicationController
       
       # Create default doc for account
       newDoc = Document.new
-      newDoc.name = "default"
+      newDoc.name = DEFAULT_DOC_NAME
       newDoc.account_id = @current_user.id
       newDoc.body = ""
       newDoc.save
