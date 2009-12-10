@@ -4,10 +4,35 @@
   <%= image_tag("scribbles-logo.jpg") %>
 </div>
 
-<div id="description">
-  <p><b>Authors:</b> Linh Vo, Arash Motamedi, Shreedhar Sundaram</p>
-  <p>Some description of the site goes here.</p>
-</div>
+<table id="description">
+<tr>
+  <td>
+    <div id="what" class="notes">
+      <h3>What</h3>
+      <p><b>Scribbles</b> is a flexible and easy to use online clipboard service built on the Ruby
+      on Rails framework. Store text and files on your own online clipboard, access them anywhere
+      and share them with anyone!</p>
+    </div>
+  </td>
+  <td>
+  <div id="who" class="notes">
+    <h3>Who</h3>
+    <p>Linh Vo<br />
+    Arash Motamedi<br />
+    Shreedhar Sundaram</p>
+  </div>
+  </td>
+  <td>
+  <div id="how" class="notes">
+    <h3>How</h3>
+    <p>You can register a permanent account or create a temporary account that expires in 7 days by
+    typing your account name in the URL. For example:</p>
+    <p><b>http://localhost:3000/name</b></p>
+  </div>
+  </td>
+</tr>
+</table>
+
 
 <div id="form_container">
   <div id="login_border" class="border">
@@ -30,7 +55,7 @@
         <%= render(:partial => "login_warn") %>
       </div>
       <span style="font-size:smaller">
-        Don't have an account? <%= link_to "Register", :controller => "accounts", :action => "registration" %>
+        Don't have an account? <a href="/accounts">Register</a>
       </span>
     </div>
   </div>
@@ -38,9 +63,8 @@
   <div id="form_create_border" class="border">
     <div id="form_create">
       <h2 style="margin-top:5px; text-align:center">Temporary account</h2>
-      <p>To create a temporary account that will expire in 7 days, just type your account name in the URL. For example:</p>
-      <p><b>http://localhost:3000/myaccount</b></p>
-      <p>Or just type your account name in the textbox below and click Go</p>
+      <p>Too lazy to type your temporary account name in the URL? That's okay! Just type your
+      account name in the textbox below and click Go.</p>
       <span style="text-align:center">
         <% form_remote_tag(:url => {:action => "create_temp"}) do %>
           <%= text_field_tag "temp_account" %>
@@ -55,15 +79,18 @@
 </body>
 
 <style type="text/css">
-  #description { text-align:left; width:800px; margin-left:auto; margin-right:auto; }
+  h2 { color:black }
+  h3 { color:black; margin:7px 0; }
+  #description { margin-bottom:10px; text-align:center; width:800px; margin-left:auto; margin-right:auto; }
+  .notes { background-image:url('../images/notes-bg.gif'); background-repeat:repeat-y; border-bottom:#D9D9D9 2px solid; border-right:#D9D9D9 1px solid; height:190px; padding:3px; width:230px; margin-left:auto; margin-right:auto; }
   
   #form_container { width:800px; margin-left:auto; margin-right:auto; }
-  #login_border { float:left; width:48%; }
-  #login { background-color:#E8EEFA; padding:5px; height:223px }
+  #login_border { float:left; width:49%; }
+  #login { background-color:#E8EEFA; padding:5px; height:190px }
   #login_warn { text-align:center; margin-left:auto; margin-right:auto; width:80%; }
   
   #form_create_border { float:left; width:49%; }
-  #form_create { background-color:#E8EEFA; padding:5px; height:223px; text-align:left }
+  #form_create { background-color:#E8EEFA; padding:5px; height:190px; text-align:left }
   
   .border { background-color:#FFFFFF; border:#C3D9FF 1px solid; padding:3px; }
   .label { text-align:right; width:45% }
