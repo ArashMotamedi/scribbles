@@ -389,7 +389,7 @@ function showPopup(popup) {
 
 	if (popup == "upload") {
 		popupDiv = popup_upload;
-		upload_file.src = "documents/UploadFile/" + documentId;
+		upload_file.src = "documents/Upload/" + documentId;
 	}
 	else if (popup == "comment") {
 		popupDiv = popup_comment;
