@@ -1,6 +1,6 @@
 ﻿function beginUpload(docId, description) {
 	// Write file name in the progress
-	var fileName = document.getElementById("file").value;
+	var fileName = document.getElementById("upload_datafile").value;
 	if (fileName == null || fileName == "") {
 		return false;
 	}
@@ -15,7 +15,6 @@
 	document.getElementById("div_progress").style.visibility = "visible";
 	
 	// Submit the form
-	document.forms[0].action = "/documents/UploadFile/" + docId;
 	document.forms[0].submit();
 	
 	return true;

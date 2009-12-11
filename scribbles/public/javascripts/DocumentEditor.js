@@ -632,6 +632,10 @@ function succeed(activity) {
 		setStatus("Comment added");
 		countdownRefresh = 1;
 	}
+	else if (activity == "upload") {
+		setStatus("File uploaded");
+		countdownRefresh = 1;
+	}
 	else if (activity == "document") {
 		setStatus("Document saved");
 		countdownRefresh = 1;
@@ -675,5 +679,14 @@ function updateDocument() {
 	if (document_body.value != body) {
 		document_body.value = body;
 		setStatus("Document refreshed");
+	}
+}
+
+function checkUploadStatus() {
+	var source = document.getElementById("iframe_upload").src;
+	var content = document.getElementById("iframe_upload").contentWindow.document.body.innerHTML;
+	if (source != "about:blank" && content.trim() == "")
+	{
+		succeed("upload");
 	}
 }
