@@ -191,7 +191,7 @@
 		<a href="javascript:void(0);" onclick="activateTab('comments');">Comments</a></div>
 		
 	<iframe id="iframe_comment" frameborder="0" height="0" scrolling="no" src="AddComment.aspx" class="hidden"></iframe>
-	<iframe id="iframe_comment_update" frameborder="0" height="0" scrolling="no" src="documents/RetrieveComments/<%= @this_doc.id -%>" class="hidden"></iframe>
+	<iframe id="iframe_comment_update" frameborder="0" height="0" scrolling="no" src="documents/RetrieveComments/<%= @this_doc.id -%>" class="hidden" onload="updateComments();"></iframe>
 
 	<iframe id="iframe_document" frameborder="0" height="0" scrolling="no" src="SaveDocument.aspx" class="hidden"></iframe>
 	<iframe id="iframe_document_update" frameborder="0" height="0" scrolling="no" src="RetrieveDocument.aspx" class="hidden"></iframe>
