@@ -1,4 +1,4 @@
-<% @page_title = "-- #{@doc_account.name} (#{@this_doc.name})" -%>
+<% @page_title = ": #{@doc_account.name} / #{@this_doc.name}" -%>
 
 <% content_for(:head) do -%>
   <%= javascript_include_tag "DocumentEditor" %>
@@ -15,8 +15,10 @@
 	<img class="logo" src="images/scribbles.png" />
 	<div id="div_curtain" class="curtain" style="opacity: 1">
 	</div>
+	<img id="img_loading" class="page_loading" src="images/loading.gif" />
+	<script>locateLoadingImage();</script>
 	<iframe id="iframe_print" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"
-		class="hidden" src="/documents/Print"></iframe>
+		class="hidden" src="Print.htm"></iframe>
 	<div id="div_popup_comment" class="popup_ph">
 		<img src="images/button-comment.png" class="popup" />
 		<div class="popup_title">
@@ -137,7 +139,7 @@
 	<div id="div_document_status" class="document_status" style="opacity: 1">
 	</div>
 	<div id="div_document_title" class="document_title">
-		<%= @this_doc.name -%></div>
+		<%= @doc_account.name -%> / <%= @this_doc.name -%></div>
 	<div id="div_textarea_ph" class="textarea_ph">
 		<div id="div_textarea_ph_top" class="textarea_ph_top">
 			<img src="images/textarea-top-left.png" class="corner left" />
@@ -166,44 +168,8 @@
 			<div id="div_attachments_ph_left" class="textarea_ph_left">
 			</div>
 			<div id="div_attachments_ph_content" class="textarea_content">
-				<div id="div_files" class="attachments">
-					<div class="file">
-						<img class="icon icon32" src="images/ext/pdf.gif" />
-						<div class="file_details">
-							<p class="file_header">
-								<span class="file_name"><a href="test.pdf">Test.pdf</a></span> uploaded on <span class="file_time">Dec. 7,
-									7:18 am</span></p>
-							<p>
-								It's amazing that we can upload files</p>
-						</div>
-					</div>
-					<div class="file">
-						<img class="icon icon32" src="images/ext/doc.gif" />
-						<div class="file_details">
-							<p class="file_header">
-								<span class="file_name"><a href="test.doc">Test.doc</a></span> uploaded on <span class="file_time">Dec. 7,
-									7:28 am</span></p>
-							<p>
-								Gotta love the icons! :D</p>
-						</div>
-					</div>					
-				</div>
-				<div id="div_comments" class="attachments" style="visibility: hidden">
-					<div class="comment">
-						<p class="comment_header">
-							<span class="comment_name">Arash</span> said on <span class="comment_time">Dec. 7, 7:01
-								am</span></p>
-						<p>
-							This is such a wonderful service :D</p>
-					</div>
-					<div class="comment">
-						<p class="comment_header">
-							<span class="comment_name">Linh</span> said on <span class="comment_time">Dec. 7, 8:01
-								am</span></p>
-						<p>
-							I kinda agree with that!</p>
-					</div>
-				</div>
+				<div id="div_files" class="attachments"></div>
+				<div id="div_comments" class="attachments" style="visibility: hidden"></div>
 			</div>
 			<div id="div_attachments_ph_right" class="textarea_ph_right">
 			</div>
@@ -217,4 +183,12 @@
 		<a href="javascript:void(0);" onclick="activateTab('files');">Files</a></div>
 	<div id="div_tab_comments" class="tab tab_inactive">
 		<a href="javascript:void(0);" onclick="activateTab('comments');">Comments</a></div>
+		
+	<iframe id="iframe_comment" frameborder="0" height="0" scrolling="no" src="AddComment.aspx" class="hidden"></iframe>
+	<iframe id="iframe_comment_update" frameborder="0" height="0" scrolling="no" src="RetrieveComments.aspx" class="hidden"></iframe>
+
+	<iframe id="iframe_document" frameborder="0" height="0" scrolling="no" src="SaveDocument.aspx" class="hidden"></iframe>
+	<iframe id="iframe_document_update" frameborder="0" height="0" scrolling="no" src="RetrieveDocument.aspx" class="hidden"></iframe>
+
 </body>
+</html>

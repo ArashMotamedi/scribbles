@@ -143,9 +143,11 @@ div.document_status
 
 div.document_title
 {
+	position: absolute;
 	font-size: 22pt;
 	font-weight: bold;
-	margin-left: 108px;
+	top: 10px;
+	left: 118px;
 }
 
 img.document_lock
