@@ -41691,3 +41691,55 @@ ActionController::UnknownAction (No action responded to RetrieveFiles. Actions: 
   C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
 
 Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-11 00:38:34) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/RetrieveBody
+Completed in 70ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
+
+
+Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-11 00:38:34) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
+Rendering documents/RetrieveComments
+Completed in 160ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
+
+
+Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-11 00:38:34) [GET]
+  Parameters: {"in_doc"=>"1"}
+
+ActionController::UnknownAction (No action responded to RetrieveFiles. Actions: Print, RetrieveBody, RetrieveComments, Upload, UploadFile, index, login, and logout):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-11 00:38:44) [GET]
+  Parameters: {"in_doc"=>"1"}
+
+ActionController::UnknownAction (No action responded to RetrieveFiles. Actions: Print, RetrieveBody, RetrieveComments, Upload, UploadFile, index, login, and logout):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-11 00:38:44) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/RetrieveBody
+Completed in 30ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
+
+
+Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-11 00:38:44) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
+Rendering documents/RetrieveComments
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
