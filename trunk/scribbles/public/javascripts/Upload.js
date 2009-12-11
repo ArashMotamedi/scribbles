@@ -9,7 +9,7 @@
 	// Add Description
 	document.getElementById("description").value = description;
 
-	document.getElementById("div_progress").innerHTML = fileName;
+	document.getElementById("div_progress").innerHTML = fileName.replace("\\", "");
 	
 	document.getElementById("div_form").style.visibility = "hidden";
 	document.getElementById("div_progress").style.visibility = "visible";
