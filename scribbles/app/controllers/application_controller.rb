@@ -26,4 +26,27 @@ class ApplicationController < ActionController::Base
     end
     @current_user = Account.find_by_id(session[:user_id])
   end
+  
+  # Creates a new temporary account and returns the account and the default doc for the account
+  def create_temp_account(name)
+    # Create the new account
+    acc = Account.new
+    acc.name = name
+    acc.expiration = 7;
+    acc.is_permanent = false
+    acc.save!
+    
+    # Create the default doc for the account
+    newAcc = Account.find_by_name(name)
+    doc = create_document(newAcc)
+    
+    return newAcc,doc
+  end
+  
+  def create_document(account)
+    doc.name = DEFAULT_DOC_NAME
+    doc.account_id = account.id
+    doc.body = ""
+    doc.save!
+  end
 end
