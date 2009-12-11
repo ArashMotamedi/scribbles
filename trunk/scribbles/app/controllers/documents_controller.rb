@@ -47,6 +47,10 @@ class DocumentsController < ApplicationController
     render :layout => false
   end
   
+  def AddComment
+    
+  end
+  
   def RetrieveComments
     @comments = Comment.find(:all,
                             :conditions => {:document_id => params[:in_doc]},
