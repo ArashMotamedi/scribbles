@@ -389,7 +389,7 @@ function showPopup(popup) {
 
 	if (popup == "upload") {
 		popupDiv = popup_upload;
-		upload_file.src = "Upload.htm";
+		upload_file.src = "documents/UploadFile/" + documentId;
 	}
 	else if (popup == "comment") {
 		popupDiv = popup_comment;
@@ -445,7 +445,7 @@ function hidePopups(hideCurtain) {
 }
 
 function uploadFile() {
-	if (!upload_file.contentWindow.beginUpload()) {
+	if (!upload_file.contentWindow.beginUpload(documentId, upload_description.value)) {
 		showError("upload", "Choose a file");
 		return;
 	}
