@@ -64,7 +64,7 @@ class DocumentsController < ApplicationController
     path = File.join(directory, name)
     File.open(path, "wb") { |f| f.write(upload['datafile'].read) }
     
-    redirect_to "/documents/Upload/" + params[:in_doc]
+    redirect_to "/documents/Success"
   end
 
 end
