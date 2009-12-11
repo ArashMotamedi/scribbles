@@ -47980,3 +47980,10 @@ ActionController::RoutingError (No route matches "/documents/RetrieveFiles/image
   C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
 
 Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#Comment (for 127.0.0.1 at 2009-12-11 01:24:06) [GET]
+  Parameters: {"in_doc"=>"1"}
+Rendering template within layouts/application
+Rendering documents/Comment
+Completed in 285ms (View: 279, DB: 0) | 200 OK [http://localhost/documents/Comment/1]
