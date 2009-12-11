@@ -53,5 +53,18 @@ class DocumentsController < ApplicationController
                             :order => "created_at DESC")
     render :layout => false
   end
+  
+  def UploadFile
+    upload = params[:upload]
+    name = upload['datafile'].original_filename
+    directory = "public/files/" + params[:in_doc]
+    if not FileTest::directory? directory
+      Dir::mkdir directory
+    end
+    path = File.join(directory, name)
+    File.open(path, "wb") { |f| f.write(upload['datafile'].read) }
+    
+    redirect_to "/documents/Upload/" + params[:in_doc]
+  end
 
 end

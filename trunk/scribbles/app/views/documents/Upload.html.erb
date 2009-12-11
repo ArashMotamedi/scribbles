@@ -4,11 +4,22 @@
 <% end -%>
 
 <body>
+<div id="div_form">
+<% form_tag({:action => "UploadFile", :in_doc => 1}, {:multipart => true}) do %> 
+<%= file_field "upload", "datafile" %></p>
+<input id="description" name="description" type="hidden" />
+<% end %>
+</div>
+<div id="div_progress" class="progress">
+		</div>
+
+<!--
 	<div id="div_form">
-		<form name="upload" action="upload.aspx">
-		<input id="file" type="file" />
+		<form name="upload" method="post" enctype="multipart/form-data">
+            <input id="file" name="file" type="file" />
+			<input id="description" name="description" type="hidden" />
 		</form>
 	</div>
 	<div id="div_progress" class="progress">
-		</div>
+		</div>-->
 </body>
