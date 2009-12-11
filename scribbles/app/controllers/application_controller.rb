@@ -43,10 +43,12 @@ class ApplicationController < ActionController::Base
     return newAcc,doc
   end
   
+  # Creates
   def create_document(account)
     doc.name = DEFAULT_DOC_NAME
     doc.account_id = account.id
     doc.body = ""
     doc.save!
+    doc = Document.find_by_account_id(account.id)
   end
 end
