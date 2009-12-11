@@ -20,9 +20,6 @@ class DocumentsController < ApplicationController
     end
   end
   
-  def do_cmd
-  end
-  
   def login
     @current_user = Account.find_by_name_and_password(params[:username], params[:password])
     if @current_user
@@ -40,30 +37,19 @@ class DocumentsController < ApplicationController
   def Print
   end
   
+  def RetrieveComments
+    @comment = Comment.find(:all,
+                            :conditions => {:document_id => params[:in_doc]},
+                            :order => "created_at DESC")
+    render :layout => false
+  end
+  
   def Upload
   end
   
   #### Private methods below ####
   private
   
-  # Creates a new temporary account and returns the account and the default doc for the account
-  def create_temp_account(name)
-    # Create the new account
-    acc = Account.new
-    acc.name = name
-    acc.expiration = 7;
-    acc.is_permanent = false
-    acc.save!
-    
-    # Create the default doc for the account
-    newAcc = Account.find_by_name(name)
-    doc = Document.new
-    doc.name = DEFAULT_DOC_NAME
-    doc.account_id = newAcc.id
-    doc.body = ""
-    doc.save!
-    
-    return newAcc,doc
-  end
+
 
 end
