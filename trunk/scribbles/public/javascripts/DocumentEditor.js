@@ -435,12 +435,12 @@ function hidePopups(hideCurtain) {
 	// Reset fields
 	upload_file.src="about:blank";
 	upload_description.value = "";
-	comment_name.value = "";
+	comment_name.value = loggedInUser;
 	comment_description.value = "";
 	protect_password.value = "";
 	protect_password_confirmation.value = "";
 	share_recipient.value = "";
-	share_name.value = "";
+	share_name.value = loggedInUser;
 	share_message.value = "Check out this document ;)";
 }
 
@@ -553,6 +553,7 @@ function countdown() {
 
 	if (countdownRefresh == 0) {
 		refreshComments();
+		refreshFiles();
 		if (!ownLock) {
 			refreshDocument();
 		}
@@ -577,6 +578,9 @@ function countdown() {
 
 function setStatus(message)
 {
+	if (document_status == null)
+		document_status = document.getElementById("div_document_status");
+		
 	document_status.innerHTML = message;
 	if (isMozilla) {
 		document_status.style.opacity = 1;
@@ -646,11 +650,24 @@ function updateComments() {
 	comments.innerHTML = comment;
 }
 
+function refreshFiles() {
+	document.getElementById("iframe_files_update").contentWindow.location.reload();
+}
+
+function updateFiles() {
+	var file = document.getElementById("iframe_files_update").contentWindow.document.body.innerHTML;
+	if (files == null)
+		files = document.getElementById("div_files");
+
+	files.innerHTML = file;
+}
+
 function refreshDocument() {
 	document.getElementById("iframe_document_update").contentWindow.location.reload();
 }
 
-function updateDocument(body) {
+function updateDocument() {
+	var body = document.getElementById("iframe_document_update").contentWindow.document.getElementById("documentBody").value;
 	if (document_body == null)
 		document_body = document.getElementById("document_body");
 
