@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20091126095243) do
     t.text     "body"
     t.integer  "account_id"
     t.string   "lock_holder"
+    t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20091126095243) do
   create_table "file_tabs", :force => true do |t|
     t.string   "name"
     t.text     "path"
+    t.text     "description"
     t.integer  "document_id"
     t.datetime "created_at"
     t.datetime "updated_at"

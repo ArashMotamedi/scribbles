@@ -45,6 +45,7 @@ class ApplicationController < ActionController::Base
   
   # Creates
   def create_document(account)
+    doc = Document.new
     doc.name = DEFAULT_DOC_NAME
     doc.account_id = account.id
     doc.body = ""

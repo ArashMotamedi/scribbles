@@ -48,9 +48,16 @@ class DocumentsController < ApplicationController
   end
   
   def RetrieveComments
-    @comment = Comment.find(:all,
+    @comments = Comment.find(:all,
                             :conditions => {:document_id => params[:in_doc]},
                             :order => "created_at DESC")
+    render :layout => false
+  end
+  
+  def RetrieveFiles
+    @files = FileTab.find(:all,
+                          :conditions => {:document_id => params[:in_doc]},
+                          :order => "name")
     render :layout => false
   end
   
@@ -62,6 +69,15 @@ class DocumentsController < ApplicationController
       Dir::mkdir directory
     end
     path = File.join(directory, name)
+    
+    # Add to DB
+    newFile = FileTab.new(:name => name,
+                          :path => path,
+                          :description => params[:description],
+                          :document_id => params[:in_doc])
+    newFile.save
+    
+    # Save file
     File.open(path, "wb") { |f| f.write(upload['datafile'].read) }
     
     redirect_to "/documents/Success"

@@ -1,5 +1,5 @@
-<% if @comment %>
-  <% @comment.each do |com|%>
+<% if @comments %>
+  <% @comments.each do |com| %>
   <div class="comment">
     <p class="comment_header">
       <span class="comment_name"><%= com.author %></span> said on <span class="comment_time"><%= com.created_at.to_time.strftime("%b %d, %Y %I:%M %p") %></span></p>
