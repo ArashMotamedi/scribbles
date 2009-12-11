@@ -37,19 +37,21 @@ class DocumentsController < ApplicationController
   def Print
   end
   
+  def Upload
+  end
+  
+  #### Commands ####
+  
+  def RetrieveBody
+    @body = Document.find(:first, :conditions => {:id => params[:in_doc]}).body
+    render :layout => false
+  end
+  
   def RetrieveComments
     @comment = Comment.find(:all,
                             :conditions => {:document_id => params[:in_doc]},
                             :order => "created_at DESC")
     render :layout => false
   end
-  
-  def Upload
-  end
-  
-  #### Private methods below ####
-  private
-  
-
 
 end

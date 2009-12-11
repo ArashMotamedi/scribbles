@@ -2,7 +2,7 @@ class CreateFileTabs < ActiveRecord::Migration
   def self.up
     create_table :file_tabs do |t|
       t.string :name
-      t.text :body
+      t.text :path
 	  t.integer :document_id
 
       t.timestamps
