@@ -15,7 +15,7 @@
 	document.getElementById("div_progress").style.visibility = "visible";
 	
 	// Submit the form
-	document.forms[0].action = "documents/UploadFile/" + docId;
+	document.forms[0].action = "/documents/UploadFile/" + docId;
 	document.forms[0].submit();
 	
 	return true;
