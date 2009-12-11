@@ -53,7 +53,7 @@ class DocumentsController < ApplicationController
                           :document_id => params[:in_doc])
     comment.save
     
-    redirect_to "documents/Comment"
+    redirect_to "documents/Comment/" + params[:in_doc]
   end
   
   def RetrieveComments
@@ -66,7 +66,7 @@ class DocumentsController < ApplicationController
   def RetrieveFiles
     @files = FileTab.find(:all,
                           :conditions => {:document_id => params[:in_doc]},
-                          :order => "name")
+                          :order => "created_at DESC")
     render :layout => false
   end
   
@@ -80,12 +80,15 @@ class DocumentsController < ApplicationController
     path = File.join(directory, name)
     
     #TODO Check if file already exists
-    # Add to DB
-    newFile = FileTab.new(:name => name,
+    #file = FileTab.find(:all, :conditions => {:document_id => params[:in_doc]})
+    #if file
+      # Add to DB
+      file = FileTab.new(:name => name,
                           :path => path,
                           :description => params[:description],
                           :document_id => params[:in_doc])
-    newFile.save
+      file.save
+    #end
     
     # Save file
     File.open(path, "wb") { |f| f.write(upload['datafile'].read) }
