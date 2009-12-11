@@ -685,7 +685,8 @@ function updateDocument() {
 function checkUploadStatus() {
 	var source = document.getElementById("iframe_upload").src;
 	var content = document.getElementById("iframe_upload").contentWindow.document.body.innerHTML;
-	if (source != "about:blank" && content.trim() == "")
+	
+	if (source != "about:blank" && content == "")
 	{
 		succeed("upload");
 	}
