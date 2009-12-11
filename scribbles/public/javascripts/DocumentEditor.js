@@ -691,3 +691,10 @@ function checkUploadStatus() {
 		succeed("upload");
 	}
 }
+var commented = false;
+function checkCommentStatus() {
+	if (commented)
+		succeed("comment");
+		
+	commented = true;
+}
