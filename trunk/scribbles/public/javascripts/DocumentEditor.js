@@ -638,7 +638,8 @@ function refreshComments() {
 	document.getElementById("iframe_comment_update").contentWindow.location.reload();
 }
 
-function updateComments(comment) {
+function updateComments() {
+	var comment = document.getElementById("iframe_comment_update").contentWindow.document.body.innerHTML;
 	if (comments == null)
 		comments = document.getElementById("div_comments");
 
