@@ -5,6 +5,13 @@
   <%= stylesheet_link_tag "DocumentEditor" %>
 <% end -%>
 
+<script>
+	documentId = <%= @this_doc.id -%>;
+	loggedInUser = '<% if (@current_user) -%>
+<%= @current_user.name -%>
+<% end -%>';
+</script>
+
 <body onload="bodyLoad();" onresize="locateComponents();">
     <div id="login">
         <%= render :partial => "login" -%>
@@ -138,8 +145,7 @@
 	</div>
 	<div id="div_document_status" class="document_status" style="opacity: 1">
 	</div>
-	<div id="div_document_title" class="document_title">
-		<%= @doc_account.name -%> / <%= @this_doc.name -%></div>
+	<div id="div_document_title" class="document_title"><%= @doc_account.name -%> / <%= @this_doc.name -%></div>
 	<div id="div_textarea_ph" class="textarea_ph">
 		<div id="div_textarea_ph_top" class="textarea_ph_top">
 			<img src="images/textarea-top-left.png" class="corner left" />
@@ -185,7 +191,7 @@
 		<a href="javascript:void(0);" onclick="activateTab('comments');">Comments</a></div>
 		
 	<iframe id="iframe_comment" frameborder="0" height="0" scrolling="no" src="AddComment.aspx" class="hidden"></iframe>
-	<iframe id="iframe_comment_update" frameborder="0" height="0" scrolling="no" src="RetrieveComments.aspx" class="hidden"></iframe>
+	<iframe id="iframe_comment_update" frameborder="0" height="0" scrolling="no" src="documents/RetrieveComments/<%= @this_doc.id -%>" class="hidden"></iframe>
 
 	<iframe id="iframe_document" frameborder="0" height="0" scrolling="no" src="SaveDocument.aspx" class="hidden"></iframe>
 	<iframe id="iframe_document_update" frameborder="0" height="0" scrolling="no" src="RetrieveDocument.aspx" class="hidden"></iframe>
