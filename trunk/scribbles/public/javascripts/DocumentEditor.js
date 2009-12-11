@@ -20,12 +20,13 @@ var curtain;
 // General variables
 var top = 55;
 var isMozilla = false;
+var ownLock = false;
 
 // Animation variables
 var faderButton, faderStatus, faderCurtain, faderLock;
 
 var fadingButton;
-var countdownStatus, countdownSave, countdownLock;
+var countdownStatus, countdownSave, countdownLock, countdownRefresh = 10;
 
 function bodyLoad() {
 	// Connect variables to components
@@ -98,11 +99,34 @@ function bodyLoad() {
 	// Locate all components
 	locateComponents();
 
+	// Fade out the loading image
+	var loadingImage = document.getElementById("img_loading");
+	loadingImage.style.visibility = "hidden";
+	loadingImage.style.top = "0px";
+	loadingImage.style.left = "0px";
+
 	// Fade out the white curtain
 	startFadeCurtain();
 
 	// Start the counter
 	window.setInterval("countdown();", 1000);
+}
+
+function locateLoadingImage() {
+	// Get the dimensions
+	var bodyWidth, bodyHeight;
+	if (isMozilla) {
+		bodyWidth = window.innerWidth;
+		bodyHeight = window.innerHeight;
+	}
+	else {
+		bodyWidth = document.documentElement.clientWidth;
+		bodyHeight = document.documentElement.clientHeight;
+	}
+
+	var loadingImage = document.getElementById("img_loading");
+	loadingImage.style.left = (bodyWidth / 2 - 16) + "px";
+	loadingImage.style.top = (bodyHeight / 2 - 16) + "px";
 }
 
 function locateComponents(){
@@ -365,7 +389,7 @@ function showPopup(popup) {
 
 	if (popup == "upload") {
 		popupDiv = popup_upload;
-		upload_file.src = "/documents/Upload";
+		upload_file.src = "Upload.htm";
 	}
 	else if (popup == "comment") {
 		popupDiv = popup_comment;
@@ -443,6 +467,8 @@ function addComment() {
 	}
 
 	showProgress("comment");
+	document.getElementById("iframe_comment").contentWindow.insertValues(comment_name.value, comment_description.value);
+	
 }
 
 function setPassword() {
@@ -512,21 +538,25 @@ function printDocument() {
 }
 
 function countdown() {
+	// Count down!
 	if (countdownSave >= 0)
-	{
-		// Decrement save countdown
 		countdownSave -= 1;
-	}
 	
 	if (countdownStatus >= 0)
-	{
-		// Decrement status countdown
 		countdownStatus -= 1;
-	}
 
-	if (countdownLock >= 0) {
-		// Decrement lock countdown
+	if (countdownLock >= 0)
 		countdownLock -= 1;
+
+	if (countdownRefresh >= 0)
+		countdownRefresh -= 1;
+
+	if (countdownRefresh == 0) {
+		refreshComments();
+		if (!ownLock) {
+			refreshDocument();
+		}
+		countdownRefresh = 10;
 	}
 
 	if (countdownSave == 0) {
@@ -561,9 +591,11 @@ function setStatus(message)
 
 function saveDocument() {
 	setStatus("Saving the document...");
+	document.getElementById("iframe_document").contentWindow.insertValues(document_body.value);	
 }
 
 function releaseLock() {
+	ownLock = false;
 	startFadeLock();
 }
 
@@ -574,6 +606,7 @@ function bodyChanged() {
 }
 
 function acquireLock() {
+	ownLock = true;
 	setLockMessage("You've got the lock");
 }
 
@@ -587,4 +620,42 @@ function setLockMessage(message) {
 	}
 
 	document_lock.style.visibility = "visible";
+}
+
+function succeed(activity) {
+	hidePopups(true);
+	if (activity == "comment") {
+		setStatus("Comment added");
+		countdownRefresh = 1;
+	}
+	else if (activity == "document") {
+		setStatus("Document saved");
+		countdownRefresh = 1;
+	}
+}
+
+function refreshComments() {
+	document.getElementById("iframe_comment_update").contentWindow.location.reload();
+}
+
+function updateComments(comment) {
+	if (comments == null)
+		comments = document.getElementById("div_comments");
+
+	comments.innerHTML = comment;
+}
+
+function refreshDocument() {
+	document.getElementById("iframe_document_update").contentWindow.location.reload();
+}
+
+function updateDocument(body) {
+	if (document_body == null)
+		document_body = document.getElementById("document_body");
+
+	// Any changes?
+	if (document_body.value != body) {
+		document_body.value = body;
+		setStatus("Document refreshed");
+	}
 }
