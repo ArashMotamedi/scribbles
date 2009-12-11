@@ -48,7 +48,12 @@ class DocumentsController < ApplicationController
   end
   
   def AddComment
+    comment = Comment.new(:author => params[:name],
+                          :comment => params[:comment],
+                          :document_id => params[:in_doc])
+    comment.save
     
+    redirect_to "documents/Comment"
   end
   
   def RetrieveComments
@@ -74,6 +79,7 @@ class DocumentsController < ApplicationController
     end
     path = File.join(directory, name)
     
+    #TODO Check if file already exists
     # Add to DB
     newFile = FileTab.new(:name => name,
                           :path => path,
