@@ -467,7 +467,7 @@ function addComment() {
 	}
 
 	showProgress("comment");
-	document.getElementById("iframe_comment").contentWindow.insertValues(comment_name.value, comment_description.value);
+	document.getElementById("iframe_comment").contentWindow.insertValues(documentId, comment_name.value, comment_description.value);
 	
 }
 

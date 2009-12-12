@@ -57,7 +57,7 @@ class DocumentsController < ApplicationController
                           :document_id => params[:in_doc])
     comment.save
     
-    redirect_to :url => {:action => "Comment", :in_doc => params[:in_doc]}
+    redirect_to "/documents/Comment"
   end
   
   def RetrieveComments

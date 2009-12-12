@@ -6,8 +6,8 @@
 <% end -%>
 
 <script>
-	documentId = <%= @this_doc.id -%>;
-	loggedInUser = "<% if (@current_user) -%>
+	var documentId = <%= @this_doc.id -%>;
+	var loggedInUser = "<% if (@current_user) -%>
 <%= @current_user.name -%>
 <% end -%>";
 </script>
