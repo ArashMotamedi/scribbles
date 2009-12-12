@@ -32,6 +32,7 @@ class AccountsController < ApplicationController
       newDoc.name = DEFAULT_DOC_NAME
       newDoc.account_id = @current_user.id
       newDoc.body = ""
+      newDoc.lock_holder = ""
       newDoc.save
       
     # Save account failed, so show error message

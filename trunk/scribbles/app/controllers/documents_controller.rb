@@ -116,5 +116,34 @@ class DocumentsController < ApplicationController
     
     redirect_to "/documents/Success"
   end
+  
+  def AcquireLock
+    # Get the document and lock
+    doc = Document.find(:first, :conditions => {:id => params[:in_doc]})
+    lock = doc.lock_holder
+    
+    # If lock is not held, then print 'Lock yours'
+    if lock == ""
+      @message = "Lock yours"
+      
+      # Assign user's name to lock
+      if @current_user
+        doc.update_attribute(:lock_holder, @current_user.name)
+      else
+        doc.update_attribute(:lock_holder, "Another person")
+      end
+    # Else, lock is held, so print the user holding the lock
+    else
+      @message = lock
+    end
+  
+    render :layout => false
+  end
+  
+  def ReleaseLock
+    doc = Document.find(:first, :conditions => {:id => params[:in_doc]})
+    doc.update_attribute(:lock_holder, "")
+    render :layout => false
+  end
 
 end
