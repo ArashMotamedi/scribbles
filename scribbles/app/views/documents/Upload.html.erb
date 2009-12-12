@@ -8,7 +8,6 @@
   <% form_tag({:action => "UploadFile", :in_doc => params[:in_doc]}, {:multipart => true}) do %> 
     <%= file_field "upload", "datafile" %>
     <input id="description" name="description" type="hidden" />
-    <%= submit_tag "Submit" %>
   <% end %>
 </div>
 <div id="div_progress" class="progress">
