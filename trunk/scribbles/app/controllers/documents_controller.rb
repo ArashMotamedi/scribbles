@@ -37,6 +37,10 @@ class DocumentsController < ApplicationController
   def Print
   end
   
+  def Comment
+    render :layout => false
+  end
+  
   def Upload
   end
   
@@ -53,7 +57,7 @@ class DocumentsController < ApplicationController
                           :document_id => params[:in_doc])
     comment.save
     
-    redirect_to "documents/Comment/" + params[:in_doc]
+    redirect_to :url => {:action => "Comment", :in_doc => params[:in_doc]}
   end
   
   def RetrieveComments
