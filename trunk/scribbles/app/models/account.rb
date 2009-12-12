@@ -5,6 +5,7 @@ class Account < ActiveRecord::Base
 
   # Validation
   validates_presence_of :name, :expiration
+  validates_format_of :name, :with => /^[\w\d_]+$/, :message => "can only be alphanumeric and no spaces"
   validates_inclusion_of :is_permanent, :in => [true, false]
   
   # Only do this validation if it's a permanent account

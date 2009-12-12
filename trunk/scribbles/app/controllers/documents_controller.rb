@@ -37,6 +37,10 @@ class DocumentsController < ApplicationController
   def Print
   end
   
+  def Body
+    render :layout => false
+  end
+  
   def Comment
     render :layout => false
   end
@@ -51,13 +55,11 @@ class DocumentsController < ApplicationController
     render :layout => false
   end
   
-  def AddComment
-    comment = Comment.new(:author => params[:name],
-                          :comment => params[:comment],
-                          :document_id => params[:in_doc])
-    comment.save
-    
-    redirect_to "/documents/Comment"
+  def UpdateBody
+    # Get the existing document
+    doc = Document.find(:first, :conditions => {:id => params[:in_doc]})
+    doc.update_attribute(:body, params[:documentBody])
+    redirect_to "/documents/Body/" + params[:in_doc]
   end
   
   def RetrieveComments
@@ -65,6 +67,15 @@ class DocumentsController < ApplicationController
                             :conditions => {:document_id => params[:in_doc]},
                             :order => "created_at DESC")
     render :layout => false
+  end
+  
+  def AddComment
+    comment = Comment.new(:author => params[:name],
+                          :comment => params[:comment],
+                          :document_id => params[:in_doc])
+    comment.save
+    
+    redirect_to "/documents/Comment"
   end
   
   def RetrieveFiles
