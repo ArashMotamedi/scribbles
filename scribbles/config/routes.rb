@@ -42,8 +42,8 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'accounts', :controller => 'accounts', :action => 'registration'
   map.connect 'accounts/:action', :controller => 'accounts'
   map.connect 'documents/:action', :controller => 'documents'
-  map.connect ':pagename', :controller => 'documents', :action => 'index'
   map.connect 'documents/:action/:in_doc', :controller => 'documents'
+  map.connect ':pagename', :controller => 'documents', :action => 'index'
   
   #map.connect ':controller/:action/:id'
   #map.connect ':controller/:action/:id.:format'

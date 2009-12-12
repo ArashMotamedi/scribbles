@@ -49,6 +49,7 @@ class ApplicationController < ActionController::Base
     doc.name = DEFAULT_DOC_NAME
     doc.account_id = account.id
     doc.body = ""
+    doc.lock_holder = ""
     doc.save!
     doc = Document.find_by_account_id(account.id)
   end
