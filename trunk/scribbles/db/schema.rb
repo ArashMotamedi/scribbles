@@ -13,7 +13,8 @@ ActiveRecord::Schema.define(:version => 20091126095243) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
-    t.string   "password"
+    t.string   "secure_password"
+    t.string   "salt"
     t.string   "email"
     t.integer  "expiration"
     t.boolean  "is_permanent"

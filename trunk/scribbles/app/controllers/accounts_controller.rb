@@ -8,14 +8,15 @@ class AccountsController < ApplicationController
   # Register a user
   def register
     # Some validation
-    if not isValid(params)
-      return
-    end
+    #if not isValid(params)
+    #  return
+    #end
     
     # Validation done, now save it
     @newAcc = Account.new
     @newAcc.name = params[:name]
     @newAcc.password = params[:password]
+    @newAcc.password_confirmation = params[:password2]
     @newAcc.email = params[:email]
     @newAcc.expiration = -1;
     @newAcc.is_permanent = true
@@ -35,6 +36,7 @@ class AccountsController < ApplicationController
       
     # Save account failed, so show error message
     else
+      #TODO can use errors.first
       @newAcc.errors.each do |attr,msg|
         flash.now[:reg_warning] = attr.capitalize + " " + msg
         break
