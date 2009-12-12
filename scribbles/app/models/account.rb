@@ -23,12 +23,10 @@ class Account < ActiveRecord::Base
   def self.authenticate(username, pw)
     acc = find(:first, :conditions => {:name => username})
     if acc.nil?
-      puts "returning nil"
       return nil
     end
     
     if Account.encrypt(pw, acc.salt) == acc.secure_password
-      puts "in encrypt"
       return acc
     end
 

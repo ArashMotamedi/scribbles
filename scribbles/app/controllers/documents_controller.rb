@@ -45,6 +45,10 @@ class DocumentsController < ApplicationController
     render :layout => false
   end
   
+  def Password
+    render :layout => false
+  end
+  
   def Upload
   end
   
@@ -144,6 +148,13 @@ class DocumentsController < ApplicationController
     doc = Document.find(:first, :conditions => {:id => params[:in_doc]})
     doc.update_attribute(:lock_holder, "")
     render :layout => false
+  end
+  
+  def SetPassword
+    # Get the document and set password
+    doc = Document.find(:first, :conditions => {:id => params[:in_doc]})
+    doc.update_attribute(:password, params[:password])
+    redirect_to "/documents/Password"
   end
 
 end

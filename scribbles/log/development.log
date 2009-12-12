@@ -64230,2310 +64230,1282 @@ Rendering documents/Body
 Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/documents/Body/1?documentBody=lkdsfj%0D%0A+aa+as%0D%0A+fa]
 
 
-Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 02:06:37) [GET]
-  Parameters: {"pagename"=>"linh"}
-  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."account_id" = 1 AND "documents"."name" = 'My Document') LIMIT 1[0m
+Processing HomeController#index (for 127.0.0.1 at 2009-12-12 01:25:15) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 377ms (View: 368, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-12 01:25:20) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (3.0ms)
+Completed in 450ms (View: 130, DB: 0) | 200 OK [http://localhost/accounts]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-12 01:25:32) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "name"=>"ds ld fa", "password"=>"", "password2"=>"", "email"=>"", "commit"=>"Register"}
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'ds ld fa') LIMIT 1[0m
+Rendering accounts/register
+Rendered accounts/_register_warn (1.0ms)
+Completed in 169ms (View: 41, DB: 0) | 200 OK [http://localhost/accounts/register]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-12 01:25:46) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (1.0ms)
+Completed in 27ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#login (for 127.0.0.1 at 2009-12-12 01:25:52) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "username"=>"dsaf  fds", "password"=>"sdf", "commit"=>"Login"}
+  [4;35;1mAccount Load (2.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'dsaf fds') LIMIT 1[0m
+Rendering home/login
+Rendered home/_login_warn (0.0ms)
+Completed in 113ms (View: 40, DB: 2) | 200 OK [http://localhost/home/login]
+
+
+Processing DocumentsController#AcquireLock (for 127.0.0.1 at 2009-12-12 01:58:27) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;36;1mDocument Load (2.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/AcquireLock
+Completed in 159ms (View: 64, DB: 2) | 200 OK [http://localhost/documents/AcquireLock/1]
+  [4;36;1mSQL (3.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLogs (20091126095243)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "logs"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126095243'[0m
+Migrating to CreateComments (20091126095126)
+  [4;35;1mSQL (6.0ms)[0m   [0mDROP TABLE "comments"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126095126'[0m
+Migrating to CreateFileTabs (20091126094750)
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "file_tabs"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126094750'[0m
+Migrating to CreateDocuments (20091126092535)
+  [4;35;1mSQL (11.0ms)[0m   [0mDROP TABLE "documents"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126092535'[0m
+Migrating to CreateAccounts (20091126085948)
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "accounts"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126085948'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091126085948)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "secure_password" varchar(255), "salt" varchar(255), "email" varchar(255), "expiration" integer, "is_permanent" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126085948')[0m
+Migrating to CreateDocuments (20091126092535)
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "body" text, "account_id" integer, "lock_holder" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126092535')[0m
+Migrating to CreateFileTabs (20091126094750)
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "file_tabs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "path" text, "description" text, "document_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126094750')[0m
+Migrating to CreateComments (20091126095126)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author" varchar(255), "comment" text, "document_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126095126')[0m
+Migrating to CreateLogs (20091126095243)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "logs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "document_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126095243')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("documents")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("file_tabs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("logs")[0m
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 02:01:10) [GET]
+  Parameters: {"pagename"=>"user"}
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'user') LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'user') LIMIT 1[0m
+  [4;36;1mAccount Create (2.0ms)[0m   [0;1mINSERT INTO "accounts" ("name", "secure_password", "salt", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('user', NULL, NULL, NULL, 7, 'f', '2009-12-12 10:01:11', '2009-12-12 10:01:11')[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'user') LIMIT 1[0m
+  [4;36;1mDocument Create (2.0ms)[0m   [0;1mINSERT INTO "documents" ("name", "body", "account_id", "lock_holder", "password", "created_at", "updated_at") VALUES('My Document', '', 1, '', NULL, '2009-12-12 10:01:11', '2009-12-12 10:01:11')[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."account_id" = 1) LIMIT 1[0m
 Rendering template within layouts/application
 Rendering documents/index
-Rendered documents/_login (0.0ms)
-Rendered documents/_messages (10.0ms)
-Completed in 6740ms (View: 941, DB: 0) | 200 OK [http://localhost/linh]
+Rendered documents/_login (10.0ms)
+Rendered documents/_messages (3.0ms)
+Completed in 1037ms (View: 240, DB: 6) | 200 OK [http://localhost/user]
 
 
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 02:06:46) [GET]
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 02:01:13) [GET]
 
 ActionController::RoutingError (No route matches "/Print.htm" with {:method=>:get}):
   <internal:prelude>:8:in `synchronize'
-  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
 
 Rendering rescues/layout (not_found)
 
 
-Processing DocumentsController#Comment (for 127.0.0.1 at 2009-12-12 02:06:47) [GET]
+Processing DocumentsController#Comment (for 127.0.0.1 at 2009-12-12 02:01:17) [GET]
   Parameters: {"in_doc"=>"1"}
 Rendering documents/Comment
-Completed in 421ms (View: 391, DB: 0) | 200 OK [http://localhost/documents/Comment/1]
+Completed in 47ms (View: 41, DB: 0) | 200 OK [http://localhost/documents/Comment/1]
 
 
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:06:48) [GET]
+Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:01:17) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 2323ms (View: 2243, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:06:51) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (10.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
+  [4;36;1mFileTab Load (1.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
 Rendering documents/RetrieveFiles
-Completed in 270ms (View: 130, DB: 10) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+Completed in 87ms (View: 57, DB: 1) | 200 OK [http://localhost/documents/RetrieveFiles/1]
 
 
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 02:06:51) [GET]
+Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:01:17) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;35;1mDocument Load (3.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/RetrieveBody
+Completed in 112ms (View: 61, DB: 3) | 200 OK [http://localhost/documents/RetrieveBody/1]
+
+
+Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:01:18) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;36;1mComment Load (2.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
+Rendering documents/RetrieveComments
+Completed in 62ms (View: 39, DB: 2) | 200 OK [http://localhost/documents/RetrieveComments/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 02:01:18) [GET]
 
 ActionController::RoutingError (No route matches "/SaveDocument.aspx" with {:method=>:get}):
   <internal:prelude>:8:in `synchronize'
-  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
 
 Rendering rescues/layout (not_found)
 
 
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:06:51) [GET]
+Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:01:29) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 200ms (View: 90, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:07:02) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 90ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:07:02) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
 Rendering documents/RetrieveComments
-Completed in 90ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
+Completed in 25ms (View: 3, DB: 1) | 200 OK [http://localhost/documents/RetrieveComments/1]
 
 
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:07:03) [GET]
+Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:01:30) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:07:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:07:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 80ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:07:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 30ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:07:23) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:07:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:07:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:07:33) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+  [4;36;1mDocument Load (3.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
 Rendering documents/RetrieveBody
-Completed in 90ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
+Completed in 55ms (View: 3, DB: 3) | 200 OK [http://localhost/documents/RetrieveBody/1]
 
 
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:07:42) [GET]
+Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:01:30) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
+  [4;35;1mFileTab Load (1.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
 Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+Completed in 33ms (View: 5, DB: 1) | 200 OK [http://localhost/documents/RetrieveFiles/1]
 
 
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:07:42) [GET]
+Processing DocumentsController#AcquireLock (for 127.0.0.1 at 2009-12-12 02:01:33) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
+  [4;36;1mDocument Load (3.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/AcquireLock
+Completed in 84ms (View: 43, DB: 3) | 200 OK [http://localhost/documents/AcquireLock/1]
+
+
+Processing DocumentsController#AcquireLock (for 127.0.0.1 at 2009-12-12 02:03:45) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;35;1mDocument Load (2.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+  [4;36;1mDocument Update (2.0ms)[0m   [0;1mUPDATE "documents" SET "lock_holder" = 'Another person', "updated_at" = '2009-12-12 10:03:45' WHERE "id" = 1[0m
+Rendering documents/AcquireLock
+Completed in 126ms (View: 3, DB: 4) | 200 OK [http://localhost/documents/AcquireLock/1]
+
+
+Processing DocumentsController#AcquireLock (for 127.0.0.1 at 2009-12-12 02:04:01) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;35;1mDocument Load (2.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/AcquireLock
+Completed in 45ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/AcquireLock/1]
+
+
+Processing AccountsController#registration (for 127.0.0.1 at 2009-12-12 02:04:42) [GET]
+Rendering template within layouts/application
+Rendering accounts/registration
+Rendered accounts/_register_warn (5.0ms)
+Completed in 198ms (View: 122, DB: 0) | 200 OK [http://localhost/accounts]
+
+
+Processing AccountsController#register (for 127.0.0.1 at 2009-12-12 02:04:57) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "name"=>"linh", "password"=>"linh123", "password2"=>"linh123", "email"=>"linh@linh.com", "commit"=>"Register"}
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;35;1mAccount Create (2.0ms)[0m   [0mINSERT INTO "accounts" ("name", "secure_password", "salt", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('linh', '4cf4c0123d041a5075c7f0d19df93702adc034a1', 'YH7KphPrkm', 'linh@linh.com', -1, 't', '2009-12-12 10:04:57', '2009-12-12 10:04:57')[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;35;1mDocument Create (3.0ms)[0m   [0mINSERT INTO "documents" ("name", "body", "account_id", "lock_holder", "password", "created_at", "updated_at") VALUES('My Document', '', 2, '', NULL, '2009-12-12 10:04:57', '2009-12-12 10:04:57')[0m
+Rendering accounts/register
+Completed in 364ms (View: 34, DB: 6) | 200 OK [http://localhost/accounts/register]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 02:04:58) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;36;1mAccount Load (9.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;36;1mDocument Load (1.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."account_id" = 2 AND "documents"."name" = 'My Document') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (2.0ms)
+Rendered documents/_messages (1.0ms)
+Completed in 154ms (View: 29, DB: 11) | 200 OK [http://localhost/linh]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 02:04:59) [GET]
+
+ActionController::RoutingError (No route matches "/Print.htm" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#Comment (for 127.0.0.1 at 2009-12-12 02:05:03) [GET]
+  Parameters: {"in_doc"=>"2"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+Rendering documents/Comment
+Completed in 97ms (View: 4, DB: 1) | 200 OK [http://localhost/documents/Comment/2]
+
+
+Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:05:04) [GET]
+  Parameters: {"in_doc"=>"2"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '2') ORDER BY created_at DESC[0m
 Rendering documents/RetrieveComments
-Completed in 70ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
+Completed in 104ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/RetrieveComments/2]
 
 
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:07:43) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (20.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:05:04) [GET]
+  Parameters: {"in_doc"=>"2"}
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mDocument Load (2.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '2') LIMIT 1[0m
 Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 20) | 200 OK [http://localhost/documents/RetrieveBody/1]
+Completed in 134ms (View: 3, DB: 4) | 200 OK [http://localhost/documents/RetrieveBody/2]
 
 
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:07:52) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 02:05:04) [GET]
+
+ActionController::RoutingError (No route matches "/SaveDocument.aspx" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:05:04) [GET]
+  Parameters: {"in_doc"=>"2"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mFileTab Load (1.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '2') ORDER BY updated_at DESC[0m
 Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+Completed in 113ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/RetrieveFiles/2]
 
 
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:07:52) [GET]
+Processing DocumentsController#AcquireLock (for 127.0.0.1 at 2009-12-12 02:05:13) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (30.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 30) | 200 OK [http://localhost/documents/RetrieveBody/1]
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/AcquireLock
+Completed in 116ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/AcquireLock/1]
 
 
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:07:53) [GET]
+Processing DocumentsController#ReleaseLock (for 127.0.0.1 at 2009-12-12 02:07:30) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mDocument Load (2.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+
+ArgumentError (wrong number of arguments (2 for 1)):
+  app/controllers/documents_controller.rb:145:in `ReleaseLock'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (361.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
 
 
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:08:02) [GET]
+Processing DocumentsController#ReleaseLock (for 127.0.0.1 at 2009-12-12 02:08:15) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+  [4;36;1mDocument Update (2.0ms)[0m   [0;1mUPDATE "documents" SET "lock_holder" = '', "updated_at" = '2009-12-12 10:08:16' WHERE "id" = 1[0m
+Rendering documents/ReleaseLock
+Completed in 288ms (View: 63, DB: 5) | 200 OK [http://localhost/documents/ReleaseLock/1]
 
 
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:08:02) [GET]
+Processing DocumentsController#AcquireLock (for 127.0.0.1 at 2009-12-12 02:08:21) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (10.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 10) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;36;1mDocument Load (1.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+  [4;35;1mDocument Update (2.0ms)[0m   [0mUPDATE "documents" SET "lock_holder" = 'linh', "updated_at" = '2009-12-12 10:08:21' WHERE "id" = 1[0m
+Rendering documents/AcquireLock
+Completed in 213ms (View: 3, DB: 4) | 200 OK [http://localhost/documents/AcquireLock/1]
 
 
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:08:03) [GET]
+Processing DocumentsController#AcquireLock (for 127.0.0.1 at 2009-12-12 02:08:28) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/AcquireLock
+Completed in 114ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/AcquireLock/1]
 
 
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:08:12) [GET]
+Processing DocumentsController#ReleaseLock (for 127.0.0.1 at 2009-12-12 02:08:55) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mDocument Load (2.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+  [4;36;1mDocument Update (2.0ms)[0m   [0;1mUPDATE "documents" SET "lock_holder" = '', "updated_at" = '2009-12-12 10:08:55' WHERE "id" = 1[0m
+Rendering documents/ReleaseLock
+Completed in 234ms (View: 4, DB: 5) | 200 OK [http://localhost/documents/ReleaseLock/1]
 
 
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:08:12) [GET]
+Processing DocumentsController#ReleaseLock (for 127.0.0.1 at 2009-12-12 02:09:15) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;36;1mDocument Load (1.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/ReleaseLock
+Completed in 120ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/ReleaseLock/1]
 
 
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:08:13) [GET]
+Processing DocumentsController#AcquireLock (for 127.0.0.1 at 2009-12-12 02:09:23) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (20.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 60ms (View: 0, DB: 20) | 200 OK [http://localhost/documents/RetrieveBody/1]
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;36;1mDocument Load (1.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+  [4;35;1mDocument Update (2.0ms)[0m   [0mUPDATE "documents" SET "lock_holder" = 'linh', "updated_at" = '2009-12-12 10:09:23' WHERE "id" = 1[0m
+Rendering documents/AcquireLock
+Completed in 259ms (View: 3, DB: 4) | 200 OK [http://localhost/documents/AcquireLock/1]
 
 
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:08:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 02:09:26) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;36;1mDocument Load (1.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."account_id" = 2 AND "documents"."name" = 'My Document') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (1.0ms)
+Rendered documents/_messages (1.0ms)
+Completed in 142ms (View: 34, DB: 2) | 200 OK [http://localhost/linh]
 
 
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:08:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (10.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 10, DB: 10) | 200 OK [http://localhost/documents/RetrieveBody/1]
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 02:09:28) [GET]
+
+ActionController::RoutingError (No route matches "/Print.htm" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
 
 
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:08:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (20.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 10, DB: 20) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:08:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 340ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:08:33) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (10.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 80ms (View: 10, DB: 10) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:08:33) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:08:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:08:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 60ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:08:43) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 50ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:08:52) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:08:53) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (30.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 10, DB: 30) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:08:53) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 30ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:09:02) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 280ms (View: 220, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:09:02) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 70ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:09:03) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:09:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:09:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 50ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:09:13) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:09:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (20.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 90ms (View: 20, DB: 20) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:09:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 80ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:09:23) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 30ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:09:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
+Processing DocumentsController#Comment (for 127.0.0.1 at 2009-12-12 02:09:32) [GET]
+  Parameters: {"in_doc"=>"2"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+Rendering documents/Comment
+Completed in 131ms (View: 4, DB: 1) | 200 OK [http://localhost/documents/Comment/2]
 
 
 Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:09:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
+  Parameters: {"in_doc"=>"2"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '2') ORDER BY created_at DESC[0m
 Rendering documents/RetrieveComments
-Completed in 40ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
+Completed in 113ms (View: 3, DB: 1) | 200 OK [http://localhost/documents/RetrieveComments/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 02:09:32) [GET]
+
+ActionController::RoutingError (No route matches "/SaveDocument.aspx" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
 
 
 Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:09:33) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
+  Parameters: {"in_doc"=>"2"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mFileTab Load (1.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '2') ORDER BY updated_at DESC[0m
 Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+Completed in 107ms (View: 4, DB: 2) | 200 OK [http://localhost/documents/RetrieveFiles/2]
 
 
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:09:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:09:43) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 40, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:09:43) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:09:33) [GET]
+  Parameters: {"in_doc"=>"2"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '2') LIMIT 1[0m
 Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
+Completed in 125ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/RetrieveBody/2]
 
 
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:09:52) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 100ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:09:52) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 230ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:09:53) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (20.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 40ms (View: 10, DB: 20) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:10:02) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 150ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:10:03) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:10:03) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (10.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 20, DB: 10) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:10:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (20.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 0, DB: 20) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:10:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 340ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:10:13) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 30ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:10:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:10:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:10:23) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (30.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 90ms (View: 0, DB: 30) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:10:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 30ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:10:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 40, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:10:33) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (20.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 20) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:10:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:10:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:10:43) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:10:52) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:10:53) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 110ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:10:53) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:11:02) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:11:02) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:11:03) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:11:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 200ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:11:13) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 40, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:11:13) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:11:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (10.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 10) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:11:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 300ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:11:23) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (20.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 80ms (View: 30, DB: 20) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:11:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 30ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:11:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (10.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 10) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:11:33) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 80ms (View: 40, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:11:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 90ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:11:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (20.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 10, DB: 20) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:11:43) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:11:52) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:11:52) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (20.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 120ms (View: 0, DB: 20) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:11:53) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:12:02) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 50ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:12:03) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:12:03) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:12:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:12:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:12:13) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:12:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 90ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:12:23) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 70ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:12:23) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 90ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:12:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (30.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 190ms (View: 0, DB: 30) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:12:33) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 70ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:12:33) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 50ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:12:43) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (10.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 591ms (View: 0, DB: 10) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:12:44) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 290ms (View: 150, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:12:45) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 280ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:12:53) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 270ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:12:53) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (20.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 80ms (View: 40, DB: 20) | 200 OK [http://localhost/documents/RetrieveComments/1]
+Processing DocumentsController#logout (for 127.0.0.1 at 2009-12-12 02:09:36) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE="}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+Rendering documents/logout
+Rendered documents/_login (5.0ms)
+Completed in 254ms (View: 169, DB: 1) | 200 OK [http://localhost/documents/logout]
 
 
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:12:54) [GET]
+Processing DocumentsController#AcquireLock (for 127.0.0.1 at 2009-12-12 02:09:47) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 100ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
+  [4;35;1mDocument Load (2.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/AcquireLock
+Completed in 45ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/AcquireLock/1]
 
 
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:13:02) [GET]
+Processing DocumentsController#ReleaseLock (for 127.0.0.1 at 2009-12-12 02:10:04) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (10.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 70ms (View: 0, DB: 10) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+  [4;36;1mDocument Load (2.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+  [4;35;1mDocument Update (3.0ms)[0m   [0mUPDATE "documents" SET "lock_holder" = '', "updated_at" = '2009-12-12 10:10:04' WHERE "id" = 1[0m
+Rendering documents/ReleaseLock
+Completed in 115ms (View: 4, DB: 5) | 200 OK [http://localhost/documents/ReleaseLock/1]
 
 
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:13:02) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:13:03) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 521ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:13:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 40, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:13:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (20.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 100ms (View: 20, DB: 20) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:13:13) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 50ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:13:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:13:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:13:23) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:13:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:13:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:13:33) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 100ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:13:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:13:43) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:13:43) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:13:52) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 80ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:13:53) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:13:53) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (10.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 20, DB: 10) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:14:02) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (30.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 30) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:14:02) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (20.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 60ms (View: 0, DB: 20) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:14:03) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:14:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:14:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (10.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 30, DB: 10) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:14:13) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 80ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:14:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:14:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (20.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 90ms (View: 10, DB: 20) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:14:23) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:14:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:14:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 90ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:14:33) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:14:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:14:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 30ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:14:43) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 50ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:14:52) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (10.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 300ms (View: 260, DB: 10) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:14:53) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 50ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:14:53) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 80ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:15:02) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:15:02) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (10.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 10) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:15:03) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:15:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:15:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:15:13) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (30.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 90ms (View: 30, DB: 30) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:15:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:15:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 140ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:15:23) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:15:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:15:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:15:33) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 90ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:15:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (20.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 90ms (View: 0, DB: 20) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:15:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:15:43) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:15:52) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:15:53) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 220ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:15:53) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:16:02) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (20.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 110ms (View: 0, DB: 20) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:16:03) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (30.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 30, DB: 30) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:16:03) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 70ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+Processing HomeController#index (for 127.0.0.1 at 2009-12-12 02:10:10) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (2.0ms)
+Completed in 131ms (View: 125, DB: 0) | 200 OK [http://localhost/]
 
 
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:16:12) [GET]
+Processing DocumentsController#AcquireLock (for 127.0.0.1 at 2009-12-12 02:10:25) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+  [4;36;1mDocument Load (3.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+  [4;35;1mDocument Update (2.0ms)[0m   [0mUPDATE "documents" SET "lock_holder" = 'Another person', "updated_at" = '2009-12-12 10:10:25' WHERE "id" = 1[0m
+Rendering documents/AcquireLock
+Completed in 169ms (View: 2, DB: 5) | 200 OK [http://localhost/documents/AcquireLock/1]
 
 
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:16:12) [GET]
+Processing DocumentsController#AcquireLock (for 127.0.0.1 at 2009-12-12 02:10:40) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 90ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
+  [4;36;1mDocument Load (2.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/AcquireLock
+Completed in 45ms (View: 5, DB: 2) | 200 OK [http://localhost/documents/AcquireLock/1]
 
 
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:16:13) [GET]
+Processing DocumentsController#ReleaseLock (for 127.0.0.1 at 2009-12-12 02:10:47) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (20.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 20) | 200 OK [http://localhost/documents/RetrieveBody/1]
+  [4;35;1mDocument Load (2.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+  [4;36;1mDocument Update (2.0ms)[0m   [0;1mUPDATE "documents" SET "lock_holder" = '', "updated_at" = '2009-12-12 10:10:47' WHERE "id" = 1[0m
+Rendering documents/ReleaseLock
+Completed in 137ms (View: 3, DB: 4) | 200 OK [http://localhost/documents/ReleaseLock/1]
 
 
-Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 02:16:20) [GET]
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 02:10:52) [GET]
   Parameters: {"pagename"=>"linh"}
-  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."account_id" = 1 AND "documents"."name" = 'My Document') LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;36;1mDocument Load (1.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."account_id" = 2 AND "documents"."name" = 'My Document') LIMIT 1[0m
 Rendering template within layouts/application
 Rendering documents/index
-Rendered documents/_login (0.0ms)
-Rendered documents/_messages (30.0ms)
-Completed in 451ms (View: 200, DB: 0) | 200 OK [http://localhost/linh]
+Rendered documents/_login (3.0ms)
+Rendered documents/_messages (0.0ms)
+Completed in 155ms (View: 40, DB: 2) | 200 OK [http://localhost/linh]
 
 
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 02:16:22) [GET]
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 02:10:53) [GET]
 
 ActionController::RoutingError (No route matches "/Print.htm" with {:method=>:get}):
   <internal:prelude>:8:in `synchronize'
-  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
 
 Rendering rescues/layout (not_found)
 
 
-Processing DocumentsController#Comment (for 127.0.0.1 at 2009-12-12 02:16:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-Rendering documents/Comment
-Completed in 40ms (View: 40, DB: 0) | 200 OK [http://localhost/documents/Comment/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:16:23) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 110ms (View: 70, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:16:24) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 80ms (View: 70, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 02:16:24) [GET]
-Rendering documents/Body
-Completed in 220ms (View: 190, DB: 0) | 200 OK [http://localhost/documents/Body]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:16:25) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (10.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 10, DB: 10) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#UpdateBody (for 127.0.0.1 at 2009-12-12 02:16:34) [GET]
-  Parameters: {"in_doc"=>"1", "documentBody"=>"dfaf\r\n\r\n"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-  [4;35;1mDocument Update (10.0ms)[0m   [0mUPDATE "documents" SET "body" = 'dfaf
-
-', "updated_at" = '2009-12-12 10:16:34' WHERE "id" = 1[0m
-Redirected to http://localhost:3000/documents/Body
-Completed in 260ms (DB: 10) | 302 Found [http://localhost/documents/UpdateBody?in_doc=1&documentBody=dfaf%0D%0A%0D%0A]
-
-
-Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 02:16:35) [GET]
-Rendering documents/Body
-Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/Body]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:16:35) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 110ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:16:35) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (10.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 20, DB: 10) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:16:45) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 40ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:16:46) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:16:46) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#UpdateBody (for 127.0.0.1 at 2009-12-12 02:16:50) [GET]
-  Parameters: {"in_doc"=>"1", "documentBody"=>"dfaf\r\n\r\nHi!"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-  [4;36;1mDocument Update (0.0ms)[0m   [0;1mUPDATE "documents" SET "body" = 'dfaf
-
-Hi!', "updated_at" = '2009-12-12 10:16:50' WHERE "id" = 1[0m
-Redirected to http://localhost:3000/documents/Body
-Completed in 260ms (DB: 0) | 302 Found [http://localhost/documents/UpdateBody?in_doc=1&documentBody=dfaf%0D%0A%0D%0AHi%21]
-
-
-Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 02:16:51) [GET]
-Rendering documents/Body
-Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/Body]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:16:55) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 70ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:16:55) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:17:05) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:17:05) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 90ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:17:06) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (20.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 100ms (View: 10, DB: 20) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#UpdateBody (for 127.0.0.1 at 2009-12-12 02:17:11) [GET]
-  Parameters: {"in_doc"=>"1", "documentBody"=>"dfaf\r\n\r\nHi!"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Redirected to http://localhost:3000/documents/Body
-Completed in 100ms (DB: 0) | 302 Found [http://localhost/documents/UpdateBody?in_doc=1&documentBody=dfaf%0D%0A%0D%0AHi%21]
-
-
-Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 02:17:12) [GET]
-Rendering documents/Body
-Completed in 10ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/Body]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:17:15) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 50ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:17:16) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (30.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 130ms (View: 30, DB: 30) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 02:17:19) [GET]
-  Parameters: {"pagename"=>"linh"}
-  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."account_id" = 1 AND "documents"."name" = 'My Document') LIMIT 1[0m
-Rendering template within layouts/application
-Rendering documents/index
-Rendered documents/_login (20.0ms)
-Rendered documents/_messages (0.0ms)
-Completed in 290ms (View: 90, DB: 0) | 200 OK [http://localhost/linh]
-
-
-Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 02:20:23) [GET]
-  Parameters: {"pagename"=>"linh"}
-  [4;36;1mAccount Load (30.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."account_id" = 1 AND "documents"."name" = 'My Document') LIMIT 1[0m
-Rendering template within layouts/application
-Rendering documents/index
-Rendered documents/_login (10.0ms)
-Rendered documents/_messages (0.0ms)
-Completed in 1492ms (View: 681, DB: 30) | 200 OK [http://localhost/linh]
-
-
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 02:20:25) [GET]
-
-ActionController::RoutingError (No route matches "/Print.htm" with {:method=>:get}):
-  <internal:prelude>:8:in `synchronize'
-  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
-
-Rendering rescues/layout (not_found)
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:20:26) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (30.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 340ms (View: 210, DB: 30) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 02:20:27) [GET]
-Rendering documents/Body
-Completed in 260ms (View: 230, DB: 0) | 200 OK [http://localhost/documents/Body]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:20:28) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 150ms (View: 90, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:20:28) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (10.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 1402ms (View: 1362, DB: 10) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#Comment (for 127.0.0.1 at 2009-12-12 02:20:30) [GET]
-  Parameters: {"in_doc"=>"1"}
-Rendering documents/Comment
-Completed in 90ms (View: 90, DB: 0) | 200 OK [http://localhost/documents/Comment/1]
-
-
-Processing DocumentsController#UpdateBody (for 127.0.0.1 at 2009-12-12 02:20:36) [GET]
-  Parameters: {"in_doc"=>"1", "documentBody"=>"dfaf\r\n\r\nHi!\r\n\r\nThis is a tesT"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-  [4;36;1mDocument Update (10.0ms)[0m   [0;1mUPDATE "documents" SET "body" = 'dfaf
-
-Hi!
-
-This is a tesT', "updated_at" = '2009-12-12 10:20:37' WHERE "id" = 1[0m
-Redirected to http://localhost:3000/documents/Body
-Completed in 260ms (DB: 10) | 302 Found [http://localhost/documents/UpdateBody?in_doc=1&documentBody=dfaf%0D%0A%0D%0AHi%21%0D%0A%0D%0AThis+is+a+tesT]
-
-
-Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 02:20:37) [GET]
-Rendering documents/Body
-Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/Body]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:20:40) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 70ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:20:41) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#UpdateBody (for 127.0.0.1 at 2009-12-12 02:20:49) [GET]
-  Parameters: {"in_doc"=>"1", "documentBody"=>"dfaf\r\n\r\nHi!\r\n\r\nThis is a tesT"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Redirected to http://localhost:3000/documents/Body
-Completed in 110ms (DB: 0) | 302 Found [http://localhost/documents/UpdateBody?in_doc=1&documentBody=dfaf%0D%0A%0D%0AHi%21%0D%0A%0D%0AThis+is+a+tesT]
-
-
-Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 02:20:50) [GET]
-  Parameters: {"pagename"=>"Arash"}
-  [4;36;1mAccount Load (10.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'Arash') LIMIT 1[0m
-  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'Arash') LIMIT 1[0m
-  [4;36;1mAccount Create (0.0ms)[0m   [0;1mINSERT INTO "accounts" ("name", "secure_password", "salt", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('Arash', NULL, NULL, NULL, 7, 'f', '2009-12-12 10:20:50', '2009-12-12 10:20:50')[0m
-  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'Arash') LIMIT 1[0m
-  [4;36;1mDocument Create (0.0ms)[0m   [0;1mINSERT INTO "documents" ("name", "body", "account_id", "lock_holder", "password", "created_at", "updated_at") VALUES('My Document', '', 2, NULL, NULL, '2009-12-12 10:20:50', '2009-12-12 10:20:50')[0m
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."account_id" = 2) LIMIT 1[0m
-Rendering template within layouts/application
-Rendering documents/index
-Rendered documents/_login (0.0ms)
-Rendered documents/_messages (0.0ms)
-Completed in 571ms (View: 60, DB: 10) | 200 OK [http://localhost/Arash]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:20:51) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 501ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:20:52) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#Comment (for 127.0.0.1 at 2009-12-12 02:20:52) [GET]
+Processing DocumentsController#Comment (for 127.0.0.1 at 2009-12-12 02:10:56) [GET]
   Parameters: {"in_doc"=>"2"}
 Rendering documents/Comment
-Completed in 10ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/Comment/2]
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/documents/Comment/2]
 
 
-Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 02:20:52) [GET]
-Rendering documents/Body
-Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/Body]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:20:53) [GET]
+Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:10:56) [GET]
   Parameters: {"in_doc"=>"2"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '2') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/2]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:20:53) [GET]
-  Parameters: {"in_doc"=>"2"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '2') ORDER BY created_at DESC[0m
+  [4;35;1mComment Load (2.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '2') ORDER BY created_at DESC[0m
 Rendering documents/RetrieveComments
-Completed in 80ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/2]
+Completed in 28ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/RetrieveComments/2]
 
 
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 02:20:53) [GET]
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 02:10:57) [GET]
 
-ActionController::RoutingError (No route matches "/Print.htm" with {:method=>:get}):
+ActionController::RoutingError (No route matches "/SaveDocument.aspx" with {:method=>:get}):
   <internal:prelude>:8:in `synchronize'
-  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
 
 Rendering rescues/layout (not_found)
 
 
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:20:54) [GET]
+Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:10:57) [GET]
   Parameters: {"in_doc"=>"2"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '2') LIMIT 1[0m
+  [4;36;1mDocument Load (2.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '2') LIMIT 1[0m
 Rendering documents/RetrieveBody
-Completed in 90ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/2]
+Completed in 49ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/RetrieveBody/2]
 
 
-Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 02:20:58) [GET]
+Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:10:57) [GET]
+  Parameters: {"in_doc"=>"2"}
+  [4;35;1mFileTab Load (2.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '2') ORDER BY updated_at DESC[0m
+Rendering documents/RetrieveFiles
+Completed in 29ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/RetrieveFiles/2]
+
+
+Processing DocumentsController#login (for 127.0.0.1 at 2009-12-12 02:11:03) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE=", "username"=>"linh", "password"=>"linh123", "commit"=>"Login"}
+  [4;36;1mAccount Load (2.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+Rendering documents/login
+Rendered documents/_login (1.0ms)
+Rendered documents/_messages (0.0ms)
+Completed in 138ms (View: 46, DB: 2) | 200 OK [http://localhost/documents/login]
+
+
+Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:11:08) [GET]
+  Parameters: {"in_doc"=>"2"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;36;1mFileTab Load (1.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '2') ORDER BY updated_at DESC[0m
+Rendering documents/RetrieveFiles
+Completed in 124ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/RetrieveFiles/2]
+
+
+Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:11:09) [GET]
+  Parameters: {"in_doc"=>"2"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '2') ORDER BY created_at DESC[0m
+Rendering documents/RetrieveComments
+Completed in 123ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/RetrieveComments/2]
+
+
+Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:11:09) [GET]
+  Parameters: {"in_doc"=>"2"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;36;1mDocument Load (1.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '2') LIMIT 1[0m
+Rendering documents/RetrieveBody
+Completed in 131ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/RetrieveBody/2]
+
+
+Processing DocumentsController#AcquireLock (for 127.0.0.1 at 2009-12-12 02:11:14) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;36;1mDocument Load (1.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+  [4;35;1mDocument Update (2.0ms)[0m   [0mUPDATE "documents" SET "lock_holder" = 'linh', "updated_at" = '2009-12-12 10:11:14' WHERE "id" = 1[0m
+Rendering documents/AcquireLock
+Completed in 342ms (View: 4, DB: 4) | 200 OK [http://localhost/documents/AcquireLock/1]
+
+
+Processing DocumentsController#AcquireLock (for 127.0.0.1 at 2009-12-12 02:11:20) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mDocument Load (6.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/AcquireLock
+Completed in 144ms (View: 3, DB: 7) | 200 OK [http://localhost/documents/AcquireLock/1]
+
+
+Processing DocumentsController#ReleaseLock (for 127.0.0.1 at 2009-12-12 02:11:27) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+  [4;36;1mDocument Update (3.0ms)[0m   [0;1mUPDATE "documents" SET "lock_holder" = '', "updated_at" = '2009-12-12 10:11:27' WHERE "id" = 1[0m
+Rendering documents/ReleaseLock
+Completed in 212ms (View: 3, DB: 5) | 200 OK [http://localhost/documents/ReleaseLock/1]
+
+
+Processing DocumentsController#ReleaseLock (for 127.0.0.1 at 2009-12-12 02:11:30) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;36;1mDocument Load (2.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/ReleaseLock
+Completed in 124ms (View: 3, DB: 3) | 200 OK [http://localhost/documents/ReleaseLock/1]
+  [4;36;1mSQL (3.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLogs (20091126095243)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "logs"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126095243'[0m
+Migrating to CreateComments (20091126095126)
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "comments"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126095126'[0m
+Migrating to CreateFileTabs (20091126094750)
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "file_tabs"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126094750'[0m
+Migrating to CreateDocuments (20091126092535)
+  [4;35;1mSQL (5.0ms)[0m   [0mDROP TABLE "documents"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126092535'[0m
+Migrating to CreateAccounts (20091126085948)
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "accounts"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126085948'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091126085948)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "secure_password" varchar(255), "salt" varchar(255), "email" varchar(255), "expiration" integer, "is_permanent" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126085948')[0m
+Migrating to CreateDocuments (20091126092535)
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "body" text, "account_id" integer, "lock_holder" varchar(255), "secure_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126092535')[0m
+Migrating to CreateFileTabs (20091126094750)
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "file_tabs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "path" text, "description" text, "document_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126094750')[0m
+Migrating to CreateComments (20091126095126)
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author" varchar(255), "comment" text, "document_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126095126')[0m
+Migrating to CreateLogs (20091126095243)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "logs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "document_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126095243')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("documents")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("file_tabs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("logs")[0m
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 03:01:59) [GET]
   Parameters: {"pagename"=>"linh"}
-  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."account_id" = 1 AND "documents"."name" = 'My Document') LIMIT 1[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;35;1mAccount Create (3.0ms)[0m   [0mINSERT INTO "accounts" ("name", "secure_password", "salt", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('linh', NULL, NULL, NULL, 7, 'f', '2009-12-12 11:02:00', '2009-12-12 11:02:00')[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+
+ActiveRecord::RecordInvalid (Validation failed: Body can't be blank, Password can't be blank, Salt can't be blank):
+  app/controllers/application_controller.rb:53:in `create_document'
+  app/controllers/application_controller.rb:41:in `create_temp_account'
+  app/controllers/documents_controller.rb:19:in `index'
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (301.0ms)
+Rendered rescues/_request_and_response (6.0ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 03:03:21) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."account_id" = 1 AND "documents"."name" = 'My Document') LIMIT 1[0m
 Rendering template within layouts/application
 Rendering documents/index
-Rendered documents/_login (0.0ms)
-Rendered documents/_messages (0.0ms)
-Completed in 190ms (View: 60, DB: 0) | 200 OK [http://localhost/linh]
 
-
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 02:21:00) [GET]
-
-ActionController::RoutingError (No route matches "/Print.htm" with {:method=>:get}):
-  <internal:prelude>:8:in `synchronize'
-  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
-
-Rendering rescues/layout (not_found)
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:21:00) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:21:01) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (10.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 100ms (View: 30, DB: 10) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#Comment (for 127.0.0.1 at 2009-12-12 02:21:01) [GET]
-  Parameters: {"in_doc"=>"1"}
-Rendering documents/Comment
-Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/Comment/1]
-
-
-Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 02:21:01) [GET]
-Rendering documents/Body
-Completed in 50ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/Body]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:21:01) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (20.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 90ms (View: 60, DB: 20) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:21:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 130ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:21:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 180ms (View: 70, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:21:13) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (20.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 20) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:21:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:21:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 351ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:21:23) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (10.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 10) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:21:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:21:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (20.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 140ms (View: 0, DB: 20) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:21:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (20.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 170ms (View: 90, DB: 20) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:21:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:21:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:21:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:21:52) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 100ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:21:52) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 100ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:21:52) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 80ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:22:02) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:22:02) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:22:03) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 150ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:22:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:22:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (30.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 90ms (View: 50, DB: 30) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:22:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:22:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (10.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 10) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:22:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 100ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:22:22) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:22:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:22:32) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 340ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:22:33) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:22:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:22:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 90ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:22:42) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 100ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:22:52) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 90ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:22:52) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 120ms (View: 50, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:22:53) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (30.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 30) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 02:22:53) [GET]
-  Parameters: {"pagename"=>"linh"}
-  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."account_id" = 1 AND "documents"."name" = 'My Document') LIMIT 1[0m
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #1 of app/views/documents/index.html.erb:
+1: <% @page_title = ": #{@doc_account.name} / #{@this_doc.name}" -%>
+2: 
+3: <% content_for(:head) do -%>
+4:   <%= javascript_include_tag "DocumentEditor" %>
+
+    app/views/documents/index.html.erb:1
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (469.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-12 03:04:03) [GET]
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered home/_login_warn (3.0ms)
+Completed in 243ms (View: 160, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 03:04:10) [GET]
+  Parameters: {"pagename"=>"linh2"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh2') LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'linh2') LIMIT 1[0m
+  [4;36;1mAccount Create (4.0ms)[0m   [0;1mINSERT INTO "accounts" ("name", "secure_password", "salt", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('linh2', NULL, NULL, NULL, 7, 'f', '2009-12-12 11:04:11', '2009-12-12 11:04:11')[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh2') LIMIT 1[0m
+  [4;36;1mDocument Create (2.0ms)[0m   [0;1mINSERT INTO "documents" ("name", "body", "account_id", "lock_holder", "secure_password", "salt", "created_at", "updated_at") VALUES('My Document', '', 2, '', NULL, NULL, '2009-12-12 11:04:11', '2009-12-12 11:04:11')[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."account_id" = 2) LIMIT 1[0m
 Rendering template within layouts/application
 Rendering documents/index
-Rendered documents/_login (10.0ms)
-Rendered documents/_messages (0.0ms)
-Completed in 461ms (View: 260, DB: 0) | 200 OK [http://localhost/linh]
 
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:22:55) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (10.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 110ms (View: 60, DB: 10) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 02:22:55) [GET]
-
-ActionController::RoutingError (No route matches "/Print.htm" with {:method=>:get}):
-  <internal:prelude>:8:in `synchronize'
-  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
-
-Rendering rescues/layout (not_found)
-
-
-Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 02:22:55) [GET]
-Rendering documents/Body
-Completed in 30ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/Body]
-
-
-Processing DocumentsController#Comment (for 127.0.0.1 at 2009-12-12 02:22:56) [GET]
-  Parameters: {"in_doc"=>"1"}
-Rendering documents/Comment
-Completed in 30ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/Comment/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:22:56) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 70ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:22:56) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 100ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#UpdateBody (for 127.0.0.1 at 2009-12-12 02:23:03) [GET]
-  Parameters: {"in_doc"=>"1", "documentBody"=>"dfaf\r\n\r\nHi!\r\n\r\nThis is a tesT ;)"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-  [4;35;1mDocument Update (0.0ms)[0m   [0mUPDATE "documents" SET "body" = 'dfaf
-
-Hi!
-
-This is a tesT ;)', "updated_at" = '2009-12-12 10:23:03' WHERE "id" = 1[0m
-Redirected to http://localhost:3000/documents/Body
-Completed in 200ms (DB: 0) | 302 Found [http://localhost/documents/UpdateBody?in_doc=1&documentBody=dfaf%0D%0A%0D%0AHi%21%0D%0A%0D%0AThis+is+a+tesT+%3B%29]
-
-
-Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 02:23:03) [GET]
-Rendering documents/Body
-Completed in 30ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/Body]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:23:07) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:23:07) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (30.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 150ms (View: 50, DB: 30) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#UpdateBody (for 127.0.0.1 at 2009-12-12 02:23:11) [GET]
-  Parameters: {"in_doc"=>"1", "documentBody"=>"dfaf\r\n\r\nHi!\r\n\r\nThis is a tesT ;)\r\n:D\r\n"}
-  [4;36;1mDocument Load (10.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-  [4;35;1mDocument Update (20.0ms)[0m   [0mUPDATE "documents" SET "body" = 'dfaf
-
-Hi!
-
-This is a tesT ;)
-:D
-', "updated_at" = '2009-12-12 10:23:11' WHERE "id" = 1[0m
-Redirected to http://localhost:3000/documents/Body
-Completed in 300ms (DB: 30) | 302 Found [http://localhost/documents/UpdateBody?in_doc=1&documentBody=dfaf%0D%0A%0D%0AHi%21%0D%0A%0D%0AThis+is+a+tesT+%3B%29%0D%0A%3AD%0D%0A]
-
-
-Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 02:23:12) [GET]
-Rendering documents/Body
-Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/Body]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:23:17) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 100ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:23:17) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#UpdateBody (for 127.0.0.1 at 2009-12-12 02:23:23) [GET]
-  Parameters: {"in_doc"=>"1", "documentBody"=>"dfaf\r\n\r\nHi!\r\n\r\nThis is a tesT ;)\r\n:D\r\n"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Redirected to http://localhost:3000/documents/Body
-Completed in 80ms (DB: 0) | 302 Found [http://localhost/documents/UpdateBody?in_doc=1&documentBody=dfaf%0D%0A%0D%0AHi%21%0D%0A%0D%0AThis+is+a+tesT+%3B%29%0D%0A%3AD%0D%0A]
-
-
-Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 02:23:23) [GET]
-Rendering documents/Body
-Completed in 30ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/Body]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:23:27) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (20.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 80ms (View: 10, DB: 20) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:23:27) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 100ms (View: 50, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:23:37) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (10.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 10, DB: 10) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:23:37) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (40.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 140ms (View: 50, DB: 40) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:23:37) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:23:47) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (30.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 10, DB: 30) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:23:47) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:23:47) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:23:57) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:23:57) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (10.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 10) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:23:57) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:24:07) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 260ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:24:07) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 140ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:24:08) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 140ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 02:24:09) [GET]
-  Parameters: {"pagename"=>"linh"}
-  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
-  [4;36;1mDocument Load (30.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."account_id" = 1 AND "documents"."name" = 'My Document') LIMIT 1[0m
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #2 of app/views/documents/_login.html.erb:
+1: <% if session[:user_id] %>
+2:   User: <%= @current_user.name %>
+3:   <%= link_to_remote "Logout", :url => {:action => "logout"} %>
+4: <% else %>
+5:   <% form_remote_tag(:url => {:action => "login"}) do -%>
+
+    app/views/documents/_login.html.erb:2
+    app/views/documents/index.html.erb:17
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (529.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-12-12 03:04:35) [GET]
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/linh2
+Filter chain halted as [:redirect_if_logged_in] rendered_or_redirected.
+Completed in 87ms (DB: 1) | 302 Found [http://localhost/]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 03:04:36) [GET]
+  Parameters: {"pagename"=>"linh2"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh2') LIMIT 1[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."account_id" = 2 AND "documents"."name" = 'My Document') LIMIT 1[0m
 Rendering template within layouts/application
 Rendering documents/index
-Rendered documents/_login (30.0ms)
-Rendered documents/_messages (0.0ms)
-Completed in 611ms (View: 441, DB: 30) | 200 OK [http://localhost/linh]
+Rendered documents/_login (1.0ms)
+Rendered documents/_messages (3.0ms)
+Completed in 183ms (View: 71, DB: 3) | 200 OK [http://localhost/linh2]
 
 
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:24:11) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#Comment (for 127.0.0.1 at 2009-12-12 02:24:12) [GET]
-  Parameters: {"in_doc"=>"1"}
-Rendering documents/Comment
-Completed in 10ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/Comment/1]
-
-
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 02:24:12) [GET]
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 03:04:40) [GET]
 
 ActionController::RoutingError (No route matches "/Print.htm" with {:method=>:get}):
   <internal:prelude>:8:in `synchronize'
-  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-  C:/Ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-  C:/Ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
 
 Rendering rescues/layout (not_found)
 
 
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:24:12) [GET]
+Processing DocumentsController#Comment (for 127.0.0.1 at 2009-12-12 03:04:43) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (20.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 90ms (View: 0, DB: 20) | 200 OK [http://localhost/documents/RetrieveBody/1]
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+Rendering documents/Comment
+Completed in 125ms (View: 43, DB: 1) | 200 OK [http://localhost/documents/Comment/1]
 
 
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:24:13) [GET]
+Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 03:04:43) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (20.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
+  [4;35;1mAccount Load (2.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
 Rendering documents/RetrieveComments
-Completed in 90ms (View: 10, DB: 20) | 200 OK [http://localhost/documents/RetrieveComments/1]
+Completed in 145ms (View: 44, DB: 3) | 200 OK [http://localhost/documents/RetrieveComments/1]
 
 
-Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 02:24:13) [GET]
+Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 03:04:43) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;35;1mAccount Load (2.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
+Rendering documents/RetrieveFiles
+Completed in 143ms (View: 42, DB: 2) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+
+
+Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 03:04:44) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+  [4;36;1mDocument Load (1.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/RetrieveBody
+Completed in 160ms (View: 42, DB: 2) | 200 OK [http://localhost/documents/RetrieveBody/1]
+
+
+Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 03:04:44) [GET]
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
 Rendering documents/Body
-Completed in 30ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/Body]
+Completed in 139ms (View: 39, DB: 1) | 200 OK [http://localhost/documents/Body]
 
 
-Processing DocumentsController#UpdateBody (for 127.0.0.1 at 2009-12-12 02:24:20) [GET]
-  Parameters: {"in_doc"=>"1", "documentBody"=>"dfaf\r\n\r\nHi!\r\n\r\nThis is a tesT ;)\r\n:D\r\n\r\nThis is awesome! :D ;)"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-  [4;35;1mDocument Update (0.0ms)[0m   [0mUPDATE "documents" SET "body" = 'dfaf
-
-Hi!
-
-This is a tesT ;)
-:D
-
-This is awesome! :D ;)', "updated_at" = '2009-12-12 10:24:20' WHERE "id" = 1[0m
-Redirected to http://localhost:3000/documents/Body
-Completed in 260ms (DB: 0) | 302 Found [http://localhost/documents/UpdateBody?in_doc=1&documentBody=dfaf%0D%0A%0D%0AHi%21%0D%0A%0D%0AThis+is+a+tesT+%3B%29%0D%0A%3AD%0D%0A%0D%0AThis+is+awesome%21+%3AD+%3B%29]
+Processing DocumentsController#logout (for 127.0.0.1 at 2009-12-12 03:04:48) [POST]
+  Parameters: {"authenticity_token"=>"dozzPA5HVUTuXQ9krxDbPZ5ghvpP7W4TKQ2eYdDeXnE="}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 2) LIMIT 1[0m
+Rendering documents/logout
+Rendered documents/_login (3.0ms)
+Completed in 122ms (View: 47, DB: 1) | 200 OK [http://localhost/documents/logout]
 
 
-Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 02:24:20) [GET]
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 03:04:52) [GET]
+  Parameters: {"pagename"=>"linh3"}
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh3') LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'linh3') LIMIT 1[0m
+  [4;35;1mAccount Create (2.0ms)[0m   [0mINSERT INTO "accounts" ("name", "secure_password", "salt", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('linh3', NULL, NULL, NULL, 7, 'f', '2009-12-12 11:04:52', '2009-12-12 11:04:52')[0m
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh3') LIMIT 1[0m
+  [4;35;1mDocument Create (3.0ms)[0m   [0mINSERT INTO "documents" ("name", "body", "account_id", "lock_holder", "secure_password", "salt", "created_at", "updated_at") VALUES('My Document', '', 3, '', NULL, NULL, '2009-12-12 11:04:52', '2009-12-12 11:04:52')[0m
+  [4;36;1mDocument Load (2.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."account_id" = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (2.0ms)
+Rendered documents/_messages (1.0ms)
+Completed in 419ms (View: 17, DB: 8) | 200 OK [http://localhost/linh3]
+
+
+Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 03:04:56) [GET]
+  Parameters: {"in_doc"=>"2"}
+  [4;35;1mFileTab Load (3.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '2') ORDER BY updated_at DESC[0m
+Rendering documents/RetrieveFiles
+Completed in 32ms (View: 4, DB: 3) | 200 OK [http://localhost/documents/RetrieveFiles/2]
+
+
+Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 03:04:56) [GET]
 Rendering documents/Body
-Completed in 30ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/Body]
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/documents/Body]
 
 
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:24:21) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 03:04:56) [GET]
+
+ActionController::RoutingError (No route matches "/Print.htm" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
 
 
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:24:21) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (20.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 10, DB: 20) | 200 OK [http://localhost/documents/RetrieveComments/1]
+Processing DocumentsController#Comment (for 127.0.0.1 at 2009-12-12 03:04:56) [GET]
+  Parameters: {"in_doc"=>"2"}
+Rendering documents/Comment
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/documents/Comment/2]
 
 
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:24:30) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (10.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 03:04:57) [GET]
+  Parameters: {"in_doc"=>"2"}
+  [4;36;1mDocument Load (2.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '2') LIMIT 1[0m
 Rendering documents/RetrieveBody
-Completed in 160ms (View: 30, DB: 10) | 200 OK [http://localhost/documents/RetrieveBody/1]
+Completed in 46ms (View: 4, DB: 2) | 200 OK [http://localhost/documents/RetrieveBody/2]
 
 
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:24:31) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (20.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
+Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 03:04:57) [GET]
+  Parameters: {"in_doc"=>"2"}
+  [4;35;1mComment Load (2.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '2') ORDER BY created_at DESC[0m
 Rendering documents/RetrieveComments
-Completed in 421ms (View: 10, DB: 20) | 200 OK [http://localhost/documents/RetrieveComments/1]
+Completed in 29ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/RetrieveComments/2]
 
 
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:24:32) [GET]
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 03:05:02) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."account_id" = 1 AND "documents"."name" = 'My Document') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #1 of app/views/documents/index.html.erb:
+1: <% @page_title = ": #{@doc_account.name} / #{@this_doc.name}" -%>
+2: 
+3: <% content_for(:head) do -%>
+4:   <%= javascript_include_tag "DocumentEditor" %>
+
+    app/views/documents/index.html.erb:1
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (380.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 03:05:07) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;36;1mAccount Load (1.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."account_id" = 1 AND "documents"."name" = 'My Document') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #1 of app/views/documents/index.html.erb:
+1: <% @page_title = ": #{@doc_account.name} / #{@this_doc.name}" -%>
+2: 
+3: <% content_for(:head) do -%>
+4:   <%= javascript_include_tag "DocumentEditor" %>
+
+    app/views/documents/index.html.erb:1
+    <internal:prelude>:8:in `synchronize'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (455.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLogs (20091126095243)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mDROP TABLE "logs"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126095243'[0m
+Migrating to CreateComments (20091126095126)
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "comments"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126095126'[0m
+Migrating to CreateFileTabs (20091126094750)
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "file_tabs"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126094750'[0m
+Migrating to CreateDocuments (20091126092535)
+  [4;35;1mSQL (5.0ms)[0m   [0mDROP TABLE "documents"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126092535'[0m
+Migrating to CreateAccounts (20091126085948)
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "accounts"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091126085948'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAccounts (20091126085948)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "secure_password" varchar(255), "salt" varchar(255), "email" varchar(255), "expiration" integer, "is_permanent" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126085948')[0m
+Migrating to CreateDocuments (20091126092535)
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "body" text, "account_id" integer, "lock_holder" varchar(255), "secure_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126092535')[0m
+Migrating to CreateFileTabs (20091126094750)
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "file_tabs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "path" text, "description" text, "document_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126094750')[0m
+Migrating to CreateComments (20091126095126)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author" varchar(255), "comment" text, "document_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126095126')[0m
+Migrating to CreateLogs (20091126095243)
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "logs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "document_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126095243')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("documents")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("file_tabs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("logs")[0m
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-12-12 03:07:08) [GET]
+  Parameters: {"pagename"=>"linh"}
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;35;1mAccount Load (1.0ms)[0m   [0mSELECT "accounts".id FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;36;1mAccount Create (3.0ms)[0m   [0;1mINSERT INTO "accounts" ("name", "secure_password", "salt", "email", "expiration", "is_permanent", "created_at", "updated_at") VALUES('linh', NULL, NULL, NULL, 7, 'f', '2009-12-12 11:07:08', '2009-12-12 11:07:08')[0m
+  [4;35;1mAccount Load (2.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."name" = 'linh') LIMIT 1[0m
+  [4;36;1mDocument Create (2.0ms)[0m   [0;1mINSERT INTO "documents" ("name", "body", "account_id", "lock_holder", "secure_password", "salt", "created_at", "updated_at") VALUES('My Document', '', 1, '', NULL, NULL, '2009-12-12 11:07:08', '2009-12-12 11:07:08')[0m
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."account_id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered documents/_login (9.0ms)
+Rendered documents/_messages (9.0ms)
+Completed in 1079ms (View: 242, DB: 9) | 200 OK [http://localhost/linh]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-12 03:07:10) [GET]
+
+ActionController::RoutingError (No route matches "/Print.htm" with {:method=>:get}):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing DocumentsController#Comment (for 127.0.0.1 at 2009-12-12 03:07:14) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
+Rendering documents/Comment
+Completed in 45ms (View: 39, DB: 0) | 200 OK [http://localhost/documents/Comment/1]
+
+
+Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 03:07:14) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
+Rendering documents/RetrieveComments
+Completed in 75ms (View: 42, DB: 1) | 200 OK [http://localhost/documents/RetrieveComments/1]
+
+
+Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 03:07:14) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;35;1mFileTab Load (2.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
 Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+Completed in 75ms (View: 44, DB: 2) | 200 OK [http://localhost/documents/RetrieveFiles/1]
 
 
-Processing DocumentsController#UpdateBody (for 127.0.0.1 at 2009-12-12 02:24:37) [GET]
-  Parameters: {"in_doc"=>"1", "documentBody"=>"dfaf\r\n\r\nHi!\r\n\r\nThis is a tesT ;)\r\n:D\r\n\r\nThis is awesome! :D ;)"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Redirected to http://localhost:3000/documents/Body
-Completed in 90ms (DB: 0) | 302 Found [http://localhost/documents/UpdateBody?in_doc=1&documentBody=dfaf%0D%0A%0D%0AHi%21%0D%0A%0D%0AThis+is+a+tesT+%3B%29%0D%0A%3AD%0D%0A%0D%0AThis+is+awesome%21+%3AD+%3B%29]
-
-
-Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 02:24:37) [GET]
+Processing DocumentsController#Body (for 127.0.0.1 at 2009-12-12 03:07:14) [GET]
 Rendering documents/Body
-Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/documents/Body]
+Completed in 46ms (View: 41, DB: 0) | 200 OK [http://localhost/documents/Body]
 
 
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:24:37) [GET]
+Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 03:07:15) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:24:38) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 90ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:24:47) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;36;1mFileTab Load (0.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
-Rendering documents/RetrieveFiles
-Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
-
-
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:24:48) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+  [4;36;1mDocument Load (2.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
 Rendering documents/RetrieveBody
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
+Completed in 195ms (View: 36, DB: 2) | 200 OK [http://localhost/documents/RetrieveBody/1]
 
 
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:24:48) [GET]
+Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 03:07:26) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (30.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
+  [4;35;1mComment Load (2.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
 Rendering documents/RetrieveComments
-Completed in 70ms (View: 30, DB: 30) | 200 OK [http://localhost/documents/RetrieveComments/1]
+Completed in 27ms (View: 4, DB: 2) | 200 OK [http://localhost/documents/RetrieveComments/1]
 
 
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:24:57) [GET]
+Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 03:07:26) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
+  [4;36;1mFileTab Load (2.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
 Rendering documents/RetrieveFiles
-Completed in 110ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+Completed in 28ms (View: 2, DB: 2) | 200 OK [http://localhost/documents/RetrieveFiles/1]
 
 
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:24:58) [GET]
+Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 03:07:27) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+  [4;35;1mDocument Load (2.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
 Rendering documents/RetrieveBody
-Completed in 90ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
+Completed in 45ms (View: 4, DB: 2) | 200 OK [http://localhost/documents/RetrieveBody/1]
 
 
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:24:58) [GET]
+Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 03:07:36) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
+  [4;36;1mDocument Load (3.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/RetrieveBody
+Completed in 48ms (View: 2, DB: 3) | 200 OK [http://localhost/documents/RetrieveBody/1]
+
+
+Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 03:07:42) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;35;1mComment Load (4.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
 Rendering documents/RetrieveComments
-Completed in 50ms (View: 10, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
+Completed in 44ms (View: 10, DB: 4) | 200 OK [http://localhost/documents/RetrieveComments/1]
 
 
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:25:08) [GET]
+Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 03:07:42) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
-Rendering documents/RetrieveComments
-Completed in 70ms (View: 40, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:25:08) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
+  [4;36;1mFileTab Load (2.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
 Rendering documents/RetrieveFiles
-Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+Completed in 32ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/RetrieveFiles/1]
 
 
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:25:08) [GET]
+Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 03:07:46) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+  [4;35;1mDocument Load (2.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
 Rendering documents/RetrieveBody
-Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
+Completed in 73ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/RetrieveBody/1]
 
 
-Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 02:25:18) [GET]
+Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 03:07:46) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (3.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
 Rendering documents/RetrieveComments
-Completed in 90ms (View: 70, DB: 0) | 200 OK [http://localhost/documents/RetrieveComments/1]
+Completed in 37ms (View: 4, DB: 3) | 200 OK [http://localhost/documents/RetrieveComments/1]
 
 
-Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 02:25:18) [GET]
+Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 03:07:47) [GET]
   Parameters: {"in_doc"=>"1"}
-  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
-Rendering documents/RetrieveBody
-Completed in 100ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveBody/1]
-
-
-Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 02:25:18) [GET]
-  Parameters: {"in_doc"=>"1"}
-  [4;35;1mFileTab Load (0.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
+  [4;35;1mFileTab Load (1.0ms)[0m   [0mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
 Rendering documents/RetrieveFiles
-Completed in 60ms (View: 0, DB: 0) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+Completed in 29ms (View: 3, DB: 1) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+
+
+Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 03:07:56) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;36;1mDocument Load (2.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/RetrieveBody
+Completed in 49ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/RetrieveBody/1]
+
+
+Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 03:07:57) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
+Rendering documents/RetrieveComments
+Completed in 24ms (View: 3, DB: 1) | 200 OK [http://localhost/documents/RetrieveComments/1]
+
+
+Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 03:07:57) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;36;1mFileTab Load (2.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
+Rendering documents/RetrieveFiles
+Completed in 31ms (View: 3, DB: 2) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+
+
+Processing DocumentsController#RetrieveComments (for 127.0.0.1 at 2009-12-12 03:08:06) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;35;1mComment Load (2.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."document_id" = '1') ORDER BY created_at DESC[0m
+Rendering documents/RetrieveComments
+Completed in 731ms (View: 4, DB: 2) | 200 OK [http://localhost/documents/RetrieveComments/1]
+
+
+Processing DocumentsController#RetrieveFiles (for 127.0.0.1 at 2009-12-12 03:08:06) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;36;1mFileTab Load (1.0ms)[0m   [0;1mSELECT * FROM "file_tabs" WHERE ("file_tabs"."document_id" = '1') ORDER BY updated_at DESC[0m
+Rendering documents/RetrieveFiles
+Completed in 34ms (View: 3, DB: 1) | 200 OK [http://localhost/documents/RetrieveFiles/1]
+
+
+Processing DocumentsController#RetrieveBody (for 127.0.0.1 at 2009-12-12 03:08:07) [GET]
+  Parameters: {"in_doc"=>"1"}
+  [4;35;1mDocument Load (4.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Rendering documents/RetrieveBody
+Completed in 56ms (View: 2, DB: 4) | 200 OK [http://localhost/documents/RetrieveBody/1]
+
+
+Processing DocumentsController#Password (for 127.0.0.1 at 2009-12-12 03:08:08) [GET]
+  Parameters: {"in_doc"=>"1"}
+Rendering documents/Password
+Completed in 46ms (View: 40, DB: 0) | 200 OK [http://localhost/documents/Password/1]
+
+
+Processing DocumentsController#SetPassword (for 127.0.0.1 at 2009-12-12 03:08:35) [GET]
+  Parameters: {"password"=>"admin", "in_doc"=>"1"}
+  [4;36;1mDocument Load (2.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/documents/Password
+Completed in 105ms (DB: 2) | 302 Found [http://localhost/documents/SetPassword?password=admin&in_doc=1]
+
+
+Processing DocumentsController#Password (for 127.0.0.1 at 2009-12-12 03:08:36) [GET]
+Rendering documents/Password
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/documents/Password]
+  [4;36;1mDocument Load (3.0ms)[0m   [0;1mSELECT * FROM "documents" [0m
+
+
+Processing DocumentsController#Password (for 127.0.0.1 at 2009-12-12 03:10:22) [GET]
+  Parameters: {"in_doc"=>"1"}
+Rendering documents/Password
+Completed in 46ms (View: 40, DB: 0) | 200 OK [http://localhost/documents/Password/1]
+
+
+Processing DocumentsController#SetPassword (for 127.0.0.1 at 2009-12-12 03:10:29) [POST]
+  Parameters: {"password"=>"admin", "in_doc"=>"1"}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  <internal:prelude>:8:in `synchronize'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  C:/Ruby1.9.1/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (385.0ms)
+Rendered rescues/_request_and_response (6.0ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing DocumentsController#Password (for 127.0.0.1 at 2009-12-12 03:10:51) [GET]
+  Parameters: {"in_doc"=>"1"}
+Rendering documents/Password
+Completed in 53ms (View: 46, DB: 0) | 200 OK [http://localhost/documents/Password/1]
+
+
+Processing DocumentsController#SetPassword (for 127.0.0.1 at 2009-12-12 03:10:55) [GET]
+  Parameters: {"password"=>"admin", "in_doc"=>"1"}
+  [4;35;1mDocument Load (8.0ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/documents/Password
+Completed in 51ms (DB: 8) | 302 Found [http://localhost/documents/SetPassword?password=admin&in_doc=1]
+
+
+Processing DocumentsController#Password (for 127.0.0.1 at 2009-12-12 03:10:56) [GET]
+Rendering documents/Password
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/documents/Password]
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" [0m
+  [4;36;1mDocument Load (2.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = 1) LIMIT 1[0m
+  [4;35;1mDocument Update (2.0ms)[0m   [0mUPDATE "documents" SET "salt" = 'jYuiviRchh', "secure_password" = '98d27f859b48d57bded88bc944cf24754afdae76', "updated_at" = '2009-12-12 11:13:02' WHERE "id" = 1[0m
+  [4;36;1mDocument Load (1.0ms)[0m   [0;1mSELECT * FROM "documents" [0m
+
+
+Processing DocumentsController#Password (for 127.0.0.1 at 2009-12-12 03:14:40) [GET]
+  Parameters: {"in_doc"=>"1"}
+Rendering documents/Password
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/documents/Password/1]
+
+
+Processing DocumentsController#SetPassword (for 127.0.0.1 at 2009-12-12 03:15:08) [GET]
+  Parameters: {"password"=>"admin1", "in_doc"=>"1"}
+  [4;36;1mDocument Load (2.0ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = '1') LIMIT 1[0m
+  [4;35;1mDocument Update (3.0ms)[0m   [0mUPDATE "documents" SET "secure_password" = '29583b68a00f30520b8db898b79819cc78a22626', "updated_at" = '2009-12-12 11:15:08' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/documents/Password
+Completed in 158ms (DB: 5) | 302 Found [http://localhost/documents/SetPassword?password=admin1&in_doc=1]
+
+
+Processing DocumentsController#Password (for 127.0.0.1 at 2009-12-12 03:15:09) [GET]
+Rendering documents/Password
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/documents/Password]
+  [4;35;1mDocument Load (1.0ms)[0m   [0mSELECT * FROM "documents" [0m
