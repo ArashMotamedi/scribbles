@@ -595,7 +595,7 @@ function setStatus(message)
 
 function saveDocument() {
 	setStatus("Saving the document...");
-	document.getElementById("iframe_document").contentWindow.insertValues(document_body.value);	
+	document.getElementById("iframe_document").contentWindow.insertValues(documentId, document_body.value);	
 }
 
 function releaseLock() {
@@ -697,4 +697,12 @@ function checkCommentStatus() {
 		succeed("comment");
 		
 	commented = true;
+}
+
+var bodySaved = false;
+function checkDocumentStatus() {
+	if (bodySaved)
+		succeed("document");
+		
+	bodySaved = true;
 }

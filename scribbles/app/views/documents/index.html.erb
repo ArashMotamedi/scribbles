@@ -195,7 +195,7 @@
 
 	<iframe id="iframe_files_update" frameborder="0" height="0" scrolling="no" src="documents/RetrieveFiles/<%= @this_doc.id -%>" class="hidden" onload="updateFiles();"></iframe>
 
-	<iframe id="iframe_document" frameborder="0" height="0" scrolling="no" src="SaveDocument.aspx" class="hidden"></iframe>
+	<iframe id="iframe_document" frameborder="0" height="0" scrolling="no" src="documents/Body" class="hidden" onload="checkDocumentStatus();"></iframe>
 	<iframe id="iframe_document_update" frameborder="0" height="0" scrolling="no" src="documents/RetrieveBody/<%= @this_doc.id -%>" class="hidden" onload="updateDocument();"></iframe>
 
 </body>
