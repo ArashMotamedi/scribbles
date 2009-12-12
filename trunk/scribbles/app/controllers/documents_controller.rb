@@ -59,7 +59,7 @@ class DocumentsController < ApplicationController
     # Get the existing document
     doc = Document.find(:first, :conditions => {:id => params[:in_doc]})
     doc.update_attribute(:body, params[:documentBody])
-    redirect_to "/documents/Body/" + params[:in_doc]
+    redirect_to "/documents/Body"
   end
   
   def RetrieveComments

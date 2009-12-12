@@ -2,7 +2,8 @@
 <head>
     <title></title>
     <script>
-     function insertValues(documentBody) {
+     function insertValues(documentId, documentBody) {
+	  document.getElementById("in_doc").value = documentId;
       document.getElementById("documentBody").value = documentBody;
       document.forms[0].submit();
      }
@@ -10,7 +11,8 @@
     
 </head>
 <body>
-    <form>
+    <form action="/documents/UpdateBody">
+	<input id="in_doc" name="in_doc" />
   <textarea id="documentBody" name="documentBody"></textarea>
   <input type="submit" />
     </form>
