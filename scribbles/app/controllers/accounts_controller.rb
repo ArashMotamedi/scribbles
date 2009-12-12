@@ -36,11 +36,8 @@ class AccountsController < ApplicationController
       
     # Save account failed, so show error message
     else
-      #TODO can use errors.first
-      @newAcc.errors.each do |attr,msg|
-        flash.now[:reg_warning] = attr.capitalize + " " + msg
-        break
-      end
+      err = @newAcc.errors.first
+      flash.now[:reg_warning] = err[0].capitalize + " " + err[1]
     end
     
   end
