@@ -7,7 +7,7 @@ class HomeController < ApplicationController
 
   # Login
   def login
-    @current_user = Account.find_by_name_and_password(params[:username], params[:password])
+    @current_user = Account.authenticate(params[:username], params[:password])
     if @current_user
       # Log user in
       session[:user_id] = @current_user.id

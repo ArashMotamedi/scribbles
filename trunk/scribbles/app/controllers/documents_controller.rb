@@ -21,7 +21,7 @@ class DocumentsController < ApplicationController
   end
   
   def login
-    @current_user = Account.find_by_name_and_password(params[:username], params[:password])
+    @current_user = Account.authenticate(params[:username], params[:password])
     if @current_user
       # Log user in
       session[:user_id] = @current_user.id
@@ -84,15 +84,21 @@ class DocumentsController < ApplicationController
     path = File.join(directory, name)
     
     #TODO Check if file already exists
-    #file = FileTab.find(:all, :conditions => {:document_id => params[:in_doc]})
-    #if file
+    file = FileTab.find(:all, :conditions => {:document_id => params[:in_doc],
+                                              :name => name})
+    
+    # If file exists, replace the record
+    if file.empty?
       # Add to DB
       file = FileTab.new(:name => name,
-                          :path => path,
-                          :description => params[:description],
-                          :document_id => params[:in_doc])
+                         :path => path,
+                         :description => params[:description],
+                         :document_id => params[:in_doc])
       file.save
-    #end
+    # Else, file doesn't exist, so just add new record
+    else
+      file.update_attribute(:description, params[:description])
+    end
     
     # Save file
     File.open(path, "wb") { |f| f.write(upload['datafile'].read) }
