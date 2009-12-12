@@ -70,7 +70,7 @@ class DocumentsController < ApplicationController
   def RetrieveFiles
     @files = FileTab.find(:all,
                           :conditions => {:document_id => params[:in_doc]},
-                          :order => "created_at DESC")
+                          :order => "updated_at DESC")
     render :layout => false
   end
   
@@ -83,21 +83,21 @@ class DocumentsController < ApplicationController
     end
     path = File.join(directory, name)
     
-    #TODO Check if file already exists
-    file = FileTab.find(:all, :conditions => {:document_id => params[:in_doc],
-                                              :name => name})
-    
-    # If file exists, replace the record
-    if file.empty?
+    # Check if file already exists
+    file = FileTab.find(:first, :conditions => {:document_id => params[:in_doc],
+                                                :name => name})
+
+    # If file exists, update the record
+    if file
+      file.update_attribute(:description, params[:description])
+    # Else, if file doesn't exist, add new record
+    else
       # Add to DB
       file = FileTab.new(:name => name,
                          :path => path,
                          :description => params[:description],
                          :document_id => params[:in_doc])
       file.save
-    # Else, file doesn't exist, so just add new record
-    else
-      file.update_attribute(:description, params[:description])
     end
     
     # Save file
