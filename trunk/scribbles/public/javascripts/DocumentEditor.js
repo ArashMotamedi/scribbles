@@ -19,7 +19,7 @@ var curtain;
 
 // General variables
 var top = 55;
-var isMozilla = false;
+var isMozilla = (window.innerHeight != undefined);
 var ownLock = false;
 var lockHolder;
 
@@ -27,7 +27,7 @@ var lockHolder;
 var faderButton, faderStatus, faderCurtain, faderLock;
 
 var fadingButton;
-var countdownStatus, countdownSave, countdownLock, countdownRefresh = 10;
+var countdownStatus, countdownSave, countdownLock, countdownRefresh = 5;
 
 function bodyLoad() {
 	// Connect variables to components
@@ -91,11 +91,6 @@ function bodyLoad() {
 	button_comment.style.left = "10px";
 
 	fadingButton = button_upload;
-
-	// Detect browser
-	if (window.innerHeight != undefined) {
-		isMozilla = true;
-	}
 
 	// Locate all components
 	locateComponents();
@@ -214,7 +209,7 @@ function locateComponents(){
 
 	// Locate the document lock
 	document_lock.style.top = (textareaTop - 15) + "px";
-	document_lock.style.left = (textareaLeft + textareaWidth - 218) + "px";
+	document_lock.style.left = (textareaLeft + textareaWidth - 268) + "px";
 
 	// Locate the document status
 	document_status.style.top = (textareaTop - 15) + "px";
@@ -292,6 +287,9 @@ function fadeButton() {
 
 function fadeLock() {
 	// For mozilla
+	if (document_lock == null)
+		document_lock = document.getElementById("div_document_lock");
+	
 	if (isMozilla) {
 		if (parseFloat(document_lock.style.opacity) == 0) {
 			window.clearInterval(faderLock);
@@ -558,7 +556,7 @@ function countdown() {
 		if (!ownLock) {
 			refreshDocument();
 		}
-		countdownRefresh = 10;
+		countdownRefresh = 5;
 	}
 
 	if (countdownSave == 0) {
@@ -591,7 +589,7 @@ function setStatus(message)
 	}
 
 	document_status.style.visibility = "visible";
-	countdownStatus = 5;	
+	countdownStatus = 4;
 }
 
 function saveDocument() {
@@ -600,22 +598,44 @@ function saveDocument() {
 }
 
 function releaseLock() {
-	ownLock = false;
-	startFadeLock();
+	document.getElementById("iframe_lock_action").src = "documents/ReleaseLock/" + documentId;
 }
 
 function bodyChanged() {
-	acquireLock();
-	countdownSave = 2;
-	countdownLock = 10;
+	if (ownLock)
+	{
+		countdownSave = 2;
+		countdownLock = 3;
+		return true;
+	}
+	else
+	{
+		acquireLock();
+		return false;
+	}
 }
 
+var acquiringLock = false;
 function acquireLock() {
-	ownLock = true;
-	setLockMessage("You've got the lock");
+	if (ownLock || lockHolder != "")
+	{
+		acquiringLock = false;
+	}
+	else
+	{
+		if (!acquiringLock)
+			document.getElementById("iframe_lock_action").src = "documents/AcquireLock/" + documentId;
+		acquiringLock = true;		
+	}
 }
 
 function setLockMessage(message) {
+	if (document_lock_message == null)
+		document_lock_message = document.getElementById("document_lock_message");
+		
+	if (document_lock == null)
+		document_lock = document.getElementById("div_document_lock");
+
 	document_lock_message.innerHTML = message;
 	if (isMozilla) {
 		document_lock.style.opacity = 1;
@@ -672,7 +692,10 @@ function refreshDocument() {
 }
 
 function updateDocument() {
+
 	var body = document.getElementById("iframe_document_update").contentWindow.document.getElementById("documentBody").value;
+	lockHolder = document.getElementById("iframe_document_update").contentWindow.document.getElementById("lockHolder").value;
+
 	if (document_body == null)
 		document_body = document.getElementById("document_body");
 
@@ -680,6 +703,44 @@ function updateDocument() {
 	if (document_body.value != body) {
 		document_body.value = body;
 		setStatus("Document refreshed");
+	}
+	
+	// What about the lock?
+	if (!ownLock)
+	{
+		if (lockHolder != "")
+			setLockMessage(lockHolder + " has the lock");
+		else
+			startFadeLock();
+	}
+}
+
+function checkLockStatus() {
+	acquiringLock = false;
+	var lockSource = document.getElementById("iframe_lock_action").src;
+	var lockStatus = document.getElementById("iframe_lock_action").contentWindow.document.body.innerHTML;
+	
+	if (lockSource == "about:blank")
+	{
+		return;
+	}
+	
+	if (lockSource.indexOf("ReleaseLock") >= 0)
+	{
+		ownLock = false;
+		startFadeLock();
+		return;
+	}
+		
+	if (lockStatus == "Lock yours")
+	{
+		ownLock = true;
+		setLockMessage("You have the lock");
+	}
+	else
+	{
+		ownLock = false;
+		setLockMessage(lockStatus + " has the lock");
 	}
 }
 
@@ -706,8 +767,4 @@ function checkDocumentStatus() {
 		succeed("document");
 		
 	bodySaved = true;
-}
-
-function checkLockStatus() {
-	
 }
