@@ -1,7 +1,7 @@
 <% if @files %>
   <% @files.each do |file| %>
     <div class="file">
-       <img class="icon icon32" src="images/ext/<%= File.extname(file.name).gsub(".","") %>.gif" />
+       <img class="icon icon32" src="/images/ext/<%= get_icon(File.extname(file.name).gsub(".","")) %>.gif" />
        <div class="file_details">
               <p class="file_header">
                      <span class="file_name"><a target="_blank" href="/files/<%= file.document_id %>/<%= file.name %>"><%= File.basename(file.name) %></a></span> uploaded on <span class="file_time"><%= file.created_at.to_time.strftime("%b %d, %Y %I:%M %p") %></span></p>

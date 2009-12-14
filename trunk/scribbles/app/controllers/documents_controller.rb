@@ -1,5 +1,6 @@
 class DocumentsController < ApplicationController
   before_filter :get_logged_in_user
+  helper DocumentsHelper
   
   # Variables
   # @current_user - The currently logged in user
