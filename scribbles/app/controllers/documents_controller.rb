@@ -56,7 +56,9 @@ class DocumentsController < ApplicationController
   #### Commands ####
   
   def RetrieveBody
-    @body = Document.find(:first, :conditions => {:id => params[:in_doc]}).body
+    doc = Document.find(:first, :conditions => {:id => params[:in_doc]})
+    @body = doc.body
+	@lock_holder = doc.lock_holder
     render :layout => false
   end
   
