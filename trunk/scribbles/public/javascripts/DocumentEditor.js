@@ -21,6 +21,7 @@ var curtain;
 var top = 55;
 var isMozilla = false;
 var ownLock = false;
+var lockHolder;
 
 // Animation variables
 var faderButton, faderStatus, faderCurtain, faderLock;
@@ -705,4 +706,8 @@ function checkDocumentStatus() {
 		succeed("document");
 		
 	bodySaved = true;
+}
+
+function checkLockStatus() {
+	
 }
