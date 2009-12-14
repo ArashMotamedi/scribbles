@@ -155,7 +155,7 @@
 			<div id="div_textarea_ph_left" class="textarea_ph_left">
 			</div>
 			<div id="div_textarea_content" class="textarea_content">
-				<textarea id="document_body" class="textarea_content" onchange="bodyChanged();" onkeypress="bodyChanged();"></textarea>
+				<textarea id="document_body" class="textarea_content" onkeypress="return bodyChanged();"></textarea>
 			</div>
 			<div id="div_textarea_ph_right" class="textarea_ph_right">
 			</div>
@@ -197,6 +197,8 @@
 
 	<iframe id="iframe_document" frameborder="0" height="0" scrolling="no" src="documents/Body" class="hidden" onload="checkDocumentStatus();"></iframe>
 	<iframe id="iframe_document_update" frameborder="0" height="0" scrolling="no" src="documents/RetrieveBody/<%= @this_doc.id -%>" class="hidden" onload="updateDocument();"></iframe>
+
+	<iframe id="iframe_lock_action" frameborder="0" height="0" scrolling="no" src="about:blank" class="hidden" onload="checkLockStatus();"></iframe>
 
 </body>
 </html>
