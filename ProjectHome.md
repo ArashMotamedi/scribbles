@@ -1,0 +1,1 @@
+An online clipboard project using Ruby on Rails.
